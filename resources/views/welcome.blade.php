@@ -118,7 +118,7 @@
         </div>
     @endif
     @if(count($latestServices) > 0)
-        <div id="rs-services" class="rs-services style2 gray-bg pt-100 pb-100 md-pt-70 md-pb-70">
+        <div id="rs-services" class="rs-services style2 bg19 pt-100 pb-100 md-pt-70 md-pb-70">
         <div class="container">
             <div class="sec-title2 text-center md-left mb-40">
                 <div class="sub-text">What We Offer</div>
@@ -148,323 +148,269 @@
 
     @if(!empty($homepage_info->core_main_heading))
         <div class="rs-services style5 bg14 pt-95 pb-100 md-pt-65 md-pb-70">
-        <div class="container">
-            <div class="sec-title text-center mb-50">
-                <span class="sub-text small">{{ucfirst(@$homepage_info->core_main_description)}}</span>
-                <h2 class="title title3">
-                    {{ucfirst(@$homepage_info->core_main_heading)}}
-                </h2>
+            <div class="container">
+                <div class="sec-title text-center mb-50">
+                    <span class="sub-text small">{{ucfirst(@$homepage_info->core_main_description)}}</span>
+                    <h2 class="title title3">
+                        {{ucfirst(@$homepage_info->core_main_heading)}}
+                    </h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 mb-25">
+                        <div class="flip-box-inner">
+                            <div class="flip-box-wrap">
+                                <div class="front-part">
+                                    <div class="front-content-part">
+                                        <div class="front-icon-part">
+                                            <div class="icon-part">
+                                                <img class="lazy" data-src="{{asset('assets/frontend/images/services/trust.png')}}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="front-title-part">
+                                            <h3 class="title"><a>{{ucwords(@$homepage_info->core_heading1 ?? '')}}</a></h3>
+                                        </div>
+                                        <div class="front-desc-part">
+                                            <p>
+                                                {{ ucfirst(@$homepage_info->core_description1 ?? '') }}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="back-part">
+                                    <div class="back-front-content">
+                                        <div class="back-title-part">
+                                            <h3 class="back-title">
+                                                <a>{{ucwords(@$homepage_info->core_heading1 ?? '')}}</a>
+                                            </h3>
+                                        </div>
+                                        <div class="back-desc-part">
+                                            <p class="back-desc">
+                                                {{ucfirst(@$homepage_info->core_description1 ?? '')}}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-25">
+                        <div class="flip-box-inner">
+                            <div class="flip-box-wrap">
+                                <div class="front-part">
+                                    <div class="front-content-part">
+                                        <div class="front-icon-part">
+                                            <div class="icon-part">
+                                                <img class="lazy" data-src="{{asset('assets/frontend/images/services/ethics.png')}}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="front-title-part">
+                                            <h3 class="title"><a>{{ucwords(@$homepage_info->core_heading2)}}</a></h3>
+                                        </div>
+                                        <div class="front-desc-part">
+                                            <p>
+    {{--                                            #efbc49--}}
+                                                {{ucfirst(@$homepage_info->core_description2)}}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="back-part">
+                                    <div class="back-front-content">
+                                        <div class="back-title-part">
+                                            <h3 class="back-title"><a>{{ucwords(@$homepage_info->core_heading2)}}</a></h3>
+                                        </div>
+                                        <div class="back-desc-part">
+                                            <p class="back-desc">
+                                                {{ucfirst(@$homepage_info->core_description2)}}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-25">
+                        <div class="flip-box-inner">
+                            <div class="flip-box-wrap">
+                                <div class="front-part">
+                                    <div class="front-content-part">
+                                        <div class="front-icon-part">
+                                            <div class="icon-part">
+                                                <img class="lazy" data-src="{{asset('assets/frontend/images/services/quality.png')}}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="front-title-part">
+                                            <h3 class="title"><a>{{ucwords(@$homepage_info->core_heading3)}}</a></h3>
+                                        </div>
+                                        <div class="front-desc-part">
+                                            <p>
+                                                {{ucfirst(@$homepage_info->core_description3)}}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="back-part">
+                                    <div class="back-front-content">
+                                        <div class="back-title-part">
+                                            <h3 class="back-title"><a>{{ucwords(@$homepage_info->core_heading3)}}</a></h3>
+                                        </div>
+                                        <div class="back-desc-part">
+                                            <p class="back-desc"> {{ucfirst(@$homepage_info->core_description3)}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 md-mb-25">
+                        <div class="flip-box-inner">
+                            <div class="flip-box-wrap">
+                                <div class="front-part">
+                                    <div class="front-content-part">
+                                        <div class="front-icon-part">
+                                            <div class="icon-part">
+                                                <img class="lazy" data-src="{{asset('assets/frontend/images/services/integrity.png')}}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="front-title-part">
+                                            <h3 class="title"><a>{{ucwords(@$homepage_info->core_heading4)}}</a></h3>
+                                        </div>
+                                        <div class="front-desc-part">
+                                            <p>
+                                                {{ucfirst(@$homepage_info->core_description4)}}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="back-part">
+                                    <div class="back-front-content">
+                                        <div class="back-title-part">
+                                            <h3 class="back-title"><a>{{ucwords(@$homepage_info->core_heading4)}}</a></h3>
+                                        </div>
+                                        <div class="back-desc-part">
+                                            <p class="back-desc">
+                                                {{ucfirst(@$homepage_info->core_description4)}}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 sm-mb-25">
+                        <div class="flip-box-inner">
+                            <div class="flip-box-wrap">
+                                <div class="front-part">
+                                    <div class="front-content-part">
+                                        <div class="front-icon-part">
+                                            <div class="icon-part">
+                                                <img src="{{asset('assets/frontend/images/services/professional.png')}}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="front-title-part">
+                                            <h3 class="title"><a>{{ucwords(@$homepage_info->core_heading5)}}</a></h3>
+                                        </div>
+                                        <div class="front-desc-part">
+                                            <p>
+                                                {{  elipsis(ucfirst(@$homepage_info->core_description5)) }}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="back-part">
+                                    <div class="back-front-content">
+                                        <div class="back-title-part">
+                                            <h3 class="back-title"><a>{{ucwords(@$homepage_info->core_heading5)}}</a></h3>
+                                        </div>
+                                        <div class="back-desc-part">
+                                            <p class="back-desc">
+                                                {{ucfirst(@$homepage_info->core_description5)}}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="flip-box-inner">
+                            <div class="flip-box-wrap">
+                                <div class="front-part">
+                                    <div class="front-content-part">
+                                        <div class="front-icon-part">
+                                            <div class="icon-part">
+                                                <img class="lazy" data-src="{{asset('assets/frontend/images/services/target.png')}}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="front-title-part">
+                                            <h3 class="title"><a>{{ucwords(@$homepage_info->core_heading6)}}</a></h3>
+                                        </div>
+                                        <div class="front-desc-part">
+                                            <p>
+                                                {{  elipsis(ucfirst(@$homepage_info->core_description6)) }}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="back-part">
+                                    <div class="back-front-content">
+                                        <div class="back-title-part">
+                                            <h3 class="back-title"><a>{{ucwords(@$homepage_info->core_heading6)}}</a></h3>
+                                        </div>
+                                        <div class="back-desc-part">
+                                            <p class="back-desc">
+                                                {{ucfirst(@$homepage_info->core_description6)}}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-25">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-wrap">
-                            <div class="front-part">
-                                <div class="front-content-part">
-                                    <div class="front-icon-part">
-                                        <div class="icon-part">
-                                            <img class="lazy" data-src="{{asset('assets/frontend/images/services/trust.png')}}" alt="">
+        </div>
+    @endif
+
+    @if(@$recruitments[0]->heading)
+        <div class="rs-process style1 bg2 pt-100 pb-100 md-pt-70 md-pb-70">
+        <div class="container">
+            <div class="sec-title2 text-center md-left mb-40">
+                <div class="sub-text">Working Process</div>
+                <h2 class="title white-color">How we work for our valued <br><span>customers.</span></h2>
+            </div>
+        </div>
+        <div class="container custom2">
+            <div class="process-effects-layer">
+                <div class="row">
+                    @foreach(@$recruitments as $index=>$recruitment)
+                        <div class="col-lg-3 col-md-6 md-mb-30">
+                            <div class="rs-addon-number">
+                                <div class="number-part">
+                                    <div class="number-image">
+                                        <img src="{{asset('assets/frontend/images/services/'.recruitment_process_icons($index))}}" alt="">
+                                    </div>
+                                    <div class="number-text">
+                                        <div class="number-area"> <span class="number-prefix"> {{ $index+1 }} </span></div>
+                                        <div class="number-title">
+                                            <h3 class="title"> {{@$recruitment->title}}</h3>
                                         </div>
-                                    </div>
-                                    <div class="front-title-part">
-                                        <h3 class="title"><a>{{ucwords(@$homepage_info->core_heading1 ?? '')}}</a></h3>
-                                    </div>
-                                    <div class="front-desc-part">
-                                        <p>
-                                            {{ ucfirst(@$homepage_info->core_description1 ?? '') }}
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="back-part">
-                                <div class="back-front-content">
-                                    <div class="back-title-part">
-                                        <h3 class="back-title">
-                                            <a>{{ucwords(@$homepage_info->core_heading1 ?? '')}}</a>
-                                        </h3>
-                                    </div>
-                                    <div class="back-desc-part">
-                                        <p class="back-desc">
-                                            {{ucfirst(@$homepage_info->core_description1 ?? '')}}
-                                        </p>
+                                        <div class="number-txt">
+                                            {{ $recruitment->icon_description ?? '' }}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-25">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-wrap">
-                            <div class="front-part">
-                                <div class="front-content-part">
-                                    <div class="front-icon-part">
-                                        <div class="icon-part">
-                                            <img class="lazy" data-src="{{asset('assets/frontend/images/services/ethics.png')}}" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="front-title-part">
-                                        <h3 class="title"><a>{{ucwords(@$homepage_info->core_heading2)}}</a></h3>
-                                    </div>
-                                    <div class="front-desc-part">
-                                        <p>
-{{--                                            #efbc49--}}
-                                            {{ucfirst(@$homepage_info->core_description2)}}
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="back-part">
-                                <div class="back-front-content">
-                                    <div class="back-title-part">
-                                        <h3 class="back-title"><a>{{ucwords(@$homepage_info->core_heading2)}}</a></h3>
-                                    </div>
-                                    <div class="back-desc-part">
-                                        <p class="back-desc">
-                                            {{ucfirst(@$homepage_info->core_description2)}}
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-25">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-wrap">
-                            <div class="front-part">
-                                <div class="front-content-part">
-                                    <div class="front-icon-part">
-                                        <div class="icon-part">
-                                            <img class="lazy" data-src="{{asset('assets/frontend/images/services/quality.png')}}" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="front-title-part">
-                                        <h3 class="title"><a>{{ucwords(@$homepage_info->core_heading3)}}</a></h3>
-                                    </div>
-                                    <div class="front-desc-part">
-                                        <p>
-                                            {{ucfirst(@$homepage_info->core_description3)}}
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="back-part">
-                                <div class="back-front-content">
-                                    <div class="back-title-part">
-                                        <h3 class="back-title"><a>{{ucwords(@$homepage_info->core_heading3)}}</a></h3>
-                                    </div>
-                                    <div class="back-desc-part">
-                                        <p class="back-desc"> {{ucfirst(@$homepage_info->core_description3)}}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 md-mb-25">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-wrap">
-                            <div class="front-part">
-                                <div class="front-content-part">
-                                    <div class="front-icon-part">
-                                        <div class="icon-part">
-                                            <img class="lazy" data-src="{{asset('assets/frontend/images/services/integrity.png')}}" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="front-title-part">
-                                        <h3 class="title"><a>{{ucwords(@$homepage_info->core_heading4)}}</a></h3>
-                                    </div>
-                                    <div class="front-desc-part">
-                                        <p>
-                                            {{ucfirst(@$homepage_info->core_description4)}}
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="back-part">
-                                <div class="back-front-content">
-                                    <div class="back-title-part">
-                                        <h3 class="back-title"><a>{{ucwords(@$homepage_info->core_heading4)}}</a></h3>
-                                    </div>
-                                    <div class="back-desc-part">
-                                        <p class="back-desc">
-                                            {{ucfirst(@$homepage_info->core_description4)}}
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 sm-mb-25">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-wrap">
-                            <div class="front-part">
-                                <div class="front-content-part">
-                                    <div class="front-icon-part">
-                                        <div class="icon-part">
-                                            <img src="{{asset('assets/frontend/images/services/professional.png')}}" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="front-title-part">
-                                        <h3 class="title"><a>{{ucwords(@$homepage_info->core_heading5)}}</a></h3>
-                                    </div>
-                                    <div class="front-desc-part">
-                                        <p>
-                                            {{  elipsis(ucfirst(@$homepage_info->core_description5)) }}
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="back-part">
-                                <div class="back-front-content">
-                                    <div class="back-title-part">
-                                        <h3 class="back-title"><a>{{ucwords(@$homepage_info->core_heading5)}}</a></h3>
-                                    </div>
-                                    <div class="back-desc-part">
-                                        <p class="back-desc">
-                                            {{ucfirst(@$homepage_info->core_description5)}}
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-wrap">
-                            <div class="front-part">
-                                <div class="front-content-part">
-                                    <div class="front-icon-part">
-                                        <div class="icon-part">
-                                            <img class="lazy" data-src="{{asset('assets/frontend/images/services/target.png')}}" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="front-title-part">
-                                        <h3 class="title"><a>{{ucwords(@$homepage_info->core_heading6)}}</a></h3>
-                                    </div>
-                                    <div class="front-desc-part">
-                                        <p>
-                                            {{  elipsis(ucfirst(@$homepage_info->core_description6)) }}
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="back-part">
-                                <div class="back-front-content">
-                                    <div class="back-title-part">
-                                        <h3 class="back-title"><a>{{ucwords(@$homepage_info->core_heading6)}}</a></h3>
-                                    </div>
-                                    <div class="back-desc-part">
-                                        <p class="back-desc">
-                                            {{ucfirst(@$homepage_info->core_description6)}}
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
     </div>
     @endif
 
-    <div class="rs-process style1 bg2 pt-100 pb-100 md-pt-70 md-pb-70">
-        <div class="container">
-            <div class="sec-title2 white-color text-center md-left mb-40">
-                <div class="sub-text">Working Process</div>
-                <h2 class="title">How we work for our valued <br><span>customers.</span></h2>
-            </div>
-        </div>
-        <div class="container custom2">
-            <div class="process-effects-layer">
-                <div class="row">
-                    <div class="col-lg-3 col-md-6 md-mb-30">
-                        <div class="rs-addon-number">
-                            <div class="number-part">
-                                <div class="number-image">
-                                    <img src="assets/images/process/style1/1.png" alt="Process">
-                                </div>
-                                <div class="number-text">
-                                    <div class="number-area"> <span class="number-prefix"> 1 </span></div>
-                                    <div class="number-title">
-                                        <h3 class="title"> Discovery</h3>
-                                    </div>
-                                    <div class="number-txt">
-                                        Quisque placerat vitae focus scelerisque. Fusce luctus odio ac nibh luctus,
-                                        in porttitor.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 md-mb-30">
-                        <div class="rs-addon-number">
-                            <div class="number-part">
-                                <div class="number-image">
-                                    <img src="assets/images/process/style1/2.png" alt="Process">
-                                </div>
-                                <div class="number-text">
-                                    <div class="number-area"> <span class="number-prefix"> 2 </span></div>
-                                    <div class="number-title">
-                                        <h3 class="title">Planning</h3>
-                                    </div>
-                                    <div class="number-txt">
-                                        Quisque placerat vitae focus scelerisque. Fusce luctus odio ac nibh luctus,
-                                        in porttitor.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 sm-mb-30">
-                        <div class="rs-addon-number">
-                            <div class="number-part">
-                                <div class="number-image">
-                                    <img src="assets/images/process/style1/3.png" alt="Process">
-                                </div>
-                                <div class="number-text">
-                                    <div class="number-area"> <span class="number-prefix"> 3 </span></div>
-                                    <div class="number-title">
-                                        <h3 class="title">Execute</h3>
-                                    </div>
-                                    <div class="number-txt">
-                                        Quisque placerat vitae focus scelerisque. Fusce luctus odio ac nibh luctus,
-                                        in porttitor.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="rs-addon-number">
-                            <div class="number-part">
-                                <div class="number-image">
-                                    <img src="assets/images/process/style1/4.png" alt="Process">
-                                </div>
-                                <div class="number-text">
-                                    <div class="number-area"> <span class="number-prefix"> 4 </span></div>
-                                    <div class="number-title">
-                                        <h3 class="title">Deliver</h3>
-                                    </div>
-                                    <div class="number-txt">
-                                        Quisque placerat vitae focus scelerisque. Fusce luctus odio ac nibh luctus,
-                                        in porttitor.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     @if(count($latestJobs) > 1)
-        <div class="rs-project style7 pt-100 pb-100 md-pt-70 md-pb-70">
+        <div class="rs-project style7 pt-100 pb-30 md-pt-70 md-pb-70">
             <div class="container custom">
                 <div class="row y-middle">
                     <div class="col-lg-6">
@@ -516,500 +462,227 @@
             </div>
         </div>
     @endif
-    <!-- Process Section Start -->
-    <div class="rs-process style1 bg2 pt-100 pb-100 md-pt-70 md-pb-70">
-        <div class="container">
-            <div class="row y-middle">
-                <div class="col-lg-5">
-                    <div class="sec-title2 md-text-center">
-                        <div class="sub-text">Working Process</div>
-                        <h2 class="title mb-23 white-color">How we work for our valued <span>customers.</span></h2>
-                    </div>
-                </div>
-                <div class="col-lg-7">
-                    <div class="btn-part text-right md-text-center">
-                        <a class="readon consultant discover" href="portfolio.html">View Works</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container custom2">
-            <div class="process-effects-layer">
-                <div class="row">
-                    <div class="col-lg-3 col-md-6 md-mb-30">
-                        <div class="rs-addon-number">
-                            <div class="number-part">
-                                <div class="number-image">
-                                    <img src="assets/images/process/style1/1.png" alt="Process">
-                                </div>
-                                <div class="number-text">
-                                    <div class="number-area"> <span class="number-prefix"> 1 </span></div>
-                                    <div class="number-title">
-                                        <h3 class="title"> Discovery</h3>
-                                    </div>
-                                    <div class="number-txt">
-                                        Quisque placerat vitae focus scelerisque. Fusce luctus odio ac nibh luctus,
-                                        in porttitor.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 md-mb-30">
-                        <div class="rs-addon-number">
-                            <div class="number-part">
-                                <div class="number-image">
-                                    <img src="assets/images/process/style1/2.png" alt="Process">
-                                </div>
-                                <div class="number-text">
-                                    <div class="number-area"> <span class="number-prefix"> 2 </span></div>
-                                    <div class="number-title">
-                                        <h3 class="title">Planning</h3>
-                                    </div>
-                                    <div class="number-txt">
-                                        Quisque placerat vitae focus scelerisque. Fusce luctus odio ac nibh luctus,
-                                        in porttitor.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 sm-mb-30">
-                        <div class="rs-addon-number">
-                            <div class="number-part">
-                                <div class="number-image">
-                                    <img src="assets/images/process/style1/3.png" alt="Process">
-                                </div>
-                                <div class="number-text">
-                                    <div class="number-area"> <span class="number-prefix"> 3 </span></div>
-                                    <div class="number-title">
-                                        <h3 class="title">Execute</h3>
-                                    </div>
-                                    <div class="number-txt">
-                                        Quisque placerat vitae focus scelerisque. Fusce luctus odio ac nibh luctus,
-                                        in porttitor.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="rs-addon-number">
-                            <div class="number-part">
-                                <div class="number-image">
-                                    <img src="assets/images/process/style1/4.png" alt="Process">
-                                </div>
-                                <div class="number-text">
-                                    <div class="number-area"> <span class="number-prefix"> 4 </span></div>
-                                    <div class="number-title">
-                                        <h3 class="title">Deliver</h3>
-                                    </div>
-                                    <div class="number-txt">
-                                        Quisque placerat vitae focus scelerisque. Fusce luctus odio ac nibh luctus,
-                                        in porttitor.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Process Section End -->
 
-    <!-- Blog Start -->
-    <div class="rs-blog style2 pt-100 pb-100 md-pt-70 md-pb-70">
-        <div class="container">
-            <div class="row y-middle md-mb-30">
-                <div class="col-lg-5 mb-20 md-mb-10">
-                    <div class="sec-title2">
-                        <div class="sub-text">News Updates</div>
-                        <h2 class="title mb-23">Read our latest updates & business <span>tips & tricks.</span></h2>
+    @if(!empty($homepage_info->why_heading))
+        <div class="rs-achievement style1 relative pt-40 md-pt-40">
+            <div class="container">
+                <div class="row rs-vertical-middle">
+                    <div class="col-lg-6 pr-0">
+                        <div class="sec-title2 mb-45 md-mb-30">
+                            <div class="sub-text">Leading solutions</div>
+                            <h2 class="title mb-23">
+                                <?php
+                                $split = explode(" ", @$homepage_info->why_heading);?> {{preg_replace('/\W\w+\s*(\W*)$/', '$1', @$homepage_info->why_heading)."\n"}}
+                                <span> {{$split[count($split)-1]}} </span>
+                            </h2>
+                            <div class="desc left-line-v">
+                                <div class="draw-line start-draw"></div>
+                                {{ucwords(@$homepage_info->why_description)}}
+                            </div>
+                        </div>
+                        <div class="rs-counter hover-box pt-35">
+                            <div class="rs-counter-list box-item">
+                                <div class="counter-icon"><i class="glyph-icon flaticon-picture-1"></i></div>
+                                <h3 class="counter-number">{{@$homepage_info->project_completed ?? '450'}}</h3>
+                                <div class="counter-text">Project <br> completed</div>
+
+                            </div><div class="rs-counter-list box-item">
+                                <div class="counter-icon"><i class="glyph-icon flaticon-user-1"></i></div>
+                                <h3 class="counter-number">{{@$homepage_info->happy_clients ?? '660'}}</h3>
+                                <div class="counter-text">Happy <br> Clients</div>
+                            </div>
+
+                            <div class="rs-counter-list box-item active">
+                                <div class="counter-icon"><i class="glyph-icon flaticon-suitcase"></i></div>
+                                <h3 class="counter-number">{{@$homepage_info->visa_approved ?? '340'}}</h3>
+                                <div class="counter-text">Visa <br> Approved</div>
+                            </div>
+                            <div class="rs-counter-list box-item">
+                                <div class="counter-icon"><i class="glyph-icon flaticon-picture-1"></i></div>
+                                <h3 class="counter-number">{{@$homepage_info->success_stories ?? '987'}}</h3>
+                                <div class="counter-text">Success <br> Stories</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 md-pt-50">
+                        <div class="img-part">
+                            <img class="lazy" data-src="{{asset('/images/home/welcome/'.@$homepage_info->what_image5)}}" alt="">
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-7 mb-20">
-                    <div class="btn-part text-right md-left">
-                        <a class="readon consultant discover" href="blog-details.html">View Updates</a>
-                    </div>
-                </div>
+                <img class="pattern-img lazy" data-src="{{asset('assets/frontend/images/pattern/pattern4.png')}}" alt="">
             </div>
-            <div class="rs-carousel owl-carousel" data-loop="true" data-items="3" data-margin="30"
-                 data-autoplay="true" data-hoverpause="true" data-autoplay-timeout="5000" data-smart-speed="800"
-                 data-dots="false" data-nav="false" data-nav-speed="false" data-center-mode="false"
-                 data-mobile-device="1" data-mobile-device-nav="false" data-mobile-device-dots="true"
-                 data-ipad-device="2" data-ipad-device-nav="false" data-ipad-device-dots="true" data-ipad-device2="2"
-                 data-ipad-device-nav2="false" data-ipad-device-dots2="true" data-md-device="3"
-                 data-md-device-nav="false" data-md-device-dots="true">
-                <div class="blog-item">
-                    <div class="image-wrap">
-                        <a href="#"><img src="assets/images/blog/1.jpg" alt="Blog"></a>
-                        <ul class="post-categories">
-                            <li><a href="blog-details.html">Branding</a></li>
-                        </ul>
-                    </div>
-                    <div class="blog-content">
-                        <ul class="blog-meta mb-10">
-                            <li class="admin"> <i class="fa fa-user-o"></i> admin</li>
-                            <li class="date"> <i class="fa fa-calendar-check-o"></i> 16 Aug 2021</li>
-                        </ul>
-                        <h3 class="blog-title"><a href="blog-details.html">Customer Onboarding Strategy: A Guide to
-                                Class</a></h3>
-                        <p>We denounce with righteous indige nation and dislike men who are so beguiled and demo...
-                        </p>
-                    </div>
+        </div>
+    @endif
+
+    @if(count($clients) > 0)
+        <div class="rs-patter-section bg14 style1 pt-100 pb-100">
+            <div class="container custom">
+                <div class="sec-title2 mb-55 md-mb-35 text-center">
+                    <div class="sub-text">Quick contact</div>
+                    <h2 class="title mb-0">Let us help your business to<br> move<span>forward.</span></h2>
                 </div>
-                <div class="blog-item">
-                    <div class="image-wrap">
-                        <a href="#"><img src="assets/images/blog/2.jpg" alt="Blog"></a>
-                        <ul class="post-categories">
-                            <li><a href="blog-details.html">Branding</a></li>
-                        </ul>
+                <div class="rs-carousel owl-carousel"
+                     data-loop="true"
+                     data-items="5"
+                     data-margin="30"
+                     data-autoplay="true"
+                     data-hoverpause="true"
+                     data-autoplay-timeout="3000"
+                     data-smart-speed="600"
+                     data-dots="false"
+                     data-nav="false"
+                     data-nav-speed="false"
+
+                     data-md-device="5"
+                     data-md-device-nav="false"
+                     data-md-device-dots="false"
+                     data-center-mode="false"
+
+                     data-ipad-device2="3"
+                     data-ipad-device-nav2="false"
+                     data-ipad-device-dots2="false"
+
+                     data-ipad-device="3"
+                     data-ipad-device-nav="false"
+                     data-ipad-device-dots="false"
+
+                     data-mobile-device="2"
+                     data-mobile-device-nav="false"
+                     data-mobile-device-dots="false">
+                    @foreach($clients as $client)
+                        <div class="logo-img">
+                        <a href="{{ $client->link ?? '#' }}" target="{{ ($client->link !== null) ? '_blank':'' }}">
+                            <img class="hovers-logos rs-grid-img lazy" data-src="{{asset('/images/clients/'.@$client->image)}}" title="" alt="">
+                            <img class="mains-logos rs-grid-img lazy" data-src="{{asset('/images/clients/'.@$client->image)}}" title="" alt="">
+                        </a>
                     </div>
-                    <div class="blog-content">
-                        <ul class="blog-meta mb-10">
-                            <li class="admin"> <i class="fa fa-user-o"></i> admin</li>
-                            <li class="date"> <i class="fa fa-calendar-check-o"></i> 16 Aug 2021</li>
-                        </ul>
-                        <h3 class="blog-title"><a href="blog-details.html">How to plan a fail-proof website redesign
-                                strategy</a></h3>
-                        <p>We denounce with righteous indige nation and dislike men who are so beguiled and demo...
-                        </p>
-                    </div>
-                </div>
-                <div class="blog-item">
-                    <div class="image-wrap">
-                        <a href="#"><img src="assets/images/blog/3.jpg" alt="Blog"></a>
-                        <ul class="post-categories">
-                            <li><a href="blog-details.html">Digital Marketing</a></li>
-                        </ul>
-                    </div>
-                    <div class="blog-content">
-                        <ul class="blog-meta mb-10">
-                            <li class="admin"> <i class="fa fa-user-o"></i> admin</li>
-                            <li class="date"> <i class="fa fa-calendar-check-o"></i> 16 Aug 2021</li>
-                        </ul>
-                        <h3 class="blog-title"><a href="blog-details.html">How investing in dependend increasing to
-                                business</a></h3>
-                        <p>We denounce with righteous indige nation and dislike men who are so beguiled and demo...
-                        </p>
-                    </div>
-                </div>
-                <div class="blog-item">
-                    <div class="image-wrap">
-                        <a href="#"><img src="assets/images/blog/4.jpg" alt="Blog"></a>
-                        <ul class="post-categories">
-                            <li><a href="blog-details.html">Digital Marketing</a></li>
-                        </ul>
-                    </div>
-                    <div class="blog-content">
-                        <ul class="blog-meta mb-10">
-                            <li class="admin"> <i class="fa fa-user-o"></i> admin</li>
-                            <li class="date"> <i class="fa fa-calendar-check-o"></i> 16 Aug 2021</li>
-                        </ul>
-                        <h3 class="blog-title"><a href="blog-details.html">7 Productivity tips to avoid burnout when
-                                working</a></h3>
-                        <p>We denounce with righteous indige nation and dislike men who are so beguiled and demo...
-                        </p>
-                    </div>
-                </div>
-                <div class="blog-item">
-                    <div class="image-wrap">
-                        <a href="#"><img src="assets/images/blog/5.jpg" alt="Blog"></a>
-                        <ul class="post-categories">
-                            <li><a href="blog-details.html">Graphic Design</a></li>
-                        </ul>
-                    </div>
-                    <div class="blog-content">
-                        <ul class="blog-meta mb-10">
-                            <li class="admin"> <i class="fa fa-user-o"></i> admin</li>
-                            <li class="date"> <i class="fa fa-calendar-check-o"></i> 16 Aug 2021</li>
-                        </ul>
-                        <h3 class="blog-title"><a href="blog-details.html">Email marketing tips that will increase
-                                your sales</a></h3>
-                        <p>We denounce with righteous indige nation and dislike men who are so beguiled and demo...
-                        </p>
-                    </div>
-                </div>
-                <div class="blog-item">
-                    <div class="image-wrap">
-                        <a href="#"><img src="assets/images/blog/6.jpg" alt="Blog"></a>
-                        <ul class="post-categories">
-                            <li><a href="blog-details.html"></a></li>
-                        </ul>
-                    </div>
-                    <div class="blog-content">
-                        <ul class="blog-meta mb-10">
-                            <li class="admin"> <i class="fa fa-user-o"></i> admin</li>
-                            <li class="date"> <i class="fa fa-calendar-check-o"></i> 16 Aug 2021</li>
-                        </ul>
-                        <h3 class="blog-title"><a href="blog-details.html">How to maintain customer relations
-                                disaster strikes</a></h3>
-                        <p>We denounce with righteous indige nation and dislike men who are so beguiled and demo...
-                        </p>
-                    </div>
-                </div>
-                <div class="blog-item">
-                    <div class="image-wrap">
-                        <a href="#"><img src="assets/images/blog/1.jpg" alt="Blog"></a>
-                        <ul class="post-categories">
-                            <li><a href="blog-details.html">E-commerce</a></li>
-                        </ul>
-                    </div>
-                    <div class="blog-content">
-                        <ul class="blog-meta mb-10">
-                            <li class="admin"> <i class="fa fa-user-o"></i> admin</li>
-                            <li class="date"> <i class="fa fa-calendar-check-o"></i> 16 Aug 2021</li>
-                        </ul>
-                        <h3 class="blog-title"><a href="blog-details.html">How to plan a fail-proof website redesign
-                                strategy</a></h3>
-                        <p>We denounce with righteous indige nation and dislike men who are so beguiled and demo...
-                        </p>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Blog End -->
+    @endif
 
-    <!-- Testimonial Section Start -->
-    <div class="rs-testimonial style2 bg10 pt-100 pb-100 md-pt-70 md-pb-70">
-        <div class="container">
-            <div class="sec-title2 text-center md-left mb-30">
-                <div class="sub-text">Testimonials</div>
-                <h2 class="title mb-0 white-color">Whats our customers saying<br> about us</h2>
+    @if(count($latestPosts) > 0)
+        <div class="rs-blog style2 pt-100 pb-100 md-pt-70 md-pb-70">
+            <div class="container">
+                <div class="row y-middle md-mb-30">
+                    <div class="col-lg-5 mb-20 md-mb-10">
+                        <div class="sec-title2">
+                            <div class="sub-text">News Updates</div>
+                            <h2 class="title mb-23">Read our latest updates & business <span>news.</span></h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 mb-20">
+                        <div class="btn-part text-right md-left">
+                            <a class="readon consultant discover" href="{{ route('blog.frontend') }}">View Updates</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="rs-carousel owl-carousel" data-loop="true" data-items="3" data-margin="30"
+                     data-autoplay="true" data-hoverpause="true" data-autoplay-timeout="5000" data-smart-speed="800"
+                     data-dots="false" data-nav="false" data-nav-speed="false" data-center-mode="false"
+                     data-mobile-device="1" data-mobile-device-nav="false" data-mobile-device-dots="true"
+                     data-ipad-device="2" data-ipad-device-nav="false" data-ipad-device-dots="true" data-ipad-device2="2"
+                     data-ipad-device-nav2="false" data-ipad-device-dots2="true" data-md-device="3"
+                     data-md-device-nav="false" data-md-device-dots="true">
+
+                    @foreach(@$latestPosts as $post)
+                        <div class="blog-item">
+                            <div class="image-wrap">
+                                <a href="#">
+                                    <img class="lazy" data-src="{{asset('/images/blog/'.@$post->image)}}" alt="Blog">
+                                </a>
+                                <ul class="post-categories">
+                                    <li><a href="{{route('blog.single',$post->slug)}}">{{ucfirst(@$post->category->name)}} </a></li>
+                                </ul>
+                            </div>
+                            <div class="blog-content">
+                                <ul class="blog-meta mb-10">
+                                    <li class="date"> <i class="fa fa-calendar-check-o"></i> {{date('d M Y', strtotime($post->created_at))}}</li>
+                                </ul>
+                                <h3 class="blog-title">
+                                    <a href="{{route('blog.single',@$post->slug)}}">
+                                        {{ucfirst(@$post->title)}}
+                                    </a>
+                                </h3>
+                                <p>
+                                    {{ elipsis( strip_tags(@$post->description)) }}
+                                </p>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
             </div>
-            <div class="rs-carousel owl-carousel" data-loop="true" data-items="3" data-margin="30"
-                 data-autoplay="true" data-hoverpause="true" data-autoplay-timeout="5000" data-smart-speed="800"
-                 data-dots="false" data-nav="false" data-nav-speed="false" data-center-mode="false"
-                 data-mobile-device="1" data-mobile-device-nav="false" data-mobile-device-dots="true"
-                 data-ipad-device="2" data-ipad-device-nav="false" data-ipad-device-dots="true" data-ipad-device2="2"
-                 data-ipad-device-nav2="false" data-ipad-device-dots2="true" data-md-device="3"
-                 data-md-device-nav="false" data-md-device-dots="true">
-                <div class="testi-wrap">
-                    <div class="item-content">
-                        <span><img src="assets/images/testimonial/quote.png" alt="Testimonial"></span>
-                        <p>Customer support is excellent and documentation good – novice can easily understand.
-                            Although I had a problem with the performance, thanks to the customer support, we have
-                            solved this problem as well.</p>
-                    </div>
-                    <div class="testi-content">
-                        <div class="image-wrap">
-                            <img src="assets/images/testimonial/avatar/1.jpg" alt="Testimonial">
-                        </div>
-                        <div class="testi-information">
-                            <div class="testi-name">David Warner</div>
-                            <span class="testi-title">Envato User</span>
-                            <div class="ratting-img">
-                                <img src="assets/images/testimonial/ratting.png" alt="Testimonial">
+        </div>
+    @endif
+
+    @if(count($testimonials) > 0)
+        <div class="rs-testimonial style4 bg2 pt-95 pb-100 md-pt-65 md-pb-70">
+            <div class="container">
+                <div class="sec-title text-center mb-60 md-mb-40">
+                    <span class="sub-text small white-color">Testimonials</span>
+                    <h2 class="title title3 white-color">Customers <span> Reviews. </span></h2>
+                </div>
+                <div class="rs-carousel owl-carousel" data-loop="true" data-items="3" data-margin="30" data-autoplay="true" data-hoverpause="true" data-autoplay-timeout="5000" data-smart-speed="800" data-dots="false" data-nav="false" data-nav-speed="false" data-center-mode="false" data-mobile-device="1" data-mobile-device-nav="false" data-mobile-device-dots="true" data-ipad-device="2" data-ipad-device-nav="false" data-ipad-device-dots="true" data-ipad-device2="2" data-ipad-device-nav2="false" data-ipad-device-dots2="true" data-md-device="3" data-md-device-nav="false" data-md-device-dots="true">
+
+                    @foreach($testimonials as $testimonial)
+                        <div class="testi-item">
+                            <div class="testi-wrap">
+                                <div class="image-wrap">
+                                    <img class="lazy" data-src="{{asset('/images/testimonial/'.@$testimonial->image)}}" alt="">
+                                </div>
+                                <div class="item-contents">
+                                    <p>{{ucfirst($testimonial->description)}}</p>
+                                </div>
+                                <div class="testi-information">
+                                    <div class="testi-name">{{ucfirst($testimonial->name)}}</div>
+                                    <span class="testi-title">{{ucfirst($testimonial->position)}}</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    @endforeach
                 </div>
-                <div class="testi-wrap">
-                    <div class="item-content">
-                        <span><img src="assets/images/testimonial/quote.png" alt="Testimonial"></span>
-                        <p>Customer support is excellent and documentation good – novice can easily understand.
-                            Although I had a problem with the performance, thanks to the customer support, we have
-                            solved this problem as well.</p>
-                    </div>
-                    <div class="testi-content">
-                        <div class="image-wrap">
-                            <img src="assets/images/testimonial/avatar/2.jpg" alt="Testimonial">
+            </div>
+        </div>
+    @endif
+
+    @if(@$setting_data->grievance_heading)
+        <div class="rs-contact contact-style2 bg11 pt-95 pb-100 md-pt-65 md-pb-70">
+            <div class="container">
+                <div class="row y-middle">
+                    <div class="col-lg-6">
+                        <div class="contact-map">
+                            <iframe src="{{@$setting_data->google_map ?? ''}}"
+                                    width="600" height="400" style="border:0;"
+                                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
-                        <div class="testi-information">
-                            <div class="testi-name">Emily Blunt</div>
-                            <span class="testi-title">Web Developer</span>
-                            <div class="ratting-img">
-                                <img src="assets/images/testimonial/ratting.png" alt="Testimonial">
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="sec-title2 mb-45 md-mb-30">
+                            <div class="sub-text">Leading solutions</div>
+                            <h2 class="title mb-23">
+                                <?php
+                                $split = explode(" ", @$setting_data->grievance_heading);?> {{preg_replace('/\W\w+\s*(\W*)$/', '$1', @$setting_data->grievance_heading)."\n"}}
+                                <span> {{$split[count($split)-1]}} </span>
+                            </h2>
+                            <div class="desc mb-0 text-justify">
+                                {{ ucfirst(@$setting_data->grievance_description) }}
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testi-wrap">
-                    <div class="item-content">
-                        <span><img src="assets/images/testimonial/quote.png" alt="Testimonial"></span>
-                        <p>Customer support is excellent and documentation good – novice can easily understand.
-                            Although I had a problem with the performance, thanks to the customer support, we have
-                            solved this problem as well.</p>
-                    </div>
-                    <div class="testi-content">
-                        <div class="image-wrap">
-                            <img src="assets/images/testimonial/avatar/3.jpg" alt="Testimonial">
-                        </div>
-                        <div class="testi-information">
-                            <div class="testi-name">Ansu Fati</div>
-                            <span class="testi-title">Marketing</span>
-                            <div class="ratting-img">
-                                <img src="assets/images/testimonial/ratting.png" alt="Testimonial">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testi-wrap">
-                    <div class="item-content">
-                        <span><img src="assets/images/testimonial/quote.png" alt="Testimonial"></span>
-                        <p>Customer support is excellent and documentation good – novice can easily understand.
-                            Although I had a problem with the performance, thanks to the customer support, we have
-                            solved this problem as well.</p>
-                    </div>
-                    <div class="testi-content">
-                        <div class="image-wrap">
-                            <img src="assets/images/testimonial/avatar/4.jpg" alt="Testimonial">
-                        </div>
-                        <div class="testi-information">
-                            <div class="testi-name">Angelina Jolie</div>
-                            <span class="testi-title">Graphic Designer</span>
-                            <div class="ratting-img">
-                                <img src="assets/images/testimonial/ratting.png" alt="Testimonial">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testi-wrap">
-                    <div class="item-content">
-                        <span><img src="assets/images/testimonial/quote.png" alt="Testimonial"></span>
-                        <p>Customer support is excellent and documentation good – novice can easily understand.
-                            Although I had a problem with the performance, thanks to the customer support, we have
-                            solved this problem as well.</p>
-                    </div>
-                    <div class="testi-content">
-                        <div class="image-wrap">
-                            <img src="assets/images/testimonial/avatar/1.jpg" alt="Testimonial">
-                        </div>
-                        <div class="testi-information">
-                            <div class="testi-name">David Warner</div>
-                            <span class="testi-title">Envato User</span>
-                            <div class="ratting-img">
-                                <img src="assets/images/testimonial/ratting.png" alt="Testimonial">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testi-wrap">
-                    <div class="item-content">
-                        <span><img src="assets/images/testimonial/quote.png" alt="Testimonial"></span>
-                        <p>Customer support is excellent and documentation good – novice can easily understand.
-                            Although I had a problem with the performance, thanks to the customer support, we have
-                            solved this problem as well.</p>
-                    </div>
-                    <div class="testi-content">
-                        <div class="image-wrap">
-                            <img src="assets/images/testimonial/avatar/2.jpg" alt="Testimonial">
-                        </div>
-                        <div class="testi-information">
-                            <div class="testi-name">Emily Blunt</div>
-                            <span class="testi-title">Web Developer</span>
-                            <div class="ratting-img">
-                                <img src="assets/images/testimonial/ratting.png" alt="Testimonial">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testi-wrap">
-                    <div class="item-content">
-                        <span><img src="assets/images/testimonial/quote.png" alt="Testimonial"></span>
-                        <p>Customer support is excellent and documentation good – novice can easily understand.
-                            Although I had a problem with the performance, thanks to the customer support, we have
-                            solved this problem as well.</p>
-                    </div>
-                    <div class="testi-content">
-                        <div class="image-wrap">
-                            <img src="assets/images/testimonial/avatar/3.jpg" alt="Testimonial">
-                        </div>
-                        <div class="testi-information">
-                            <div class="testi-name">Ansu Fati</div>
-                            <span class="testi-title">Marketing</span>
-                            <div class="ratting-img">
-                                <img src="assets/images/testimonial/ratting.png" alt="Testimonial">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testi-wrap">
-                    <div class="item-content">
-                        <span><img src="assets/images/testimonial/quote.png" alt="Testimonial"></span>
-                        <p>Customer support is excellent and documentation good – novice can easily understand.
-                            Although I had a problem with the performance, thanks to the customer support, we have
-                            solved this problem as well.</p>
-                    </div>
-                    <div class="testi-content">
-                        <div class="image-wrap">
-                            <img src="assets/images/testimonial/avatar/4.jpg" alt="Testimonial">
-                        </div>
-                        <div class="testi-information">
-                            <div class="testi-name">Angelina Jolie</div>
-                            <span class="testi-title">Graphic Designer</span>
-                            <div class="ratting-img">
-                                <img src="assets/images/testimonial/ratting.png" alt="Testimonial">
+                            <div class="btn-part mt-3">
+                                <a class="readon consultant discover" href="{{route('contact')}}">
+                                    Contact Us
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Testimonial Section End -->
+    @endif
 
-
-    <!-- Contact Section Start -->
-    <div class="rs-contact contact-style2 bg11 pt-95 pb-100 md-pt-65 md-pb-70">
-        <div class="container">
-            <div class="sec-title2 mb-55 md-mb-35 text-center text-lg-start">
-                <div class="sub-text">Contact</div>
-                <h2 class="title mb-0">Let us help your business <br> to move <span>forward.</span></h2>
-            </div>
-            <div class="row y-middle">
-                <div class="col-lg-6 md-mb-50">
-                    <div class="contact-img">
-                        <img src="assets/images/contact/computer.jpg" alt="Contact">
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="contact-wrap">
-                        <div id="form-messages"></div>
-                        <form id="contact-form" method="post" action="https://reactheme.com/products/html/bizup/mailer.php">
-                            <fieldset>
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6 col-sm-6 mb-30">
-                                        <input class="from-control" type="text" id="name" name="name"
-                                               placeholder="Name" required="">
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-6 mb-30">
-                                        <input class="from-control" type="text" id="email" name="email"
-                                               placeholder="E-Mail" required="">
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-6 mb-30">
-                                        <input class="from-control" type="text" id="phone" name="phone"
-                                               placeholder="Phone Number" required="">
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-6 mb-30">
-                                        <input class="from-control" type="text" id="Website" name="subject"
-                                               placeholder="Your Website" required="">
-                                    </div>
-
-                                    <div class="col-lg-12 mb-30">
-                                            <textarea class="from-control" id="message" name="message"
-                                                      placeholder="Your message Here" required=""></textarea>
-                                    </div>
-                                </div>
-                                <div class="btn-part">
-                                    <div class="form-group mb-0">
-                                        <input class="readon submit" type="submit" value="Submit Now">
-                                    </div>
-                                </div>
-                            </fieldset>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Contact Section End -->
 
 </div>
-<!-- Main content End -->
-
 @endsection
 @section('js')
     <script src="{{asset('assets/frontend/js/lightbox.min.js')}}"></script>

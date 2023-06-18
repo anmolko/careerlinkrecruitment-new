@@ -234,27 +234,23 @@ if (!function_exists('recruitment_process_icons')) {
     {
         $icon   = '';
         if($index == 0){
-            $icon = '01.svg';
+            $icon = 'letter.png';
         }else if($index == 1){
-            $icon = '02.svg';
+            $icon = 'proof.png';
         }else if($index == 2){
-            $icon = '03.svg';
+            $icon = 'approve.png';
         }else if($index == 3){
-            $icon = '04.svg';
+            $icon = 'contract.png';
         }else if($index == 4){
-            $icon = 'goal.svg';
+            $icon = 'checkup.png';
         }else if($index == 5){
-            $icon = 'save.svg';
+            $icon = 'data.png';
         }else if($index == 6){
-            $icon = 'target.svg';
+            $icon = 'stamp.png';
         }else if($index == 7){
-            $icon = 'user.svg';
-        }else if($index == 8){
-            $icon = 'briefcase.svg';
-        }else if($index == 9){
-            $icon = 'dashboard.svg';
+            $icon = 'passport.png';
         }else{
-            $icon = 'trophy.svg';
+            $icon = 'verify.png';
         }
 
         return $icon;

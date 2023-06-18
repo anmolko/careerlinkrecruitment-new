@@ -12,7 +12,7 @@
                     </div>
                     <div class="position-relative mb-3">
                         <label>Description</label>
-                        <textarea class="form-control" maxlength="880" id="ckeditor-classic" name="grievance_description" placeholder="Enter grievance description" rows="6" required>{{@$settings->grievance_description}}</textarea>
+                        <textarea class="form-control" maxlength="1100" id="ckeditor-classic" name="grievance_description" placeholder="Enter grievance description" rows="6" required>{{@$settings->grievance_description}}</textarea>
                         <div class="invalid-tooltip">
                             Please enter the website summary.
                         </div>

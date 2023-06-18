@@ -173,10 +173,10 @@ h6 {
   background: #fff;
 }
 .primary-color2 {
-  color: #e94d65 !important;
+  color: #efbc49 !important;
 }
 .primary-bd2 {
-  background: #e94d65 !important;
+  background: #efbc49 !important;
 }
 .secondary-bg2 {
   background: #043d72 !important;
@@ -234,120 +234,120 @@ ul {
   color: #ffffff;
 }
 .bg1 {
-  background: url(assets/images/bg/about-bg.png);
+  background: url(../images/bg/about-bg.png);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .bg2 {
-  background: url(assets/images/bg/ser-bg.png);
+  background: url(../images/bg/ser-bg.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
     background: #111317;
 }
 .bg3 {
-  background: url(assets/images/bg/portfolio-bg.png);
+  background: url(../images/bg/portfolio-bg.png);
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
 }
 .bg4 {
-  background-image: url(assets/images/bg/team-bg.jpg);
+  background-image: url(../images/bg/team-bg.jpg);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .bg5 {
-  background-image: url(assets/images/bg/choose-bg.jpg);
+  background-image: url(../images/bg/choose-bg.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
 }
 .bg6 {
-  background-image: url(assets/images/bg/testi-bg.png);
+  background-image: url(../images/bg/testi-bg.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
 }
 .bg7 {
   background-color: #EBEBEB;
-  background-image: url(assets/images/bg/blog-bg.jpg);
+  background-image: url(../images/bg/blog-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 .bg8 {
-  background-image: url(assets/images/bg/contact-bg.jpg);
+  background-image: url(../images/bg/contact-bg.jpg);
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: cover;
 }
 .bg9 {
-  background-image: url(assets/images/bg/contact-bg-3.jpg);
+  background-image: url(../images/bg/contact-bg-3.jpg);
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
 }
 .bg10 {
-  background-image: url(assets/images/bg/testi-bg2.jpg);
+  background-image: url(../images/bg/testi-bg2.jpg);
   background-color: #000000;
   background-repeat: no-repeat;
   background-position: top left;
   background-size: cover;
 }
 .bg11 {
-  background-image: url(assets/images/bg/contact-bg-2.jpg);
+  background-image: url(../images/bg/contact-bg-2.jpg);
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
 }
 .bg12 {
-  background-image: url(assets/images/bg/about-bg2.jpg);
+  background-image: url(../images/bg/about-bg2.jpg);
   background-repeat: no-repeat;
   background-position: top center;
 }
 .bg13 {
-  background-image: url(assets/images/bg/cta-bg.png);
+  background-image: url(../images/bg/cta-bg.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
 }
 .bg14 {
-  background-image: url(assets/images/bg/ser-bg3.jpg);
+  background-image: url(../images/bg/ser-bg3.jpg);
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
 }
 .bg15 {
-  background-image: url(assets/images/bg/choose-bg3.jpg);
+  background-image: url(../images/bg/choose-bg3.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 .bg16 {
-  background-image: url(assets/images/bg/testi-bg3.jpg);
+  background-image: url(../images/bg/testi-bg3.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 .bg17 {
-  background-image: url(assets/images/bg/team-bg3.jpg);
+  background-image: url(../images/bg/team-bg3.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 .bg18 {
   background-color: #F9F9F9;
-  background-image: url(assets/images/bg/con-bg4.jpg);
+  background-image: url(../images/bg/con-bg4.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
 }
 .bg19 {
-  background-image: url(assets/images/bg/blog-bg3.jpg);
+  background-image: url(../images/bg/blog-bg3.jpg);
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
 }
 .bg20 {
-  background-image: url(assets/images/bg/service-bg4.jpg);
+  background-image: url(assets/frontend/images/bg/service-bg4.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -908,7 +908,7 @@ blockquote cite:before {
   border-radius: 100%;
   display: inline-block;
   color: #ffffff;
-  background: #e94d65;
+  background: #efbc49;
 }
 .readon {
   color: #fff;
@@ -1118,7 +1118,7 @@ blockquote cite:before {
   position: relative;
   display: inline-flex;
   align-items: center;
-  background: #e94d65;
+  background: #efbc49;
   text-align: center;
   cursor: pointer;
   font-size: 16px;
@@ -1154,7 +1154,7 @@ blockquote cite:before {
 }
 .readon2:hover div:before,
 .readon2:hover div:after {
-  color: #e94d65;
+  color: #efbc49;
 }
 .readon2:hover div:before {
   right: -20px;
@@ -1164,11 +1164,11 @@ blockquote cite:before {
 }
 .readon2.hover-light:hover {
   background: #ffffff;
-  color: #e94d65 !important;
+  color: #efbc49 !important;
 }
 .readon2.hover-light:hover .btn-arrow:before,
 .readon2.hover-light:hover .btn-arrow:after {
-  color: #e94d65;
+  color: #efbc49;
 }
 .left-line-v {
   position: relative;
@@ -1181,7 +1181,7 @@ blockquote cite:before {
   top: 3px;
   width: 4px;
   height: 0;
-  background: #e94d65;
+  background: #efbc49;
   animation: start-draw 1.5s ease forwards;
 }
 .blog-button a {
@@ -1547,7 +1547,7 @@ blockquote cite:before {
   z-index: 1;
 }
 .sec-title4 .sub-title {
-  color: #e94d65;
+  color: #efbc49;
   text-transform: uppercase;
   font-size: 22px;
   font-weight: 500;
@@ -3148,7 +3148,7 @@ body .search-modal .close:hover {
   border-radius: 100%;
   display: inline-block;
   color: #ffffff;
-  background: #e94d65;
+  background: #efbc49;
 }
 .rs-banner.banner-style6 .bnr-play-btn .border-wrap i:before {
   font-size: 15px;
@@ -3164,7 +3164,7 @@ body .search-modal .close:hover {
   transform: translate(-50%, -50%);
   display: block;
   background: transparent;
-  border: 1px solid #e94d65;
+  border: 1px solid #efbc49;
   border-radius: 50%;
   animation: pulse-border 1300ms ease-out infinite;
   transition: all 0.3s ease;
@@ -4403,7 +4403,7 @@ body .search-modal .close:hover {
   color: #043d72;
 }
 .rs-services.style1 .service-wrap .service-grid .title a:hover {
-  color: #e94d65;
+  color: #efbc49;
 }
 .rs-services.style1 .service-wrap .service-grid .btn-wrap .readmore {
   font-weight: 600;
@@ -4434,11 +4434,11 @@ body .search-modal .close:hover {
   right: 22px;
 }
 .rs-services.style1 .service-wrap .service-grid .btn-wrap .readmore:hover {
-  color: #e94d65;
+  color: #efbc49;
 }
 .rs-services.style1 .service-wrap .service-grid .btn-wrap .readmore:hover div:before,
 .rs-services.style1 .service-wrap .service-grid .btn-wrap .readmore:hover div:after {
-  color: #e94d65;
+  color: #efbc49;
 }
 .rs-services.style1 .service-wrap .service-grid .btn-wrap .readmore:hover div:before {
   right: -20px;
@@ -5257,7 +5257,7 @@ body .search-modal .close:hover {
 }
 .rs-process.style1 .process-effects-layer .rs-addon-number .number-part .number-image {
   background: #fff;
-  padding: 50px;
+  padding: 40px;
   border-radius: 50%;
   display: block;
   margin: 0 auto;
@@ -5494,16 +5494,16 @@ body .search-modal .close:hover {
   box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.08);
 }
 .rs-pricing.style2 .pricing-wrap.active .head-part .price {
-  color: #e94d65;
+  color: #efbc49;
 }
 .rs-pricing.style2 .pricing-wrap.active .body-part .btn-part .price-btn {
-  border-color: #e94d65;
+  border-color: #efbc49;
   color: #ffffff;
-  background: #e94d65;
+  background: #efbc49;
 }
 .rs-pricing.style2 .pricing-wrap.active .body-part .btn-part .price-btn:hover {
   background: transparent;
-  color: #e94d65;
+  color: #efbc49;
 }
 /*------------------------------------
     20. Project Section CSS
@@ -6151,7 +6151,7 @@ body .search-modal .close:hover {
   filter: grayscale(1);
 }
 .rs-patter-section.style1 .logo-img {
-  padding: 0 50px;
+  padding: 0 20px;
 }
 /*------------------------------------
     22. Blog Section CSS
@@ -6416,7 +6416,7 @@ body .search-modal .close:hover {
   color: #222;
 }
 .rs-blog.style1 .blog-wrap .blog-contant .title a:hover {
-  color: #e94d65;
+  color: #efbc49;
 }
 .rs-blog.style1 .blog-wrap .blog-contant .blog-meta {
   border-top: 1px solid #eee;
@@ -6441,7 +6441,7 @@ body .search-modal .close:hover {
   color: #454545;
 }
 .rs-blog.style1 .blog-wrap .blog-contant .blog-meta ul li a:hover {
-  color: #e94d65;
+  color: #efbc49;
 }
 .rs-blog.style1 .blog-wrap .blog-contant .blog-meta ul li i {
   font-size: 17px;
@@ -6993,7 +6993,7 @@ body .search-modal .close:hover {
   margin-right: 5px;
 }
 .rs-testimonial.style1 .item .rating li i {
-  color: #e94d65;
+  color: #efbc49;
   font-size: 26px;
 }
 .rs-testimonial.style1 .item .rating li:last-child {
@@ -7091,7 +7091,7 @@ body .search-modal .close:hover {
   right: 15px;
 }
 .rs-partner .owl-carousel .owl-nav [class*="owl-"]:hover {
-  background-color: #e94d65;
+  background-color: #efbc49;
 }
 .rs-partner .owl-carousel:hover [class*="owl-"] {
   opacity: 1 !important;
@@ -7131,7 +7131,7 @@ body .search-modal .close:hover {
   height: 46.3px;
   line-height: 46.3px;
   display: block;
-  color: #e94d65;
+  color: #efbc49;
 }
 .rs-achievement.style1 .rs-counter .rs-counter-list .counter-icon i:before {
   font-size: 48px;
@@ -8529,7 +8529,7 @@ body .search-modal .close:hover {
   color: #e2e2e2;
 }
 .rs-footer .bg-wrap .footer-content .about-widget a:hover {
-  color: #e94d65;
+  color: #efbc49;
 }
 .rs-footer .bg-wrap .footer-content .about-widget .footer-desc {
   color: #e2e2e2;
@@ -8549,13 +8549,13 @@ body .search-modal .close:hover {
   line-height: 37px;
   border-radius: 100%;
   display: inline-block;
-  background: #e94d65;
+  background: #efbc49;
   font-size: 16px;
   color: #ffffff;
 }
 .rs-footer .bg-wrap .footer-content .about-widget .social-links li a:hover {
   background: #ffffff;
-  color: #e94d65;
+  color: #efbc49;
 }
 .rs-footer .bg-wrap .footer-content .about-widget .social-links li:last-child {
   margin: 0;
@@ -8575,7 +8575,7 @@ body .search-modal .close:hover {
   display: inline-block;
 }
 .rs-footer .bg-wrap .footer-content .widget ul li a:hover {
-  color: #e94d65;
+  color: #efbc49;
   margin-left: 5px;
 }
 .rs-footer .bg-wrap .footer-content .widget ul li:last-child {
@@ -8705,7 +8705,7 @@ body .search-modal .close:hover {
   text-decoration: none;
 }
 .home-6 a:hover {
-  color: #e94d65;
+  color: #efbc49;
 }
 .home-6 .desc {
   font-weight: 400;
@@ -8723,7 +8723,7 @@ body .search-modal .close:hover {
 .home-6 .full-width-header .rs-header.style2 .topbar-area,
 .home-6 .full-width-header .right_menu_togle .canvas-contact .social li a i:hover,
 .home-6 .full-width-header .rs-header .expand-btn-inner ul .humburger .nav-expander .bar span {
-  background: #e94d65;
+  background: #efbc49;
 }
 .home-6 .full-width-header .rs-header .topbar-area.style1 .toolbar-sl-share ul li a:hover {
   opacity: 0.85;
@@ -8732,13 +8732,13 @@ body .search-modal .close:hover {
 .home-6 .rs-project.style1 .project-item .project-content .project-inner .title a:hover,
 .home-6 .full-width-header .right_menu_togle .canvas-contact .address-area .address-list .info-icon i::before,
 .home-6 .full-width-header .rs-header.style2 .expand-btn-inner ul li > a:hover {
-  color: #e94d65;
+  color: #efbc49;
 }
 .home-6 .full-width-header .rs-header .menu-area .main-menu .rs-menu ul li a:hover,
 .home-6 .full-width-header .rs-header .menu-area .main-menu .rs-menu ul li.active a,
 .home-6 .full-width-header .rs-header .menu-area .main-menu .rs-menu ul li.current-menu-item > a,
 .home-6 .full-width-header .rs-header .menu-area .main-menu .rs-menu ul li.current-menu-item > a::before {
-  color: #e94d65 !important;
+  color: #efbc49 !important;
 }
 .pl-30 {
   padding-left: 30px;

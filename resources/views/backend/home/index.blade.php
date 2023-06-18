@@ -219,7 +219,7 @@
                                                             id="profile-foreground-img-file-input" onchange="loadFile(event)" name="welcome_image" {{ (@$homesettings->welcome_image !== null) ? '' :  'required' }}
                                                         class="profile-foreground-img-file-input" >
 
-                                                        <figcaption class="figure-caption">*use image minimum of 570 x 655px </figcaption>
+                                                        <figcaption class="figure-caption">*use image minimum of 800 x 760px </figcaption>
                                                         <div class="invalid-feedback" >
                                                                 Please select a image.
                                                             </div>

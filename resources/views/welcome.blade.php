@@ -5,553 +5,517 @@
 @endsection
 @section('content')
 
-<!-- Slider Start -->
-<div id="rs-slider" class="rs-slider slider3">
-    <div class="bend niceties">
-        <div id="nivoSlider" class="slides">
-            <img src="assets/images/slider/h2-sl1.webp" alt="" title="#slide-1" />
-            <img src="assets/images/slider/h2-sl2.webp" alt="" title="#slide-2" />
-        </div>
-        <!-- Slide 1 -->
-        <div id="slide-1" class="slider-direction">
-            <div class="content-part">
-                <div class="container">
-                    <div class="slider-des">
-                        <div class="sl-subtitle">Sustainable Finance</div>
-                        <h1 class="sl-title">We transform <br>your business </h1>
-                    </div>
-                    <div class="desc">Excepteur sint cupidatat non proident, sunt in coulpa qui official mollit
-                        anim id est laborum 20 years experience.</div>
-                    <div class="slider-bottom ">
-                        <a class="readon consultant slider" href="contact.html">Discover More</a>
-                    </div>
+    @if(count($sliders) > 0)
+        <div id="rs-slider" class="rs-slider slider3 rs-slider-style4 relative">
+            <div class="bend niceties">
+                <div id="nivoSlider" class="slides">
+                    @foreach(@$sliders as $index=>$slider)
+                        <img src="{{ asset('/images/sliders/'.$slider->image) }}" alt="" title="#slide-{{$index+1}}" />
+                    @endforeach
                 </div>
-            </div>
-        </div>
-        <!-- Slide 2 -->
-        <div id="slide-2" class="slider-direction">
-            <div class="content-part">
-                <div class="container">
-                    <div class="slider-des">
-                        <div class="sl-subtitle">Discover your business</div>
-                        <h1 class="sl-title">We Promote <br>Your Business</h1>
-                    </div>
-                    <div class="desc">Excepteur sint cupidatat non proident, sunt in coulpa qui official mollit
-                        anim id est laborum 20 years experience.</div>
-                    <div class="slider-bottom ">
-                        <a class="readon consultant" href="contact.html">Discover More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Slider End -->
-
-<!-- Premium Services Section Start -->
-    <div id="rs-services" class="rs-services style2 gray-bg pt-100 pb-100 md-pt-70 md-pb-70">
-        <div class="container">
-            <div class="sec-title2 d-flex align-items-center mb-60 md-mb-40">
-                <div class="first-half">
-                    <div class="sub-text">What We Offer</div>
-                    <h2 class="title mb-0 md-pb-20">The best solutions for your business - <span>what we do.</span>
-                    </h2>
-                </div>
-                <div class="last-half">
-                    <p class="desc mb-0 pl-20 md-pl-15">30+ years experience in business and finance consulting, IT
-                        solutions, and working with 5k+ clients over the world. Creation timelines for the digital
-                        consulting business theme 2021.</p>
-                </div>
-            </div>
-            <div class="rs-carousel owl-carousel" data-loop="true" data-items="3" data-margin="30"
-                 data-autoplay="true" data-hoverpause="true" data-autoplay-timeout="5000" data-smart-speed="800"
-                 data-dots="true" data-nav="false" data-nav-speed="false" data-md-device="3"
-                 data-md-device-nav="false" data-md-device-dots="true" data-center-mode="false" data-ipad-device2="2"
-                 data-ipad-device-nav2="false" data-ipad-device-dots2="true" data-ipad-device="2"
-                 data-ipad-device-nav="false" data-ipad-device-dots="true" data-mobile-device="1"
-                 data-mobile-device-nav="false" data-mobile-device-dots="true">
-                <div class="service-wrap">
-                    <div class="image-part">
-                        <img src="assets/images/services/style2/1.jpg" alt="">
-                    </div>
-                    <div class="content-part">
-                        <h3 class="title"><a href="business-planning.html">Business Planning</a></h3>
-                        <div class="desc">We denounce with indignation on and dislike men who are so begui led and
-                            demoralized data.</div>
-                    </div>
-                </div>
-                <div class="service-wrap">
-                    <div class="image-part">
-                        <img src="assets/images/services/style2/2.jpg" alt="">
-                    </div>
-                    <div class="content-part">
-                        <h3 class="title"><a href="tax-strategy.html">Tax Strategy</a></h3>
-                        <div class="desc">We denounce with indignation on and dislike men who are so begui led and
-                            demoralized data.</div>
-                    </div>
-                </div>
-                <div class="service-wrap">
-                    <div class="image-part">
-                        <img src="assets/images/services/style2/3.jpg" alt="">
-                    </div>
-                    <div class="content-part">
-                        <h3 class="title"><a href="financial-advices.html">Financial Advices</a></h3>
-                        <div class="desc">We denounce with indignation on and dislike men who are so begui led and
-                            demoralized data.</div>
-                    </div>
-                </div>
-                <div class="service-wrap">
-                    <div class="image-part">
-                        <img src="assets/images/services/style2/4.jpg" alt="">
-                    </div>
-                    <div class="content-part">
-                        <h3 class="title"><a href="insurance-strategy.html">Insurance Strategy</a></h3>
-                        <div class="desc">We denounce with indignation on and dislike men who are so begui led and
-                            demoralized data.</div>
-                    </div>
-                </div>
-                <div class="service-wrap">
-                    <div class="image-part">
-                        <img src="assets/images/services/style2/5.jpg" alt="">
-                    </div>
-                    <div class="content-part">
-                        <h3 class="title"><a href="start-ups.html">Start Ups</a></h3>
-                        <div class="desc">We denounce with indignation on and dislike men who are so begui led and
-                            demoralized data.</div>
-                    </div>
-                </div>
-                <div class="service-wrap">
-                    <div class="image-part">
-                        <img src="assets/images/services/style2/6.jpg" alt="">
-                    </div>
-                    <div class="content-part">
-                        <h3 class="title"><a href="manage-investment.html">Investment</a></h3>
-                        <div class="desc">We denounce with indignation on and dislike men who are so begui led and
-                            demoralized data.</div>
-                    </div>
-                </div>
-                <div class="service-wrap">
-                    <div class="image-part">
-                        <img src="assets/images/services/style2/1.jpg" alt="">
-                    </div>
-                    <div class="content-part">
-                        <h3 class="title"><a href="business-planning.html">Business Planning</a></h3>
-                        <div class="desc">We denounce with indignation on and dislike men who are so begui led and
-                            demoralized data.</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Premium Services Section End -->
-
-    <!-- About Section Start -->
-    <div class="rs-about style1 pt-100 pb-100 md-pt-70 md-pb-70">
-        <div class="container">
-            <div class="row y-middle">
-                <div class="col-lg-6 pr-70 md-pr-15 md-mb-50">
-                    <div class="sec-title2 mb-30">
-                        <div class="sub-text">Who We Are</div>
-                        <h2 class="title mb-23">We craft your business ideas and <span>plans.</span></h2>
-                        <p class="desc mb-0">Nor is there anyone who loves or pursues or desires to obtain pain of
-                            itself, because it is pain, but occasionally circumstances occur in which toil and pain
-                            can procure him some great pleasure. We did with righteous indignat ion and dislike men
-                            who are so begui led and demoralized data business theme 2021.</p>
-                    </div>
-                    <!-- Skillbar Section Start -->
-                    <div class="rs-skillbar style1">
-                        <div class="cl-skill-bar">
-                            <!-- Start Skill Bar -->
-                            <span class="skillbar-title">Business Consulting</span>
-                            <div class="skillbar" data-percent="92">
-                                <p class="skillbar-bar"></p>
-                                <span class="skill-bar-percent"></span>
-                            </div>
-                            <!-- Start Skill Bar -->
-                            <span class="skillbar-title">Financial Advices</span>
-                            <div class="skillbar" data-percent="90">
-                                <p class="skillbar-bar"></p>
-                                <span class="skill-bar-percent"></span>
+                @foreach(@$sliders as $index=>$slider)
+                    <div id="slide-{{$index+1}}" class="slider-direction">
+                        <div class="content-part text-center">
+                            <div class="container">
+                                <div class="slider-des">
+                                    <div class="sl-subtitle">{{@$slider->subheading ?? ''}}</div>
+                                    <h1 class="sl-title">{{@$slider->heading ?? ''}}</h1>
+                                </div>
+                                @if(@$slider->link)
+                                    <ul class="slider-bottom">
+                                        <li><a class="readon consultant orange-slide" href="{{@$slider->link ?? ''}}">{{@$slider->button ?? 'Start Exploring'}}</a></li>
+                                    </ul>
+                                @endif
                             </div>
                         </div>
-                        <div class="col-lg-12 mt-45">
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    @endif
+    @if($homepage_info->mission)
+        <div id="rs-services" class="rs-services style4 pt-95 pb-100 md-pt-65 md-pb-70">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 md-mb-30">
+                        <div class="services-item">
+                            <div class="services-icon">
+                                <img class="dance_hover" src="{{ asset('assets/frontend/images/services/mission.png') }}" alt="">
+                            </div>
+                            <div class="services-content">
+                                <h3 class="title"><a> Our Mission</a></h3>
+                                <p class="margin-0">
+                                    {{ ucfirst(@$homepage_info->mission) }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 md-mb-30">
+                        <div class="services-item">
+                            <div class="services-icon">
+                                <img class="dance_hover" src="{{asset('assets/frontend/images/services/vision.png')}}" alt="">
+                            </div>
+                            <div class="services-content">
+                                <h3 class="title"><a>Our Vision</a></h3>
+                                <p class="margin-0"> {{ ucfirst(@$homepage_info->vision) }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="services-item">
+                            <div class="services-icon">
+                                <img class="dance_hover" src="{{ asset('assets/frontend/images/services/benefits.png') }}" alt="">
+                            </div>
+                            <div class="services-content">
+                                <h3 class="title"><a>Our Value</a></h3>
+                                <p class="margin-0">{{ ucfirst(@$homepage_info->value) }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endif
+
+    @if(!empty($homepage_info->welcome_description))
+        <div class="rs-about style1 pt-10 pb-40 md-pt-70 md-pb-70">
+            <div class="container">
+                <div class="row y-middle">
+                    <div class="col-lg-6 pr-70 md-pr-15 md-mb-50">
+                        <div class="sec-title2 mb-30">
+                            <div class="sub-text">{{$homepage_info->welcome_subheading ?? ''}}</div>
+                            <h2 class="title mb-23">
+                                <?php
+                                $split = explode(" ", @$homepage_info->welcome_heading);?> {{preg_replace('/\W\w+\s*(\W*)$/', '$1', @$homepage_info->welcome_heading)."\n"}}
+                                <span> {{$split[count($split)-1]}} </span>
+                            </h2>
+                            <p class="desc mb-0 text-justify"> {{ ucfirst(@$homepage_info->welcome_description) }}</p>
+                        </div>
+                        @if(@$homepage_info->welcome_link)
                             <div class="btn-part">
-                                <a class="readon consultant discover" href="about.html">Discover More</a>
+                                <a class="readon consultant discover" href="{{@$homepage_info->welcome_link}}">
+                                    {{ @$homepage_info->welcome_button }}
+                                </a>
                             </div>
-                        </div>
+                        @endif
                     </div>
-                    <!-- Skillbar Section End -->
-                </div>
-                <div class="col-lg-6">
-                    <div class="about-img">
-                        <img src="assets/images/about/about-2.png" alt="images">
-                        <div class="working-experiance">
-                            <div class="experience-year">
-                                <div class="count-year plus"><span class="sub-text">25+</span></div>
-                                <h4 class="title mb-0">Years Experience</h4>
+                    <div class="col-lg-6">
+                        <div class="rs-videos choose-video">
+                            <div class="images-video">
+                                <img class="lazy" data-src="{{ @$homepage_info->welcome_image ? asset('/images/home/welcome/'.@$homepage_info->welcome_image):''}}" alt="images">
                             </div>
+                            @if(@$homepage_info->welcome_video_link)
+                                <div class="animate-border">
+                                    <a class="popup-border" href="{{ @$homepage_info->welcome_video_link }}">
+                                        <i class="fa fa-play"></i>
+                                    </a>
+                                </div>
+                            @endif
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Partner Section Start -->
-        <div class="rs-patter-section style1 pt-75">
-            <div class="container custom">
-                <div class="rs-carousel owl-carousel" data-loop="true" data-items="5" data-margin="30"
-                     data-autoplay="true" data-hoverpause="true" data-autoplay-timeout="5000" data-smart-speed="800"
-                     data-dots="false" data-nav="false" data-nav-speed="false" data-md-device="5"
-                     data-md-device-nav="false" data-md-device-dots="false" data-center-mode="false"
-                     data-ipad-device2="4" data-ipad-device-nav2="false" data-ipad-device-dots2="true"
-                     data-ipad-device="3" data-ipad-device-nav="false" data-ipad-device-dots="false"
-                     data-mobile-device="2" data-mobile-device-nav="false" data-mobile-device-dots="false">
-                    <div class="logo-img">
-                        <a href="#">
-                            <img class="hovers-logos rs-grid-img" src="assets/images/partner/main-home/1.png"
-                                 title="" alt="">
-                            <img class="mains-logos rs-grid-img " src="assets/images/partner/main-home/1.png"
-                                 title="" alt="">
-                        </a>
-                    </div>
-                    <div class="logo-img">
-                        <a href="#">
-                            <img class="hovers-logos rs-grid-img" src="assets/images/partner/main-home/2.png"
-                                 title="" alt="">
-                            <img class="mains-logos rs-grid-img " src="assets/images/partner/main-home/2.png"
-                                 title="" alt="">
-                        </a>
-                    </div>
-                    <div class="logo-img">
-                        <a href="#">
-                            <img class="hovers-logos rs-grid-img" src="assets/images/partner/main-home/3.png"
-                                 title="" alt="">
-                            <img class="mains-logos rs-grid-img " src="assets/images/partner/main-home/3.png"
-                                 title="" alt="">
-                        </a>
-                    </div>
-                    <div class="logo-img">
-                        <a href="#">
-                            <img class="hovers-logos rs-grid-img" src="assets/images/partner/main-home/4.png"
-                                 title="" alt="">
-                            <img class="mains-logos rs-grid-img " src="assets/images/partner/main-home/4.png"
-                                 title="" alt="">
-                        </a>
-                    </div>
-                    <div class="logo-img">
-                        <a href="#">
-                            <img class="hovers-logos rs-grid-img" src="assets/images/partner/main-home/5.png"
-                                 title="" alt="">
-                            <img class="mains-logos rs-grid-img " src="assets/images/partner/main-home/5.png"
-                                 title="" alt="">
-                        </a>
-                    </div>
-                    <div class="logo-img">
-                        <a href="#">
-                            <img class="hovers-logos rs-grid-img" src="assets/images/partner/main-home/6.png"
-                                 title="" alt="">
-                            <img class="mains-logos rs-grid-img " src="assets/images/partner/main-home/6.png"
-                                 title="" alt="">
-                        </a>
-                    </div>
-                    <div class="logo-img">
-                        <a href="#">
-                            <img class="hovers-logos rs-grid-img" src="assets/images/partner/main-home/7.png"
-                                 title="" alt="">
-                            <img class="mains-logos rs-grid-img " src="assets/images/partner/main-home/7.png"
-                                 title="" alt="">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Partner Section End -->
-    </div>
-    <!-- About Section Start -->
-
-    <!-- Services Section Start -->
-    <div class="rs-services home-style2 gray-bg pt-100 pb-100 md-pt-70 md-pb-70">
+    @endif
+    @if(count($latestServices) > 0)
+        <div id="rs-services" class="rs-services style2 gray-bg pt-100 pb-100 md-pt-70 md-pb-70">
         <div class="container">
             <div class="sec-title2 text-center md-left mb-40">
-                <div class="sub-text">Why Choose Us</div>
-                <h2 class="title">Get our services & drive more <br><span>customers.</span></h2>
+                <div class="sub-text">What We Offer</div>
+                <h2 class="title mb-0 md-pb-20">The best <span> services </span> for your business
+                </h2>
             </div>
-            <div class="row y-middle">
-                <div class="col-lg-4  md-mb-50 pr-30 md-pr-l5">
-                    <div class="services-item mb-45">
-                        <div class="services-icon">
-                            <img src="assets/images/services/style3/1.png" alt="Images">
+            <div class="row">
+                @foreach(@$latestServices as $index=>$service)
+                    <div class="col-md-4 mt-2 mr-14 service-wrap" style="width: 365.5px!important;">
+                        <div class="image-part">
+                            <img class="lazy" data-src="{{asset('/images/service/thumb/thumb_'.@$service->banner_image)}}" alt="">
                         </div>
-                        <div class="services-text">
-                            <h3 class="title"><a href="services-style1.html">Expert peoples</a></h3>
-                            <p class="services-txt">Quisque placerat vitae ut scelerise consulting.</p>
-                        </div>
-                    </div>
-                    <div class="services-item mb-45">
-                        <div class="services-icon">
-                            <img src="assets/images/services/style3/2.png" alt="Images">
-                        </div>
-                        <div class="services-text">
-                            <h3 class="title"><a href="services-style1.html">Big experience</a></h3>
-                            <p class="services-txt">Quisque placerat vitae ut scelerise consulting.</p>
+                        <div class="content-part">
+                            <h3 class="title">
+                                <a href="{{route('service.single',$service->slug)}}">
+                                    {{ucwords(@$service->title)}}
+                                </a>
+                            </h3>
+                            <div class="desc"> {{ elipsis( strip_tags($service->description) )}}</div>
                         </div>
                     </div>
-                    <div class="services-item">
-                        <div class="services-icon">
-                            <img src="assets/images/services/style3/3.png" alt="Images">
-                        </div>
-                        <div class="services-text">
-                            <h3 class="title"><a href="services-style1.html">Financial control</a></h3>
-                            <p class="services-txt">Quisque placerat vitae ut scelerise consulting.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4  md-mb-50">
-                    <div class="rs-videos choose-video">
-                        <div class="images-video">
-                            <img src="assets/images/choose/choose-2.png" alt="images">
-                        </div>
-                        <div class="animate-border">
-                            <a class="popup-border" href="https://www.youtube.com/watch?v=FMvA5fyZ338">
-                                <i class="fa fa-play"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 pl-40 md-pl-15">
-                    <div class="services-item mb-45">
-                        <div class="services-icon">
-                            <img src="assets/images/services/style3/4.png" alt="Images">
-                        </div>
-                        <div class="services-text">
-                            <h3 class="title"><a href="services-style1.html">Committed quality</a></h3>
-                            <p class="services-txt">Quisque placerat vitae ut scelerise consulting.</p>
-                        </div>
-                    </div>
-                    <div class="services-item mb-45">
-                        <div class="services-icon">
-                            <img src="assets/images/services/style3/5.png" alt="Images">
-                        </div>
-                        <div class="services-text">
-                            <h3 class="title"><a href="services-style1.html">Award winning</a></h3>
-                            <p class="services-txt">Quisque placerat vitae ut scelerise consulting.</p>
-                        </div>
-                    </div>
-                    <div class="services-item">
-                        <div class="services-icon">
-                            <img src="assets/images/services/style3/6.png" alt="Images">
-                        </div>
-                        <div class="services-text">
-                            <h3 class="title"><a href="services-style1.html">Insurance Policy</a></h3>
-                            <p class="services-txt">Quisque placerat vitae ut scelerise consulting.</p>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
-        <!-- Counter Section End -->
-        <div class="rs-counter style1">
-            <div class="container">
-                <div class="counter-border-top">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-6 col-sm-6 md-mb-30">
-                            <div class="counter-area">
-                                <div class="counter-list mb-20">
-                                    <div class="counter-icon">
-                                        <img src="assets/images/counter/icons/1.png" alt="Counter">
-                                    </div>
-                                    <div class="counter-number">
-                                        <span class="rs-count">582</span>
-                                    </div>
-                                </div>
-                                <div class="content-part">
-                                    <h5 class="title">Projects completed for our respected clients.</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6 md-mb-30">
-                            <div class="counter-area">
-                                <div class="counter-list mb-20">
-                                    <div class="counter-icon">
-                                        <img src="assets/images/counter/icons/2.png" alt="Counter">
-                                    </div>
-                                    <div class="counter-number">
-                                        <span class="rs-count">215</span>
-                                        <span class="prefix">+</span>
-                                    </div>
-                                </div>
-                                <div class="content-part">
-                                    <h5 class="title">Experienced people serving to clients.</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6 xs-mb-30">
-                            <div class="counter-area">
-                                <div class="counter-list mb-20">
-                                    <div class="counter-icon">
-                                        <img src="assets/images/counter/icons/3.png" alt="Counter">
-                                    </div>
-                                    <div class="counter-number">
-                                        <span class="rs-count">25</span>
-                                        <span class="prefix">+</span>
-                                    </div>
-                                </div>
-                                <div class="content-part">
-                                    <h5 class="title">Years experience in business & consulting.</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6">
-                            <div class="counter-area">
-                                <div class="counter-list mb-20">
-                                    <div class="counter-icon">
-                                        <img src="assets/images/counter/icons/4.png" alt="Counter">
-                                    </div>
-                                    <div class="counter-number">
-                                        <span class="rs-count">70</span>
-                                        <span class="prefix">+</span>
-                                    </div>
-                                </div>
-                                <div class="content-part">
-                                    <h5 class="title">Business & consulting awards won over world.</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Counter Section End -->
     </div>
-    <!-- Services Section End -->
+    @endif
 
-    <!-- Project Section Start -->
-    <div class="rs-project style7 pt-100 pb-100 md-pt-70 md-pb-70">
-        <div class="container custom">
-            <div class="row y-middle">
-                <div class="col-lg-6">
-                    <div class="sec-title2 mb-55 md-mb-30">
-                        <div class="sub-text">Recent Work</div>
-                        <h2 class="title mb-23">We blend business ideas to create something <span>awesome.</span>
-                        </h2>
-                    </div>
-                </div>
-                <div class="col-lg-6 pl-60 md-pl-15 mb-30">
-                    <p class="desc mb-0">30+ years experience in business and finance consulting, IT solutions, and
-                        working with 5k+ clients over the world. Creation timelines for the digital consulting
-                        business theme 2021.</p>
-                </div>
+    @if(!empty($homepage_info->core_main_heading))
+        <div class="rs-services style5 bg14 pt-95 pb-100 md-pt-65 md-pb-70">
+        <div class="container">
+            <div class="sec-title text-center mb-50">
+                <span class="sub-text small">{{ucfirst(@$homepage_info->core_main_description)}}</span>
+                <h2 class="title title3">
+                    {{ucfirst(@$homepage_info->core_main_heading)}}
+                </h2>
             </div>
-        </div>
-        <div class="container-fluid pl-30 pr-30">
-            <div class="rs-carousel owl-carousel" data-loop="true" data-items="4" data-margin="30"
-                 data-autoplay="false" data-hoverpause="true" data-autoplay-timeout="5000" data-smart-speed="800"
-                 data-dots="false" data-nav="false" data-nav-speed="false" data-md-device="4"
-                 data-md-device-nav="false" data-md-device-dots="true" data-center-mode="false" data-ipad-device2="2"
-                 data-ipad-device-nav2="false" data-ipad-device-dots2="true" data-ipad-device="2"
-                 data-ipad-device-nav="false" data-ipad-device-dots="true" data-mobile-device="1"
-                 data-mobile-device-nav="false" data-mobile-device-dots="true">
-
-                <div class="project-item">
-                    <div class="project-img">
-                        <img src="assets/images/project/style2/1.jpg" alt="images">
-                    </div>
-                    <div class="project-content">
-                        <div class="project-inner">
-                            <h3 class="title"><a href="project-single.html">Business planning</a></h3>
-                            <span class="category"><a href="project-single.html">Investment</a></span>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-25">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-wrap">
+                            <div class="front-part">
+                                <div class="front-content-part">
+                                    <div class="front-icon-part">
+                                        <div class="icon-part">
+                                            <img class="lazy" data-src="{{asset('assets/frontend/images/services/trust.png')}}" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="front-title-part">
+                                        <h3 class="title"><a>{{ucwords(@$homepage_info->core_heading1 ?? '')}}</a></h3>
+                                    </div>
+                                    <div class="front-desc-part">
+                                        <p>
+                                            {{ ucfirst(@$homepage_info->core_description1 ?? '') }}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="back-part">
+                                <div class="back-front-content">
+                                    <div class="back-title-part">
+                                        <h3 class="back-title">
+                                            <a>{{ucwords(@$homepage_info->core_heading1 ?? '')}}</a>
+                                        </h3>
+                                    </div>
+                                    <div class="back-desc-part">
+                                        <p class="back-desc">
+                                            {{ucfirst(@$homepage_info->core_description1 ?? '')}}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <a class="p-icon" href="project-single.html"><i class="flaticon-right-arrow"></i></a>
                     </div>
                 </div>
-                <div class="project-item">
-                    <div class="project-img">
-                        <img src="assets/images/project/style2/2.jpg" alt="images">
-                    </div>
-                    <div class="project-content">
-                        <div class="project-inner">
-                            <h3 class="title"><a href="project-single.html">Strength solutions</a></h3>
-                            <span class="category"><a href="project-single.html">Investment</a></span>
+                <div class="col-lg-4 col-md-6 mb-25">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-wrap">
+                            <div class="front-part">
+                                <div class="front-content-part">
+                                    <div class="front-icon-part">
+                                        <div class="icon-part">
+                                            <img class="lazy" data-src="{{asset('assets/frontend/images/services/ethics.png')}}" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="front-title-part">
+                                        <h3 class="title"><a>{{ucwords(@$homepage_info->core_heading2)}}</a></h3>
+                                    </div>
+                                    <div class="front-desc-part">
+                                        <p>
+{{--                                            #efbc49--}}
+                                            {{ucfirst(@$homepage_info->core_description2)}}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="back-part">
+                                <div class="back-front-content">
+                                    <div class="back-title-part">
+                                        <h3 class="back-title"><a>{{ucwords(@$homepage_info->core_heading2)}}</a></h3>
+                                    </div>
+                                    <div class="back-desc-part">
+                                        <p class="back-desc">
+                                            {{ucfirst(@$homepage_info->core_description2)}}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <a class="p-icon" href="project-single.html"><i class="flaticon-right-arrow"></i></a>
                     </div>
                 </div>
-                <div class="project-item">
-                    <div class="project-img">
-                        <img src="assets/images/project/style2/3.jpg" alt="images">
-                    </div>
-                    <div class="project-content">
-                        <div class="project-inner">
-                            <h3 class="title"><a href="project-single.html">Business analytics</a></h3>
-                            <span class="category"><a href="project-single.html">Business Strategy</a></span>
+                <div class="col-lg-4 col-md-6 mb-25">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-wrap">
+                            <div class="front-part">
+                                <div class="front-content-part">
+                                    <div class="front-icon-part">
+                                        <div class="icon-part">
+                                            <img class="lazy" data-src="{{asset('assets/frontend/images/services/quality.png')}}" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="front-title-part">
+                                        <h3 class="title"><a>{{ucwords(@$homepage_info->core_heading3)}}</a></h3>
+                                    </div>
+                                    <div class="front-desc-part">
+                                        <p>
+                                            {{ucfirst(@$homepage_info->core_description3)}}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="back-part">
+                                <div class="back-front-content">
+                                    <div class="back-title-part">
+                                        <h3 class="back-title"><a>{{ucwords(@$homepage_info->core_heading3)}}</a></h3>
+                                    </div>
+                                    <div class="back-desc-part">
+                                        <p class="back-desc"> {{ucfirst(@$homepage_info->core_description3)}}</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <a class="p-icon" href="project-single.html"><i class="flaticon-right-arrow"></i></a>
                     </div>
                 </div>
-                <div class="project-item">
-                    <div class="project-img">
-                        <img src="assets/images/project/style2/4.jpg" alt="images">
-                    </div>
-                    <div class="project-content">
-                        <div class="project-inner">
-                            <h3 class="title"><a href="project-single.html">Stock market analysis</a></h3>
-                            <span class="category"><a href="project-single.html">Business Strategy</a></span>
+                <div class="col-lg-4 col-md-6 md-mb-25">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-wrap">
+                            <div class="front-part">
+                                <div class="front-content-part">
+                                    <div class="front-icon-part">
+                                        <div class="icon-part">
+                                            <img class="lazy" data-src="{{asset('assets/frontend/images/services/integrity.png')}}" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="front-title-part">
+                                        <h3 class="title"><a>{{ucwords(@$homepage_info->core_heading4)}}</a></h3>
+                                    </div>
+                                    <div class="front-desc-part">
+                                        <p>
+                                            {{ucfirst(@$homepage_info->core_description4)}}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="back-part">
+                                <div class="back-front-content">
+                                    <div class="back-title-part">
+                                        <h3 class="back-title"><a>{{ucwords(@$homepage_info->core_heading4)}}</a></h3>
+                                    </div>
+                                    <div class="back-desc-part">
+                                        <p class="back-desc">
+                                            {{ucfirst(@$homepage_info->core_description4)}}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <a class="p-icon" href="project-single.html"><i class="flaticon-right-arrow"></i></a>
                     </div>
                 </div>
-                <div class="project-item">
-                    <div class="project-img">
-                        <img src="assets/images/project/style2/5.jpg" alt="images">
-                    </div>
-                    <div class="project-content">
-                        <div class="project-inner">
-                            <h3 class="title"><a href="project-single.html">Sales analysis</a></h3>
-                            <span class="category"><a href="project-single.html">Financial</a></span>
+                <div class="col-lg-4 col-md-6 sm-mb-25">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-wrap">
+                            <div class="front-part">
+                                <div class="front-content-part">
+                                    <div class="front-icon-part">
+                                        <div class="icon-part">
+                                            <img src="{{asset('assets/frontend/images/services/professional.png')}}" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="front-title-part">
+                                        <h3 class="title"><a>{{ucwords(@$homepage_info->core_heading5)}}</a></h3>
+                                    </div>
+                                    <div class="front-desc-part">
+                                        <p>
+                                            {{  elipsis(ucfirst(@$homepage_info->core_description5)) }}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="back-part">
+                                <div class="back-front-content">
+                                    <div class="back-title-part">
+                                        <h3 class="back-title"><a>{{ucwords(@$homepage_info->core_heading5)}}</a></h3>
+                                    </div>
+                                    <div class="back-desc-part">
+                                        <p class="back-desc">
+                                            {{ucfirst(@$homepage_info->core_description5)}}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <a class="p-icon" href="project-single.html"><i class="flaticon-right-arrow"></i></a>
                     </div>
                 </div>
-                <div class="project-item">
-                    <div class="project-img">
-                        <img src="assets/images/project/style2/6.jpg" alt="images">
-                    </div>
-                    <div class="project-content">
-                        <div class="project-inner">
-                            <h3 class="title"><a href="project-single.html">Stock investments</a></h3>
-                            <span class="category"><a href="project-single.html">Tax Consulting</a></span>
+                <div class="col-lg-4 col-md-6">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-wrap">
+                            <div class="front-part">
+                                <div class="front-content-part">
+                                    <div class="front-icon-part">
+                                        <div class="icon-part">
+                                            <img class="lazy" data-src="{{asset('assets/frontend/images/services/target.png')}}" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="front-title-part">
+                                        <h3 class="title"><a>{{ucwords(@$homepage_info->core_heading6)}}</a></h3>
+                                    </div>
+                                    <div class="front-desc-part">
+                                        <p>
+                                            {{  elipsis(ucfirst(@$homepage_info->core_description6)) }}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="back-part">
+                                <div class="back-front-content">
+                                    <div class="back-title-part">
+                                        <h3 class="back-title"><a>{{ucwords(@$homepage_info->core_heading6)}}</a></h3>
+                                    </div>
+                                    <div class="back-desc-part">
+                                        <p class="back-desc">
+                                            {{ucfirst(@$homepage_info->core_description6)}}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <a class="p-icon" href="project-single.html"><i class="flaticon-right-arrow"></i></a>
-                    </div>
-                </div>
-                <div class="project-item">
-                    <div class="project-img">
-                        <img src="assets/images/project/style2/7.jpg" alt="images">
-                    </div>
-                    <div class="project-content">
-                        <div class="project-inner">
-                            <h3 class="title"><a href="project-single.html">Advertising Technology</a></h3>
-                            <span class="category"><a href="project-single.html">Business Strategy</a></span>
-                        </div>
-                        <a class="p-icon" href="project-single.html"><i class="flaticon-right-arrow"></i></a>
-                    </div>
-                </div>
-                <div class="project-item">
-                    <div class="project-img">
-                        <img src="assets/images/project/style2/1.jpg" alt="images">
-                    </div>
-                    <div class="project-content">
-                        <div class="project-inner">
-                            <h3 class="title"><a href="project-single.html">Business planning</a></h3>
-                            <span class="category"><a href="project-single.html">Investment</a></span>
-                        </div>
-                        <a class="p-icon" href="project-single.html"><i class="flaticon-right-arrow"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Project Section End -->
+    @endif
 
+    <div class="rs-process style1 bg2 pt-100 pb-100 md-pt-70 md-pb-70">
+        <div class="container">
+            <div class="sec-title2 white-color text-center md-left mb-40">
+                <div class="sub-text">Working Process</div>
+                <h2 class="title">How we work for our valued <br><span>customers.</span></h2>
+            </div>
+        </div>
+        <div class="container custom2">
+            <div class="process-effects-layer">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 md-mb-30">
+                        <div class="rs-addon-number">
+                            <div class="number-part">
+                                <div class="number-image">
+                                    <img src="assets/images/process/style1/1.png" alt="Process">
+                                </div>
+                                <div class="number-text">
+                                    <div class="number-area"> <span class="number-prefix"> 1 </span></div>
+                                    <div class="number-title">
+                                        <h3 class="title"> Discovery</h3>
+                                    </div>
+                                    <div class="number-txt">
+                                        Quisque placerat vitae focus scelerisque. Fusce luctus odio ac nibh luctus,
+                                        in porttitor.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 md-mb-30">
+                        <div class="rs-addon-number">
+                            <div class="number-part">
+                                <div class="number-image">
+                                    <img src="assets/images/process/style1/2.png" alt="Process">
+                                </div>
+                                <div class="number-text">
+                                    <div class="number-area"> <span class="number-prefix"> 2 </span></div>
+                                    <div class="number-title">
+                                        <h3 class="title">Planning</h3>
+                                    </div>
+                                    <div class="number-txt">
+                                        Quisque placerat vitae focus scelerisque. Fusce luctus odio ac nibh luctus,
+                                        in porttitor.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 sm-mb-30">
+                        <div class="rs-addon-number">
+                            <div class="number-part">
+                                <div class="number-image">
+                                    <img src="assets/images/process/style1/3.png" alt="Process">
+                                </div>
+                                <div class="number-text">
+                                    <div class="number-area"> <span class="number-prefix"> 3 </span></div>
+                                    <div class="number-title">
+                                        <h3 class="title">Execute</h3>
+                                    </div>
+                                    <div class="number-txt">
+                                        Quisque placerat vitae focus scelerisque. Fusce luctus odio ac nibh luctus,
+                                        in porttitor.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="rs-addon-number">
+                            <div class="number-part">
+                                <div class="number-image">
+                                    <img src="assets/images/process/style1/4.png" alt="Process">
+                                </div>
+                                <div class="number-text">
+                                    <div class="number-area"> <span class="number-prefix"> 4 </span></div>
+                                    <div class="number-title">
+                                        <h3 class="title">Deliver</h3>
+                                    </div>
+                                    <div class="number-txt">
+                                        Quisque placerat vitae focus scelerisque. Fusce luctus odio ac nibh luctus,
+                                        in porttitor.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @if(count($latestJobs) > 1)
+        <div class="rs-project style7 pt-100 pb-100 md-pt-70 md-pb-70">
+            <div class="container custom">
+                <div class="row y-middle">
+                    <div class="col-lg-6">
+                        <div class="sec-title2 mb-55 md-mb-30">
+                            <div class="sub-text">Recent Jobs</div>
+                            <h2 class="title mb-23">We provide good availability of jobs for <span>you.</span>
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 text-right md-left">
+                        <div class="btn-part mb-90 md-mb-50">
+                            <a class="readon consultant discover" href="{{ route('job.list') }}">All Jobs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid pl-30 pr-30">
+                <div class="rs-carousel owl-carousel" data-loop="true" data-items="4" data-margin="30"
+                     data-autoplay="false" data-hoverpause="true" data-autoplay-timeout="5000" data-smart-speed="800"
+                     data-dots="false" data-nav="false" data-nav-speed="false" data-md-device="4"
+                     data-md-device-nav="false" data-md-device-dots="true" data-center-mode="false" data-ipad-device2="2"
+                     data-ipad-device-nav2="false" data-ipad-device-dots2="true" data-ipad-device="2"
+                     data-ipad-device-nav="false" data-ipad-device-dots="true" data-mobile-device="1"
+                     data-mobile-device-nav="false" data-mobile-device-dots="true">
+
+                    @foreach($latestJobs as $index=>$job)
+                        <div class="project-item">
+                            <div class="project-img">
+                                <img class="lazy" data-src="{{ ($job->image !== null) ? asset('/images/job/thumb/thumb_'.@$job->image): asset('assets/frontend/images/career.png')}}"  alt="">
+                            </div>
+                            <div class="project-content">
+                                <div class="project-inner">
+                                    <h3 class="title"><a href="{{route('job.single',@$job->slug)}}">{{ucfirst($job->name)}}</a></h3>
+                                    <span class="category"><a href="{{route('job.single',@$job->slug)}}">
+                                             @if(@$job->end_date >= $today)
+                                                {{date('M j, Y',strtotime(@$job->start_date))}} - {{date('M j, Y',strtotime(@$job->end_date))}}
+                                            @else
+                                                Expired
+                                            @endif
+                                        </a>
+                                    </span>
+                                </div>
+                                <a class="p-icon" href="{{route('job.single',@$job->slug)}}"><i class="flaticon-right-arrow"></i></a>
+                            </div>
+                        </div>
+                    @endforeach
+
+                </div>
+            </div>
+        </div>
+    @endif
     <!-- Process Section Start -->
     <div class="rs-process style1 bg2 pt-100 pb-100 md-pt-70 md-pb-70">
         <div class="container">

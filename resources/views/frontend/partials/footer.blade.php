@@ -5,75 +5,94 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-12 col-sm-12 md-mb-10">
-                    <div class="footer-logo mb-40">
-                        <a href="index.html"><img src="assets/images/logo.png" alt=""></a>
+                    <div class="footer-logo mb-10">
+                        <a href="/"><img src="{{ (@$setting_data->logo_white) ? asset('/images/settings/'.@$setting_data->logo_white): asset('/images/settings/'.@$setting_data->logo) }}" alt=""></a>
                     </div>
-                    <div class="textwidget white-color pb-40">
-                        <p>We denounce with righteous indig nation in and dislike men who are so beguiled and to
-                            demo realized by the, so blinded by desire, that they cannot foresee.</p>
+                    <div class="textwidget white-color pb-10">
+                         {!! ucfirst(@$setting_data->website_description ?? '') !!}
                     </div>
                     <ul class="footer-social md-mb-30">
-                        <li>
-                            <a href="#" target="_blank"><span><i class="fa fa-facebook"></i></span></a>
-                        </li>
-                        <li>
-                            <a href="# " target="_blank"><span><i class="fa fa-twitter"></i></span></a>
-                        </li>
+                        @if(@$setting_data->facebook)
+                            <li><a href="{{@$setting_data->facebook}}"><span class="fa-brands fa-facebook"></span></a></li>
+                        @endif
+                        @if(@$setting_data->youtube)
+                            <li><a href="{{@$setting_data->youtube}}"><span class="fa-brands fa-youtube"></span></a></li>
 
-                        <li>
-                            <a href="# " target="_blank"><span><i class="fa fa-pinterest-p"></i></span></a>
-                        </li>
-                        <li>
-                            <a href="# " target="_blank"><span><i class="fa fa-instagram"></i></span></a>
-                        </li>
+                        @endif
+                        @if(@$setting_data->instagram)
+                            <li><a href="{{@$setting_data->instagram}}"><span class="fa-brands fa-instagram"></span></a></li>
 
+                        @endif
+                        @if(@$setting_data->linkedin)
+                            <li><a href="{{@$setting_data->linkedin}}"><span class="fa-brands fa-linkedin"></span></a></li>
+                        @endif
+                        @if(!empty(@$setting_data->ticktock))
+                            <li><a href="{{@$setting_data->ticktock}}"><span class="fa-brands fa-tiktok"></span></a></li>
+                        @endif
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-12 col-sm-12 md-mb-10 pl-55 md-pl-15">
-                    <h3 class="footer-title">Our Services</h3>
+                    @if($footer_nav_data1!==null)
+                    <h3 class="footer-title">{{ $footer_nav_title1 ?? '' }}</h3>
                     <ul class="site-map">
-                        <li><a href="business-planning.html">Business planning</a></li>
-                        <li><a href="tax-strategy.html">Tax strategy</a></li>
-                        <li><a href="financial-advices.html">Financial advices</a></li>
-                        <li><a href="insurance-strategy.html">Insurance strategy</a></li>
-                        <li><a href="manage-investment.html">Manage investment</a></li>
+                        @foreach(@$footer_nav_data1 as $nav)
+                            @if(empty(@$nav->children[0]))
+                                <li>
+                                    <a href="{{get_menu_url(@$nav->type, @$nav)}}" target="{{@$nav->target ? '_blank':''}}">
+                                        {{ @$nav->name ?? @$nav->title ?? ''}}
+                                    </a>
+                                </li>
+                            @endif
+                        @endforeach
                     </ul>
+                    @endif
                 </div>
                 <div class="col-lg-3 col-md-12 col-sm-12 md-mb-10">
                     <h3 class="footer-title">Contact Info</h3>
                     <ul class="address-widget">
                         <li>
                             <i class="flaticon-location"></i>
-                            <div class="desc">1010 Avenue<br>
-                                New York, US.</div>
+                            <div class="desc">{{@$setting_data->address ?? ''}}</div>
                         </li>
                         <li>
                             <i class="flaticon-call"></i>
                             <div class="desc">
-                                <a href="#">(+880)155 69569 365</a>
+                                <a href="tel:{{@$setting_data->phone ?? $setting_data->mobile ?? ''}}">
+                                    {{@$setting_data->phone ?? $setting_data->mobile ?? ''}}
+                                </a>
                             </div>
                         </li>
                         <li>
                             <i class="flaticon-email"></i>
                             <div class="desc">
-                                <a href="mailto:support@reacthemes.com">support@reacthemes.com</a>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="flaticon-clock-1"></i>
-                            <div class="desc">
-                                Office Hours: 8AM - 11PM
+                                <a href="mailto:{{@$setting_data->email ?? ''}}"> {{@$setting_data->email ?? ''}}</a>
                             </div>
                         </li>
                     </ul>
                 </div>
-                <div class="col-lg-3 col-md-12 col-sm-12">
-                    <h3 class="footer-title">Newsletter</h3>
-                    <p class="widget-desc white-color">Stay up to update with our latest news and products.</p>
-                    <p>
-                        <input type="email" name="EMAIL" placeholder="Your email address" required="">
-                        <input type="submit" value="Subscribe Now">
-                    </p>
+                <div class="col-lg-3 col-md-12 col-sm-12 recent-posts">
+                    @if(count($footer_jobs)>0)
+                        <h3 class="footer-title">Newsletter</h3>
+                        @foreach(@$footer_jobs as $index=>$job)
+                            <div class="recent-post-widget {{$loop->first ? 'no-border':''}}">
+                                <div class="post-img">
+                                    <a href="{{route('job.single',@$job->slug)}}">
+                                        <img class="lazy" data-src="{{ ($job->image !== null) ? asset('/images/job/thumb/thumb_'.@$job->image): asset('assets/frontend/images/career.png')}}" alt="">
+                                    </a>
+                                </div>
+                                <div class="post-desc">
+                                    <a href="{{route('job.single',@$job->slug)}}" class="text-white">
+                                        {{ucfirst($job->name)}} </a>
+                                    <span class="date-post"> <i class="fa fa-calendar"></i>
+                                        @if(@$job->end_date >= $today)
+                                            {{date('M j, Y',strtotime(@$job->end_date))}}
+                                        @else
+                                            Expired
+                                        @endif </span>
+                                </div>
+                            </div>
+                        @endforeach
+                    @endif
                 </div>
             </div>
         </div>
@@ -81,17 +100,9 @@
     <div class="footer-bottom">
         <div class="container">
             <div class="row y-middle">
-                <div class="col-lg-6 md-mb-10 text-lg-end text-center order-last">
-                    <ul class="copy-right-menu">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="faqs.html">Faqs</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-6">
-                    <div class="copyright text-lg-start text-center ">
-                        <p>© 2021 Bizup - Consulting Company Inc. All Rights Reserved.</p>
+                <div class="col-lg-12">
+                    <div class="copyright text-center">
+                        <p>© 2023 {{$setting_data->website_name ?? 'Careerlink'}} - by <a href="https://www.canosoft.com.np/" target="_blank">Canosoft Techonology</a> All Rights Reserved.</p>
                     </div>
                 </div>
             </div>
@@ -114,9 +125,9 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="search-block clearfix">
-                <form>
+                <form method="get" id="searchform" action="{{route('searchJob')}}">
                     <div class="form-group">
-                        <input class="form-control" placeholder="Search Here..." type="text">
+                        <input id="s" name="s" class="form-control" placeholder="Search for jobs.." type="text" oninvalid="this.setCustomValidity('Type a keyword')" oninput="this.setCustomValidity('')" required>
                         <button type="submit" value="Search"><i class="flaticon-search"></i></button>
                     </div>
                 </form>
@@ -157,6 +168,7 @@
 <script src="{{ asset('assets/frontend/js/main.js') }}"></script>
 
 <script src="{{ asset('assets/common/lazyload.js') }}"></script>
-
+@yield('js')
+@stack('scripts')
 </body>
 </html>

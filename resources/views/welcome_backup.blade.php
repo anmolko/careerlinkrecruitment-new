@@ -267,7 +267,7 @@
                                     <h5 class="title">{{ucwords(@$homepage_info->core_heading6)}}</h5>
                                 </a>
                                 <p class="disc">
-                                    {{ucfirst(@$homepage_info->core_description6)}}
+                                    {{ ucfirst(@$homepage_info->core_description6) }}
                                 </p>
                             </div>
                         </div>

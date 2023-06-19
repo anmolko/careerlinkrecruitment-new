@@ -3,71 +3,73 @@
 
 @section('content')
 
-    <!-- start breadcrumb area -->
-    <div class="rts-breadcrumb-area breadcrumb-bg bg_image">
+    <!-- Breadcrumbs Start -->
+    <div class="rs-breadcrumbs img4">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 breadcrumb-1">
-                    <h1 class="title">Blog Search result</h1>
-                </div>
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                    <div class="bread-tag">
-                        <a href="/">Home</a>
-                        <span> / </span>
-                        <a href="{{route('blog.frontend')}}" style="padding-left: 5px">Blog</a>
-                        <span> / </span>
-                        <a href="#" class="active">Searched for : {{$query}}</a>
-                    </div>
-                </div>
+            <div class="breadcrumbs-inner">
+                <h1 class="page-title">Blog Search</h1>
+                <span class="sub-text">
+                    Search Result For : {{$query}}
+                </span>
             </div>
         </div>
     </div>
-    <!-- end breadcrumb area -->
+    <!-- Breadcrumbs End -->
 
-    <div class="rts-blog-list-area rts-section-gap">
-        <div class="container">
-            <div class="row g-5">
-                <!-- rts blo post area -->
-                <div class="col-xl-8 col-md-12 col-sm-12 col-12">
-                    <div class="row g-5">
+    <!-- Blog Section Start -->
+    <div class="rs-inner-blog pt-100 pb-100 md-pt-70 md-pb-70">
+        <div class="container custom">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 order-last">
+                    @include('frontend.pages.blogs.sidebar')
+                </div>
+                <div class="col-lg-8 pr-35 md-pr-15 md-mt-50">
+                    <div class="row">
                         @foreach($allPosts as $post)
-                            <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                <div class="blog-grid-inner">
-                                    <div class="blog-header">
-                                        <a class="thumbnail" href="{{route('blog.single',$post->slug)}}">
-                                            <img class="lazy" data-src="{{asset('/images/blog/'.@$post->image) }}" alt="">
-                                        </a>
-                                        <div class="blog-info">
-                                            <div class="user">
-                                                <i class="fal fa-tags"></i>
-                                                <span>{{ucfirst(@$post->category->name)}}</span>
-                                            </div>
-                                        </div>
-                                        <div class="date">
-                                            <h6 class="title">{{date('j',strtotime(@$latest->created_at))}}</h6>
-                                            <span>{{date('M',strtotime(@$latest->created_at))}}</span>
-                                        </div>
-                                    </div>
-                                    <div class="blog-body">
+                            <div class="col-lg-6 col-md-12 mb-50">
+                                <div class="blog-item">
+                                    <div class="blog-img">
                                         <a href="{{route('blog.single',$post->slug)}}">
-                                            <h5 class="title">
-                                                {{@$post->title}}
-                                            </h5>
-                                        </a>
+                                            <img class="lazy" data-src="{{asset('/images/blog/'.@$post->image) }}"  alt=""></a>
+                                        <ul class="post-categories">
+                                            <li><a href="{{route('blog.single',$post->slug)}}">{{ucfirst(@$post->category->name)}}</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="blog-content">
+                                        <h3 class="blog-title"><a href="{{route('blog.single',$post->slug)}}">
+                                                {{@$post->title}}</a></h3>
+                                        <div class="blog-meta">
+                                            <ul class="btm-cate">
+                                                <li>
+                                                    <div class="blog-date">
+                                                        <i class="fa fa-calendar-check-o"></i>{{date('d M Y', strtotime($post->created_at))}}
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="blog-desc">
+                                            {{ elipsis( strip_tags(@$post->description)) }}
+                                        </div>
+                                        <div class="blog-button">
+                                            <a class="blog-btn" href="{{route('blog.single',$post->slug)}}">Continue Reading</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         @endforeach
 
-                        {{ $allPosts->links('vendor.pagination.simple-bootstrap-4') }}
-
+                        <div class="col-lg-12">
+                            <div class="pagination-area">
+                                {{ $allPosts->links('vendor.pagination.default') }}
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="col-xl-4 col-md-12 col-sm-12 col-12">
-                    @include('frontend.pages.blogs.sidebar')
-                </div>
             </div>
         </div>
     </div>
+    <!-- Blog Section End -->
+    </div>
+    <!-- Main content End -->
 @endsection

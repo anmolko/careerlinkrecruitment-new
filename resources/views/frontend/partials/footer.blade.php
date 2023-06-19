@@ -75,7 +75,7 @@
                         <h3 class="footer-title">Newsletter</h3>
                         @foreach(@$footer_jobs as $index=>$job)
                             <div class="recent-post-widget {{$loop->first ? 'no-border':''}}">
-                                <div class="post-img">
+                                <div class="post-img" style="width: 80px;">
                                     <a href="{{route('job.single',@$job->slug)}}">
                                         <img class="lazy" data-src="{{ ($job->image !== null) ? asset('/images/job/thumb/thumb_'.@$job->image): asset('assets/frontend/images/career.png')}}" alt="">
                                     </a>

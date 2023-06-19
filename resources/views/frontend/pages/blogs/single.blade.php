@@ -17,83 +17,83 @@
     <meta property="og:image:size" content="300" />
 @endsection
 @section('content')
-    <div class="rts-breadcrumb-area breadcrumb-bg bg_image">
+
+    <!-- Breadcrumbs Start -->
+    <div class="rs-breadcrumbs img4">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 breadcrumb-1">
-                    <h1 class="title">Blog List</h1>
-                </div>
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                    <div class="bread-tag">
-                        <a href="/">Home</a>
-                        <span> / </span>
-                        <a href="{{route('blog.frontend')}}" style="padding-left: 5px">Blog</a>
-                        <span> / </span>
-                        <a class="active">{{ @$singleBlog->title }}</a>
-                    </div>
-                </div>
+            <div class="breadcrumbs-inner">
+                <h1 class="page-title">{{ @$singleBlog->title }}</h1>
             </div>
         </div>
     </div>
+    <!-- Breadcrumbs End -->
 
-    <div class="rts-blog-list-area rts-section-gap">
-        <div class="container">
-            <div class="row g-5">
-
-                <div class="col-xl-8 col-md-12 col-sm-12 col-12">
-                    <div class="blog-single-post-listing details mb--0">
-                        <div class="thumbnail">
-                            <img class="lazy" data-src="{{ asset('/images/blog/'.@$singleBlog->image)}}" alt="">
-                        </div>
-                        <div class="blog-listing-content">
-                            <div class="user-info">
-                                <!-- single infoe end -->
-                                <!-- single info -->
-                                <div class="single">
-                                    <i class="fa fa-clock"></i>
-                                    <span>{{date('j M, Y',strtotime(@$singleBlog->created_at))}}</span>
-                                </div>
-                                <!-- single infoe end -->
-                                <!-- single info -->
-                                <div class="single">
-                                    <i class="fa fa-tags"></i>
-                                    <span>{{@$singleBlog->category->name }}</span>
-                                </div>
-                                <!-- single infoe end -->
-                            </div>
-                            <h3 class="title">{{ ucwords(@$singleBlog->title) }}</h3>
-                            <div class="disc para-1 custom-description">
-                                {!! $singleBlog->description !!}
-                            </div>
-                            <div class="row  align-items-center">
-                                <div class="col-lg-6 col-md-12">
-                                    <!-- tags details -->
-                                    <div class="details-tag">
-                                    </div>
-                                    <!-- tags details End -->
-                                </div>
-                                <div class="col-lg-6 col-md-12">
-                                    <div class="details-share">
-                                        <h6>Share:</h6>
-
-                                            <a ><i class="fab fa-facebook-f" onclick='fbShare("{{route('blog.single',$singleBlog->slug)}}")'></i></a>
-
-                                            <a><i class="fab fa-twitter"  onclick='twitShare("{{route('blog.single',$singleBlog->slug)}}","{{ $singleBlog->title }}")'></i></a>
-
-                                            <a ><i class="fab fa-whatsapp" onclick='whatsappShare("{{route('blog.single',$singleBlog->slug)}}","{{ $singleBlog->title }}")'></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-4 col-md-12 col-sm-12 col-12 mt-5">
+    <!-- Blog Section Start -->
+    <div class="rs-inner-blog pt-100 pb-100 md-pt-70 md-pb-70">
+        <div class="container custom">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 order-last">
                     @include('frontend.pages.blogs.sidebar')
                 </div>
+                <div class="col-lg-8 pr-35 md-pr-15 md-mt-50">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="blog-details">
+                                <div class="bs-img mb-35">
+                                    <a href="#">
+                                        <img class="lazy" data-src="{{ asset('/images/blog/'.@$singleBlog->image)}}" alt=""></a>
+                                </div>
+                                <div class="blog-full">
+                                    <ul class="single-post-meta">
+                                        <li>
+                                            <span class="p-date"><i class="fa fa-calendar-check-o"></i>
+                                                {{date('j M, Y',strtotime(@$singleBlog->created_at))}}
+                                            </span>
+                                        </li>
+                                        <li class="Post-cate">
+                                            <div class="tag-line">
+                                                <i class="fa fa-book"></i>
+                                                <a href="{{route('blog.category',$singleBlog->category->slug)}}">{{@$singleBlog->category->name }} </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <h3>{{ ucwords(@$singleBlog->title) }}</h3>
+                                    <div class="custom-description">
+                                        {!! $singleBlog->description !!}
+                                    </div>
+                                    <div class="rs-counter style1 project-single bg23">
+                                        <div class="container">
+                                            <div class="row">
+                                                <h3 class="title title4" style="padding-bottom: 0px!important;font-size: 20px; margin-bottom: 4px;">
+                                                    Share
+                                                </h3>
+                                                <div class="col-lg-12">
+                                                    <ul class="footer-social md-mb-30">
+                                                        <li>
+                                                            <a href="#"><i class="fab fa-facebook" onclick='fbShare("{{route('blog.single',$singleBlog->slug)}}")'></i></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"><i class="fab fa-twitter"  onclick='twitShare("{{route('blog.single',$singleBlog->slug)}}","{{ $singleBlog->title }}")'></i></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"><i class="fab fa-whatsapp" onclick='whatsappShare("{{route('blog.single',$singleBlog->slug)}}","{{ $singleBlog->title }}")'></i></a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <!-- Blog Section End -->
+    </div>
+    <!-- Main content End -->
 @endsection
 
 @section('js')

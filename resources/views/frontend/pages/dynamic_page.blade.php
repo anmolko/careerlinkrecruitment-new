@@ -13,7 +13,7 @@
             object-fit: cover;
         }
     </style>
-    <link rel="stylesheet" href="{{asset('assets/frontend/css/plugins/lightbox.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/common/lightbox.css')}}">
 
 @endsection
 @section('content')
@@ -260,28 +260,27 @@
         @endif
 
         @if($value == "gallery_section")
-            <section class="portfolio-area style-4 pt--120 pb--120 pt_xs--60 pt_xs--60">
+            <div class="rs-project style3 pt-100 pb-100 md-pt-70 md-pb-70">
                 <div class="container">
                     @if(@$heading!==null)
-                        <div class="col-12">
-                            <div class="text-center title-service-three">
-                                <p class="pre-title">
-                                    {{@$subheading ?? ''}}
-                                </p>
-                                <h2 class="title">{{@$heading}}</h2>
-                            </div>
+                        <div class="sec-title3 text-center mb-65 md-mb-45">
+                            <span class="sub-title">  {{@$subheading ?? ''}}</span>
+                            <h2 class="title pb-25">
+                                {{@$heading}}
+                            </h2>
+                            <div class="heading-border-line"></div>
                         </div>
                     @endif
                     <div class="row">
-                        @if(count(@$gallery_elements) > 0)
+                        @if(count(@$singleAlbum->gallery) > 0)
                             <div id="gallery" style="padding: 0px 30px 0 30px;">
                                 <div id="image-gallery">
                                     <div class="row">
-                                        @foreach(@$gallery_elements as $gallery_element)
+                                        @foreach($singleAlbum->gallery as $gallery)
                                             <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
                                                 <div class="{{  $page_detail->slug =='legal-document' || $page_detail->slug =='legal-documents' ? "":"img-wrapper"   }}">
-                                                    <a href="{{asset('/images/section_elements/gallery/'.@$gallery_element->filename)}}">
-                                                        <img data-src="{{asset('/images/section_elements/gallery/'.@$gallery_element->filename)}}" class="img-responsive lazy"></a>
+                                                    <a href="{{asset('/images/albums/gallery/'.@$gallery->filename)}}">
+                                                        <img data-src="{{asset('/images/albums/gallery/'.@$gallery->filename)}}" class="img-responsive lazy"></a>
                                                     <div class="img-overlay">
                                                         <i class="fa fa-plus-circle" aria-hidden="true"></i>
                                                     </div>
@@ -294,7 +293,7 @@
                         @endif
                     </div>
                 </div>
-            </section>
+            </div>
         @endif
 
         @if($value == "slider_list")
@@ -345,7 +344,7 @@
 
 @endsection
 @section('js')
-    <script src="{{asset('assets/frontend/js/plugins/lightbox.min.js')}}"></script>
+    <script src="{{asset('assets/common/lightbox.min.js')}}"></script>
   <script>
       $( document ).ready(function() {
           let selector = $('.custom-description').find('table').length;

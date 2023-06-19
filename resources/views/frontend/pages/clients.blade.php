@@ -16,48 +16,40 @@
 @endsection
 @section('content')
 
-    <div class="rts-breadcrumb-area breadcrumb-bg bg_image">
+    <!-- Breadcrumbs Start -->
+    <div class="rs-breadcrumbs img6">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 breadcrumb-1">
-                    <h1 class="title">Our Clients</h1>
-                </div>
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                    <div class="bread-tag">
-                        <a href="/">Home</a>
-                        <span> / </span>
-                        <a href="#" class="active">Clients</a>
-                    </div>
-                </div>
+            <div class="breadcrumbs-inner">
+                <h1 class="page-title">Our Clients</h1>
             </div>
         </div>
     </div>
 
-    <section class="portfolio-area style-4 pt--120 pb--120 pt_xs--60 pt_xs--60">
+    <div class="rs-project style2 pt-100 pb-100 md-pt-70 md-pb-70">
         <div class="container">
-            <div class="row">
-                @if(count(@$clients) > 0)
-                    <div id="gallery" style="padding: 0px 30px 0 30px;">
-                        <div id="image-gallery">
-                            <div class="row">
-                                @foreach($clients as $client)
-                                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
-                                        <div class="img-wrapper">
-                                            <a href="{{asset('/images/clients/'.@$client->image)}}">
-                                                <img data-src="{{asset('/images/clients/'.@$client->image)}}" class="img-responsive lazy"></a>
-                                            <div class="img-overlay">
-                                                <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                @endforeach
-                            </div><!-- End row -->
-                        </div><!-- End image gallery -->
-                    </div><!-- End container -->
-                @endif
+            <div class="gridFilter mb-50 md-mb-30 text-center">
+                <button class="active" data-filter="*">All</button>
+                @foreach($country as $index=>$cn)
+                    <button data-filter=".{{$index}}">{{ ucfirst($cn) }}</button>
+                @endforeach
+
+            </div>
+            <div class="row grid rs-project">
+
+                @foreach($clients as $client)
+                    <div class="col-lg-4 col-md-6 mb-30 grid-item {{$client->country}}">
+                        <div class="box-inner">
+                            <div class="box-item">
+                                <div class="icon-box">
+                                    <a href="#"><img class="dance_hover" src="{{asset('/images/clients/'.@$client->image)}}" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
             </div>
         </div>
-    </section>
+    </div>
 @endsection
 @section('js')
     <script src="{{asset('assets/frontend/js/plugins/lightbox.min.js')}}"></script>

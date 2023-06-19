@@ -368,7 +368,7 @@ class FrontController extends Controller
 
             Session::flash('success','Your message was submitted successfully');
 
-            return redirect()->back();
+        return response()->json(route('contact'));
     }
 
     public function careerSingle($slug){

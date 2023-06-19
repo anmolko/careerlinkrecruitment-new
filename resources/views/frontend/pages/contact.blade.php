@@ -4,113 +4,118 @@
 @section('css')
 @endsection
 @section('content')
-    <div class="rts-breadcrumb-area breadcrumb-bg bg_image">
+    <!-- Breadcrumbs Start -->
+    <div class="rs-breadcrumbs img9">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 breadcrumb-1">
-                    <h1 class="title">Contact</h1>
-                </div>
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                    <div class="bread-tag">
-                        <a href="/">Home</a>
-                        <span> / </span>
-                        <a href="#" class="active">Contact us</a>
-                    </div>
-                </div>
+            <div class="breadcrumbs-inner">
+                <h1 class="page-title">Contact us</h1>
             </div>
         </div>
     </div>
 
-    <div class="rts-map-area bg-light-white rts-section-gap">
-        <div class="container-fluid">
-            <div class="row align-items-center">
-                <div class="col-lg-12">
-                    <!-- map area left -->
-                    <div class="mapdetails-inner-one inner">
-                        <div class="left-area single-wized">
-                            <h5 class="title">Get in touch</h5>
-                            <div class="details">
-                                <p>Work and general inquiries</p>
-                                <a class="number" href="#">{{@$setting_data->phone}}</a>
-
-                                <p class="time-header">
-                                    Contact number:
-                                </p>
-                                <p class="time">
-                                    {{@$setting_data->mobile}}
-                                </p>
-                            </div>
-                        </div>
-                        <div class="right-area single-wized">
-                            <h5 class="title">Post Address</h5>
-                            <div class="details">
-                                <p>Office</p>
-                                <a href="#">{{@$setting_data->address}}</a>
-
-                                <p class="headoffice">
-                                    Email
-                                </p>
-                                <p class="office">{{@$setting_data->email}}</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- map area right -->
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <div class="rts-contact-form-area">
+    <div class="rs-contact contact-style2 bg9 pt-100 pb-100 md-pt-70 md-pb-70">
         <div class="container">
             <div class="row">
-                <div class="col-12">
-                    <div class="rts-contact-fluid rts-section-gap">
-                        <div class="rts-title-area contact-fluid text-center mb--50">
-                            <p class="pre-title">
-                                Get In Touch
-                            </p>
-                            <h2 class="title">Need Help? Let’s Get in Touch</h2>
-                        </div>
-                        <div class="form-wrapper">
-                            <div id="form-messages"></div>
-                            <form id="contact-forms" name="contact" class="" action="{{route('contact.store')}}" method="post">
-                                @csrf
-                                <div class="name-email">
-                                    <input type="text" name="name" placeholder="Your Name" required>
-                                    <input type="email" name="email" placeholder="Email Address" required>
-                                </div>
-                                <div class="name-email">
-                                    <input type="text" name="phone" placeholder="Your phone number" required>
-                                    <input type="text" name="subject" placeholder="Your Subject">
-                                </div>
-                                <textarea placeholder="Type Your Message" name="message"></textarea>
-                                <button type="submit" class="rts-btn btn-primary">Send Message</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    @if(@$setting_data->google_map)
-
-        <div class="rts-contact-map-area">
-            <div class="contaciner-fluid">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="contact-map-area-fluid">
+                <div class="col-lg-6 pr-40 md-pr-15 md-mb-50">
+                    @if(@$setting_data->google_map)
+                        <div class="contact-map">
                             <iframe class="contact-map" src="{{@$setting_data->google_map}}"
                                     style="border:0;" allowfullscreen="" loading="lazy"
                                     referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
+                    @endif
+                </div>
+                <div class="col-lg-6">
+                    <div class="sec-title mb-45 md-mb-25">
+                        <h2 class="title pb-20">
+                            Let us help your business to move <span>forward.</span>
+                        </h2>
+                    </div>
+                    <div class="contact-wrap">
+                        <div id="form-messages"></div>
+                        <form id="contact-form" name="contact" class="" action="{{route('contact.store')}}" method="post">
+                           @csrf
+                            <fieldset>
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 mb-30">
+                                        <input class="from-control" type="text" id="name" name="name"
+                                               placeholder="Name" required="">
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 mb-30">
+                                        <input class="from-control" type="text" id="email" name="email"
+                                               placeholder="E-Mail" required="">
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 mb-30">
+                                        <input class="from-control" type="text" id="phone" name="phone"
+                                               placeholder="Phone Number" required="">
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 mb-30">
+                                        <input class="from-control" type="text" id="Website" name="subject"
+                                               placeholder="Your Website" required="">
+                                    </div>
+
+                                    <div class="col-lg-12 mb-35">
+                                            <textarea class="from-control" id="message" name="message"
+                                                      placeholder="Your message Here" required=""></textarea>
+                                    </div>
+                                </div>
+                                <div class="btn-part">
+                                    <div class="form-group mb-0">
+                                        <input class="readon submit" type="submit" value="Submit Now">
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
-    @endif
-
+        <!-- Contact Icon Section Start -->
+        <div class="rs-contact main-home">
+            <div class="container">
+                <div class="contact-icons-style box-address pt-100 md-pt-70">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-6 md-mb-30">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <img src="{{ asset('assets/frontend/images/contact/icons/1.png') }}" alt="images">
+                                </div>
+                                <div class="content-text">
+                                    <h2 class="title"><a>Office</a></h2>
+                                    <p class="services-txt">{{@$setting_data->address}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6 xs-mb-30">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <img src="{{ asset('assets/frontend/images/contact/icons/3.png') }}" alt="images">
+                                </div>
+                                <div class="content-text">
+                                    <h2 class="title"><a href="mailto:{{@$setting_data->email}}">Email us</a></h2>
+                                    <a href="mailto:{{@$setting_data->email}}">{{@$setting_data->email}}</a><br>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <img src="{{ asset('assets/frontend/images/contact/icons/4.png') }}" alt="images">
+                                </div>
+                                <div class="content-text">
+                                    <h2 class="title"><a href="tel:{{@$setting_data->phone ?? $setting_data->mobile}}">Call us</a></h2>
+                                    <a href="tel:{{@$setting_data->phone}}">{{@$setting_data->phone}}</a><br>
+                                    <a href="tel:{{@$setting_data->mobile}}">{{@$setting_data->mobile}}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Contact Icon Section End -->
+    </div>
 @endsection
 @section('js')
     <!-- For Contact Form -->

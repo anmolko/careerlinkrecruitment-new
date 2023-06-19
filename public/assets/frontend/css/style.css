@@ -7917,7 +7917,7 @@ body .search-modal .close:hover {
   color: #C5C2C2;
 }
 .rs-contact.main-home .contact-icons-style.box-address .contact-item {
-  background-image: url(assets/images/contact/box-bg2.png);
+  background-image: url(../images/contact/box-bg2.png);
 }
 .rs-contact.main-home .contact-icons-style.box-address .contact-item .content-text .title a {
   color: #0a0a0a;
@@ -7935,7 +7935,7 @@ body .search-modal .close:hover {
   color: #444444;
 }
 .rs-contact.main-home .contact-icons-style.box-address.box-style2 .contact-item {
-  background-image: url(assets/images/contact/box-bg3.png);
+  background-image: url(../images/contact/box-bg3.png);
 }
 .rs-contact.main-home.office-modify1 .contact-map iframe {
   height: 761px;
@@ -8012,7 +8012,7 @@ body .search-modal .close:hover {
   font-weight: 500;
 }
 .rs-contact.main-home.office-modify1 .office-buliding {
-  background: url(assets/images/contact/office.jpg);
+  background: url(../images/contact/office.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -8181,7 +8181,7 @@ body .search-modal .close:hover {
   opacity: .9;
 }
 .rs-contact.home3-contact-style .icon-box-wraper {
-  background-image: url(assets/images/contact/con-home3.jpg);
+  background-image: url(../images/contact/con-home3.jpg);
   background-position: top left;
   background-size: cover;
   padding: 70px 50px 99px 50px;
@@ -8449,7 +8449,7 @@ body .search-modal .close:hover {
   color: #4caf50;
 }
 .rs-footer .bg-wrap {
-  background: url(assets/images/footer-bg.png);
+  background: url(../images/footer-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 70px 0 0 0;

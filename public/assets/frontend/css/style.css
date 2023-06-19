@@ -6546,7 +6546,7 @@ body .search-modal .close:hover {
   color: #454545;
   margin-bottom: 20px;
 }
-.rs-inner-blog .widget-area .widget-title .title {
+.widget-area .widget-title .title {
   font-size: 20px;
   line-height: 26px;
   font-weight: 600;
@@ -6556,7 +6556,7 @@ body .search-modal .close:hover {
   padding-bottom: 12px;
   margin: 0;
 }
-.rs-inner-blog .widget-area .widget-title .title:after {
+.widget-area .widget-title .title:after {
   content: "";
   position: absolute;
   border: 0;
@@ -6568,15 +6568,15 @@ body .search-modal .close:hover {
   bottom: 0;
   left: 0;
 }
-.rs-inner-blog .widget-area .search-widget {
+.widget-area .search-widget  {
   background: #fff;
   padding: 40px 30px 40px;
   box-shadow: 0 6px 25px rgba(0, 0, 0, 0.07);
 }
-.rs-inner-blog .widget-area .search-widget .search-wrap {
+ .widget-area .search-widget .search-wrap {
   position: relative;
 }
-.rs-inner-blog .widget-area .search-widget .search-wrap [type=search] {
+.widget-area .search-widget .search-wrap [type=search] {
   color: #444444;
   padding: 12px 17px;
   width: 100%;
@@ -6585,7 +6585,7 @@ body .search-modal .close:hover {
   position: relative;
   background: #F6F7F9;
 }
-.rs-inner-blog .widget-area .search-widget .search-wrap button {
+ .widget-area .search-widget .search-wrap button {
   background: transparent;
   border: medium none;
   color: #454545;
@@ -6598,14 +6598,14 @@ body .search-modal .close:hover {
   font-size: 20px;
   border-radius: 0 5px 5px;
 }
-.rs-inner-blog .widget-area .search-widget .search-wrap button i:before {
+.widget-area .search-widget .search-wrap button i:before {
   font-weight: 600;
   font-size: 18px;
 }
-.rs-inner-blog .widget-area .search-widget .search-wrap button:hover {
+.widget-area .search-widget .search-wrap button:hover {
   color: #efbc49;
 }
-.rs-inner-blog .widget-area .recent-posts {
+.widget-area .recent-posts {
   background: #fff;
   padding: 40px 30px;
   box-shadow: 0 6px 25px rgba(0, 0, 0, 0.07);
@@ -6617,7 +6617,7 @@ body .search-modal .close:hover {
   overflow: hidden;
 }
 .recent-posts .recent-post-widget .post-img {
-  width: 100px;
+  width: 70px;
   float: left;
   padding-right: 15px;
 }

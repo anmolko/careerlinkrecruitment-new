@@ -33,7 +33,7 @@
                 <div class="post-desc">
                     <a href="{{route('blog.single',@$latest->slug)}}">
                         {{ucwords(@$latest->title)}} </a>
-                    <span class="date-post"> <i class="fa fa-calendar"></i> >{{date('j M, Y',strtotime(@$latest->created_at))}} </span>
+                    <span class="date-post"> <i class="fa fa-calendar"></i>{{date('j M, Y',strtotime(@$latest->created_at))}} </span>
                 </div>
             </div>
         @endforeach

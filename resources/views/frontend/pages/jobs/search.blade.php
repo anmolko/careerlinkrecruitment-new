@@ -14,62 +14,58 @@
 @endsection
 @section('content')
 
-    <!-- start breadcrumb area -->
-    <div class="rts-breadcrumb-area breadcrumb-bg bg_image">
+    <!-- Breadcrumbs Start -->
+    <div class="rs-breadcrumbs img4">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 breadcrumb-1">
-                    <h1 class="title">Job Search</h1>
+            <div class="breadcrumbs-inner">
+                <h1 class="page-title">Jobs Search</h1>
+                <span class="sub-text">
+                    Search Result For : {{$title}}
+                </span>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumbs End -->
+
+    <div class="rs-project style2 pt-100 pb-100 md-pt-70 md-pb-70">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 order-last">
+                    @include('frontend.pages.jobs.sidebar')
                 </div>
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                    <div class="bread-tag">
-                        <a href="/">Home</a>
-                        <span> / </span>
-                        <a href="{{route('job.list')}}" style="padding-left: 5px">Jobs</a>
-                        <span> / </span>
-                        <a href="#" class="active">Searched for: {{$title}}</a>
+                <div class="col-lg-8 pr-35 md-pr-15 md-mt-50">
+                    <div class="row">
+                        @foreach($alljobs as $job)
+                            <div class="col-lg-6 col-md-6 mb-30">
+                                <div class="project-item">
+                                    <div class="project-img">
+                                        <img class="lazy" data-src="{{ ($job->image !== null) ? asset('/images/job/thumb/thumb_'.@$job->image): asset('assets/frontend/images/space.png')}}" alt="">
+                                    </div>
+                                    <div class="project-content">
+                                        <a class="p-icon" href="{{route('job.single',@$job->slug)}}"><i class="custom-icon"></i></a>
+                                        <div class="project-inner">
+                                            <span class="category"><a>
+                                                      @if(@$job->end_date >= $today)
+                                                        {{date('M j, Y',strtotime(@$job->start_date))}} - {{date('M j, Y',strtotime(@$job->end_date))}}
+                                                    @else
+                                                        Expired
+                                                    @endif
+                                                </a>
+                                            </span>
+                                            <h3 class="title"><a href="{{route('job.single',@$job->slug)}}">{{ucfirst($job->name)}}</a></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+                        <div class="col-lg-12">
+                            <div class="pagination-area">
+                                {{ $alljobs->links('vendor.pagination.default') }}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <section class="case-study-area case-bg2 nav-style-1 pt--115 pt_md--60 pt_xs--60 pb--115 pb_md--60 pb_xs--60">
-        <div class="container">
-            <div class="row g-5">
-                <!-- rts blo post area -->
-                <div class="col-xl-8 col-md-12 col-sm-12 col-12">
-                    <div class="row">
-                        @foreach($alljobs as $job)
-                            <div class="col-lg-6 col-md-6 col-sm-12">
-                                <div class="item">
-                                    <div class="cases-wrapper2">
-                                        <div class="item-image">
-                                            <img src="{{ ($job->image !== null) ? asset('/images/job/thumb/thumb_'.@$job->image): asset('assets/frontend/images/space.png')}}" alt="Image">
-                                        </div>
-                                        <div class="item-content">
-                                            <h6>
-                                                @if(@$job->end_date >= $today)
-                                                    {{date('M j, Y',strtotime(@$job->start_date))}} - {{date('M j, Y',strtotime(@$job->end_date))}}
-                                                @else
-                                                    Expired
-                                                @endif
-                                            </h6>
-                                            <h5 class="fs-20 text-heding3">{{ucfirst($job->name)}}</h5>
-                                        </div>
-                                        <a href="{{route('job.single',@$job->slug)}}" class="read-more">View details <span class="f-right"><i class="fa fa-long-arrow-right"></i></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        @endforeach
-                        {{ $alljobs->links('vendor.pagination.simple-bootstrap-4') }}
-                    </div>
-                </div>
-
-                <div class="col-xl-4 col-md-12 col-sm-12 col-12">
-                    @include('frontend.pages.jobs.sidebar')
-                </div>
-            </div>
-        </div>
-    </section>
 @endsection

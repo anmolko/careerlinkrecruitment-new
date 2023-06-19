@@ -9128,6 +9128,9 @@ body .search-modal .close:hover {
     background: #1b1b1c;
 }
 
+.custom-description{
+    text-align: justify;
+}
 .custom-description ul{
     list-style: outside none none;
     margin: 0;

@@ -11,52 +11,53 @@
 @endsection
 @section('content')
 
-    <div class="rts-breadcrumb-area breadcrumb-bg bg_image">
+    <!-- Breadcrumbs Start -->
+    <div class="rs-breadcrumbs img4">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 breadcrumb-1">
-                    <h1 class="title">Service List</h1>
-                </div>
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                    <div class="bread-tag">
-                        <a href="/">Home</a>
-                        <span> / </span>
-                        <a href="#" class="active">Our Service</a>
-                    </div>
-                </div>
+            <div class="breadcrumbs-inner">
+                <h1 class="page-title">Our Services</h1>
             </div>
         </div>
     </div>
-
-    <div class="rts-service-area rts-section-gapTop pb--200 service-two-bg bg_image">
-        <div class="container">
-            <div class="row g-5 service padding-controler">
-                <div class="col-xl-8 col-md-12 col-sm-12 col-12">
-                    <div class="row g-5">
+    <!-- Breadcrumbs End -->
+    <div class="rs-services style2  pt-100 pb-100 md-pt-70 md-pb-70">
+        <div class="container custom">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 order-last">
+                    @include('frontend.pages.services.sidebar')
+                </div>
+                <div class="col-lg-8 pr-35 md-pr-15 md-mt-50">
+                    <div class="row">
                         @foreach(@$allservices as $index=>$service)
-                            <div class="col-xl-6 col-md-6 col-sm-12 col-12 pb--140 pb_md--100">
-                                <div class="service-two-inner">
-                                    <a href="{{route('service.single',$service->slug)}}" class="thumbnail">
-                                        <img class="lazy" data-src="{{asset('/images/service/thumb/thumb_'.@$service->banner_image)}}" alt="" /></a>
-                                    <div class="body-content">
-                                        <div class="hidden-area">
-                                            <h5 class="title">{{ucwords(@$service->title)}}</h5>
-                                            <p class="dsic">
-                                                {{ elipsis(strip_tags($service->description))}}
-                                            </p>
-                                            <a class="rts-read-more-two color-primary" href="{{route('service.single',$service->slug)}}">Read More <i class="fa fa-arrow-right"></i></a>
-                                        </div>
+                            <div class="col-lg-6 col-md-6 mb-20">
+                                <div class="service-wrap">
+                                    <div class="image-part">
+                                        <img class="lazy" data-src="{{asset('/images/service/thumb/thumb_'.@$service->banner_image)}}" alt="" />
+                                    </div>
+                                    <div class="content-part">
+                                        <h3 class="title"><a href="{{route('service.single',$service->slug)}}">
+                                                {{ucwords(@$service->title)}}
+                                            </a></h3>
+                                        <div class="desc">{{ elipsis(strip_tags($service->description))}}</div>
                                     </div>
                                 </div>
                             </div>
                         @endforeach
+
+                        <div class="col-lg-12">
+                            <div class="pagination-area">
+                                {{ $allservices->links('vendor.pagination.default') }}
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-md-12 col-sm-12 col-12">
-                    @include('frontend.pages.services.sidebar')
-                </div>
+
             </div>
         </div>
     </div>
+
+    </div>
+    <!-- Main content End -->
+
 
 @endsection

@@ -475,7 +475,7 @@ class FrontController extends Controller
 
 
     public function album(){
-        $albums = Album::with('gallery')->get();
+        $albums = Album::with('gallery')->has('gallery')->get();
         return view('frontend.pages.album',compact('albums'));
     }
 

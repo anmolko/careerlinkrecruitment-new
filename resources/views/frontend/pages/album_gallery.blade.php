@@ -2,7 +2,6 @@
 @section('title') {{ucwords(@$singleAlbum->name)}} | Album @endsection
 @section('css')
     <style>
-
         .img-wrapper {
             height: 270px;
             object-fit: cover;
@@ -13,31 +12,23 @@
             object-fit: cover;
         }
     </style>
-    <link rel="stylesheet" href="{{asset('assets/frontend/css/plugins/lightbox.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/common/lightbox.css')}}">
 
 @endsection
 @section('content')
 
-    <div class="rts-breadcrumb-area breadcrumb-bg bg_image">
+    <div class="rs-breadcrumbs img10">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 breadcrumb-1">
-                    <h1 class="title">{{ucwords(@$singleAlbum->name)}}</h1>
-                </div>
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                    <div class="bread-tag">
-                        <a href="/">Home</a>
-                        <span> / </span>
-                        <a href="{{ route('album.index') }}" style="padding-left: 5px"> Albums</a>
-                        <span> / </span>
-                        <a href="" class="active">Album Gallery</a>
-                    </div>
-                </div>
+            <div class="breadcrumbs-inner">
+                <h1 class="page-title">{{ucwords(@$singleAlbum->name)}}'s Gallery</h1>
             </div>
         </div>
     </div>
 
-    <section class="portfolio-area style-4 pt--120 pb--120 pt_xs--60 pt_xs--60">
+
+
+    <!-- Project Section Start -->
+    <div class="rs-project style3 pt-100 pb-100 md-pt-70 md-pb-70">
         <div class="container">
             <div class="row">
                 @if(count(@$singleAlbum->gallery) > 0)
@@ -61,9 +52,13 @@
                 @endif
             </div>
         </div>
-    </section>
+    </div>
+    <!-- Project Section End -->
+    </div>
+
+
 
 @endsection
 @section('js')
-    <script src="{{asset('assets/frontend/js/plugins/lightbox.min.js')}}"></script>
+    <script src="{{asset('assets/common/lightbox.min.js')}}"></script>
 @endsection

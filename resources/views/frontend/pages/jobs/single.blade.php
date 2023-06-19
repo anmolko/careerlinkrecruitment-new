@@ -22,7 +22,7 @@
 @section('content')
 
     <!-- Breadcrumbs Start -->
-    <div class="rs-breadcrumbs img4">
+    <div class="rs-breadcrumbs img6">
         <div class="container">
             <div class="breadcrumbs-inner">
                 <h1 class="page-title">Job Details</h1>

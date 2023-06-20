@@ -36,6 +36,7 @@ Route::get('/categories', function () {
 Route::get('/contact-us', 'App\Http\Controllers\FrontController@contact')->name('contact');
 Route::post('/contact-us/store', 'App\Http\Controllers\FrontController@contactStore')->name('contact.store');
 Route::get('/testimonial', 'App\Http\Controllers\FrontController@testimonial')->name('testimonial');
+Route::get('/video-gallery', 'App\Http\Controllers\FrontController@videoGallery')->name('videoGallery');
 
 
 Route::get('/', 'App\Http\Controllers\FrontController@index')->name('home');
@@ -321,6 +322,15 @@ Route::group(['prefix' => 'auth', 'middleware' => ['auth']], function () {
     Route::post('/album-gallery/image-delete', 'App\Http\Controllers\AlbumController@deleteGallery')->name('album-gallery.delete');
     Route::get('/album-gallery/{id}', 'App\Http\Controllers\AlbumController@getGallery')->name('album-gallery.display');
     //End of Album
+
+
+    Route::get('/video-gallery', 'App\Http\Controllers\VideoGalleryController@index')->name('video.index');
+    Route::get('/video-gallery/create', 'App\Http\Controllers\VideoGalleryController@create')->name('video.create');
+    Route::post('/video-gallery', 'App\Http\Controllers\VideoGalleryController@store')->name('video.store');
+    Route::put('/video-gallery/{video}', 'App\Http\Controllers\VideoGalleryController@update')->name('video.update');
+    Route::delete('/video/{teams}', 'App\Http\Controllers\VideoGalleryController@destroy')->name('video.destroy');
+    Route::get('/video-gallery/{video}/edit', 'App\Http\Controllers\VideoGalleryController@edit')->name('video.edit');
+    Route::post('/video-gallery/update/gallery', 'App\Http\Controllers\VideoGalleryController@videoUpdate')->name('video.galleryUpdate');
 
 });
 

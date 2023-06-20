@@ -304,3 +304,26 @@ if (!function_exists('get_legal_documents')) {
         }
     }
 }
+
+if (! function_exists('getYoutubeThumbnail')) {
+    /**
+     * returns youtube thumbnail based on its link
+     *
+     * @param  string  $link
+     * @return string
+     */
+    function getYoutubeThumbnail($link)
+    {
+        $video_id = explode("?v=", $link);
+        if (!isset($video_id[1])) {
+            $video_id = explode("youtu.be/", $link);
+        }
+        $youtubeID = $video_id[1];
+        if (empty($video_id[1])) {
+            $video_id = explode("/v/", $link);
+        }
+        $video_id       = explode("&", $video_id[1]);
+        $youtubeVideoID = $video_id[0];
+        return "https://img.youtube.com/vi/".$youtubeVideoID."/hqdefault.jpg";
+    }
+}

@@ -133,6 +133,11 @@
 {{--                    </a>--}}
 {{--                </li>--}}
                 <li class="nav-item">
+                    <a class="nav-link menu-link @if(\Request::route()->getName() == 'video.index') active @endif" href="{{route('video.index')}}">
+                        <i class="ri-video-chat-line"></i> <span data-key="t-widgets">Video Gallery</span>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link menu-link @if(\Request::route()->getName() == 'album.index' || \Request::route()->getName() == 'album.show') active @endif" href="{{route('album.index')}}">
                         <i class="ri-gallery-line"></i> <span data-key="t-widgets">Albums</span>
                     </a>

@@ -25,6 +25,7 @@ use App\Models\Page;
 use App\Models\Client;
 use App\Models\PageSection;
 use App\Models\SectionGallery;
+use App\Models\VideoGallery;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Mail;
@@ -491,6 +492,12 @@ class FrontController extends Controller
     public function career(){
         $careers =   Career::orderBy('end_date', 'DESC')->paginate(9);
         return view('frontend.pages.careers.index',compact('careers'));
+    }
+
+    public function VideoGallery(){
+        $videoGalleries    = VideoGallery::orderBy('created_at', 'desc')->paginate(9);
+
+        return view('frontend.pages.video',compact('videoGalleries'));
     }
 
 

@@ -326,11 +326,18 @@
                                              <div class="card-body">
                                                  <div class="form-group mb-3">
                                                      <label>Heading <span class="text-muted text-danger">*</span></label>
-                                                     <input type="text" class="form-control" maxlength="100" name="heading" value="{{@$call1_elements->heading}}" required>
+                                                     <input type="text" class="form-control" maxlength="65" name="heading" value="{{@$call1_elements->heading}}" required>
                                                      <input type="hidden" class="form-control" value="{{$key}}" name="page_section_id" required>
                                                      <input type="hidden" class="form-control" value="{{$value}}" name="section_name" required>
                                                      <div class="invalid-feedback">
                                                          Please enter the call action section heading.
+                                                     </div>
+                                                 </div>
+                                                 <div class="form-group mb-3">
+                                                     <label>Subheading </label>
+                                                     <input type="text" maxlength="40" class="form-control" value="{{@$call1_elements->subheading}}" name="subheading">
+                                                     <div class="invalid-feedback">
+                                                         Please enter the subheading.
                                                      </div>
                                                  </div>
                                                  <div class="form-group mb-3">
@@ -386,13 +393,6 @@
                                                          </div>
                                                      </div>
 
-                                                     <div class="form-group mb-3">
-                                                         <label>Subheading </label>
-                                                         <input type="text" maxlength="60" class="form-control" name="subheading" value="{{@$bgimage_elements->subheading}}">
-                                                         <div class="invalid-feedback">
-                                                             Please write the subheading.
-                                                         </div>
-                                                     </div>
                                                      <div class="form-group mb-3">
                                                          <label>Description </label>
                                                          <textarea class="form-control" maxlength="1200" rows="12" name="description" >{{@$bgimage_elements->description}}</textarea>

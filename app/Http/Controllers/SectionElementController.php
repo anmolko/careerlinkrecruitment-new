@@ -188,6 +188,7 @@ class SectionElementController extends Controller
             $data=[
                 'page_section_id'        => $section_id,
                 'heading'                => $request->input('heading'),
+                'subheading'             => $request->input('subheading'),
                 'button'                 => $request->input('button'),
                 'button_link'            => $request->input('button_link'),
                 'created_by'             => Auth::user()->id,
@@ -207,7 +208,7 @@ class SectionElementController extends Controller
                 $image = $request->file('image');
                 $name = uniqid() . '__background__' . $image->getClientOriginalName();
                 $path = base_path() . '/public/images/section_elements/bgimage_section/';
-                $moved = Image::make($image->getRealPath())->fit(723, 610)->orientate()->save($path . $name);
+                $moved = Image::make($image->getRealPath())->fit(717, 718)->orientate()->save($path . $name);
                 if ($moved) {
                     $data['image'] = $name;
                 }
@@ -413,7 +414,7 @@ class SectionElementController extends Controller
             $action->page_section_id     = $section_id;
             $action->heading             = $request->input('heading');
             $action->subheading          = $request->input('subheading');
-            $action->description          = $request->input('description');
+            $action->description         = $request->input('description');
             $action->updated_by          = Auth::user()->id;
             $oldimage                    = $action->image;
 
@@ -421,7 +422,7 @@ class SectionElementController extends Controller
                 $image        = $request->file('image');
                 $name         = uniqid().'__background__'.$image->getClientOriginalName();
                 $path         = base_path().'/public/images/section_elements/bgimage_section/';
-                $moved        = Image::make($image->getRealPath())->fit(723, 610)->orientate()->save($path.$name);
+                $moved        = Image::make($image->getRealPath())->fit(717, 718)->orientate()->save($path.$name);
                 if ($moved){
                     $action->image = $name;
                     if (!empty($oldimage) && file_exists(public_path().'/images/section_elements/bgimage_section/'.$oldimage)){

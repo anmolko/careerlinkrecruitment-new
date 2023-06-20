@@ -64,15 +64,24 @@
         @endif
 
         @if($value == "call_to_action_1")
-            <div class="rts-callto-acation-area rts-callto-acation-area4 bg-call-to-action-two mb--80">
+            <div class="rs-cta style1 bg13 pt-70 pb-60 md-pt-70 md-pb-65">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="cta-two-wrapper">
-                                <div class="title-area">
-                                    <h3 class="title animated fadeIn">{{ ucfirst($call1_elements->heading ?? '') }}</h3>
-                                </div>
-                                <a class="rts-btn btn-secondary-3" href="{{@$call1_elements->button_link ?? '/contact-us'}}">{{ucwords(@$call1_elements->button ?? 'Lets Work Together')}}</a>
+                    <div class="row y-middle">
+                        <div class="col-lg-7 md-mb-30">
+                            <div class="sec-title2">
+                                <div class="sub-text">{{@$call1_elements->subheading ?? ''}}</div>
+                                <h2 class="title white-color margin-0">
+                                    <?php
+                                    $split = explode(" ", @$call1_elements->heading);?> {{preg_replace('/\W\w+\s*(\W*)$/', '$1', @$call1_elements->heading)."\n"}}
+                                    <span class="new-next"> {{$split[count($split)-1]}} </span>
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="btn-part text-right md-left mt-3">
+                                <a class="readon consultant discover" href="{{@$call1_elements->button_link ?? '/contact-us'}}">
+                                    {{ucwords(@$call1_elements->button ?? 'Get Started')}}
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -81,27 +90,23 @@
         @endif
 
         @if($value == "background_image_section")
-            <div class="rts-contact-area contact-one appoinment background-contact-appoinment">
-                <div class="">
-                    <div class="row g-0 align-items-center">
-                        <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12">
-                            <div class="contact-image-one appoinment">
-                                <img src="{{asset('/images/section_elements/bgimage_section/'.@$bgimage_elements->image)}}" alt="">
+            <div class="rs-about bg19 pt-40 pb-80 md-pb-70">
+                <div class="container">
+                    <div class="row y-middle">
+                        <div class="col-lg-6 pr-50 md-pr-15">
+                            <div class="sec-title">
+                                <h2 class="title title4 pb-30">
+                                    {{@$bgimage_elements->heading ?? ''}}
+                                </h2>
+                                <div class="margin-0 pb-30 text-justify">
+                                    {{ @$bgimage_elements->description }}
+                                </div>
                             </div>
                         </div>
-                        <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12">
-                            <div class="contact-form-area-one">
-                                <div class="rts-title-area contact-appoinment text-start">
-                                    <p class="pre-title">
-                                        {{@$bgimage_elements->subheading ?? ''}}
-                                    </p>
-                                    <h2 class="title">{{@$bgimage_elements->heading ?? ''}}</h2>
-                                </div>
-                                <p class="disc custom-fs-line text-justify text-white">
-                                    {{ @$bgimage_elements->description }}
-                                </p>
+                        <div class="col-lg-6">
+                            <div class="images-part">
+                                <img src="{{asset('/images/section_elements/bgimage_section/'.@$bgimage_elements->image)}}" alt="Images">
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -109,31 +114,29 @@
         @endif
 
         @if($value == "flash_cards")
-            <div class="rts-service-area rts-service-area5" style="margin-top: 50px; margin-bottom: 50px">
+            <div class="rs-services style1 modify shape-bg pt-128 md-pt-70 pb-140 md-pb-80">
                 <div class="container">
-                    <div class="col-12">
-                        <div class="text-center title-service-three">
-                            <p class="pre-title">
-                                {{$flash_elements[0]->subheading}}
-                            </p>
-                            <h2 class="title">{{@$flash_elements[0]->heading}}</h2>
-                        </div>
+                    <div class="sec-title4 text-center mb-60">
+                        <div class="sub-title mb-6">{{$flash_elements[0]->subheading ?? ''}}</div>
+                        <h2 class="title primary-color">{{@$flash_elements[0]->heading ?? ''}}</h2>
                     </div>
-                    <div class="row g-5 mt--20">
+                    <div class="row service-wrap mr-0 ml-0">
                         @foreach(@$flash_elements as $index=>$flash_element)
-                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                            <div class="service-one-inner-four">
-                                <a href="#" class="icon">
-                                    <img src="{{asset('assets/frontend/images/service/icon/service-logo'.($index+1).'.svg')}}" alt="">
-                                </a>
-                                <div class="content">
-                                    <h5 class="title">{{ucwords(@$flash_element->list_header)}}</h5>
-                                    <p class="disc text-justify"> {{ucfirst(@$flash_element->list_description) }}
-                                    </p>
+                            <div class="col-lg-4 padding-0 {{ $loop->first ? 'pr-1':'' }}">
+                                <div class="service-grid">
+                                    <div class="service-icon mb-23">
+                                        <img src="{{ asset('assets/frontend/images/services/'.get_icons($index)) }}" alt="">
+                                    </div>
+                                    <h4 class="title mb-18">
+                                        <a>
+                                            {{ucwords(@$flash_element->list_header)}}
+                                        </a>
+                                    </h4>
+                                    <div class="desc mb-12">
+                                        {{ucfirst(@$flash_element->list_description) }}
+                                    </div>
                                 </div>
-
                             </div>
-                        </div>
                         @endforeach
                     </div>
                 </div>

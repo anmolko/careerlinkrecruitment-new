@@ -117,6 +117,7 @@
             </div>
         </div>
     @endif
+
     @if(count($latestServices) > 0)
         <div id="rs-services" class="rs-services style2 bg19 pt-100 pb-100 md-pt-70 md-pb-70">
         <div class="container">
@@ -144,6 +145,29 @@
             </div>
         </div>
     </div>
+    @endif
+
+    @if(!empty($homepage_info->action_heading))
+        <div class="rs-cta style1 bg13 pt-100 pb-95 md-pt-70 md-pb-65">
+            <div class="container">
+                <div class="row y-middle">
+                    <div class="col-lg-8 md-mb-30">
+                        <div class="sec-title2">
+                            <h2 class="title white-color margin-0">
+                                <?php
+                                $split = explode(" ", @$homepage_info->action_heading);?> {{preg_replace('/\W\w+\s*(\W*)$/', '$1', @$homepage_info->action_heading)."\n"}}
+                                <span> {{$split[count($split)-1]}} </span>
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="btn-part text-right md-left">
+                            <a class="readon consultant discover" href="{{@$homepage_info->action_link2}}">{{@$homepage_info->action_link ?? 'Learn more'}}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     @endif
 
     @if(!empty($homepage_info->core_main_heading))
@@ -374,39 +398,39 @@
 
     @if(@$recruitments[0]->heading)
         <div class="rs-process style1 bg2 pt-100 pb-100 md-pt-70 md-pb-70">
-        <div class="container">
-            <div class="sec-title2 text-center md-left mb-40">
-                <div class="sub-text">Working Process</div>
-                <h2 class="title white-color">How we work for our valued <br><span>customers.</span></h2>
+            <div class="container">
+                <div class="sec-title2 text-center md-left mb-40">
+                    <div class="sub-text">Working Process</div>
+                    <h2 class="title white-color">How we work for our valued <br><span>customers.</span></h2>
+                </div>
             </div>
-        </div>
-        <div class="container custom2">
-            <div class="process-effects-layer">
-                <div class="row">
-                    @foreach(@$recruitments as $index=>$recruitment)
-                        <div class="col-lg-3 col-md-6 md-mb-30">
-                            <div class="rs-addon-number">
-                                <div class="number-part">
-                                    <div class="number-image">
-                                        <img src="{{asset('assets/frontend/images/services/'.recruitment_process_icons($index))}}" alt="">
-                                    </div>
-                                    <div class="number-text">
-                                        <div class="number-area"> <span class="number-prefix"> {{ $index+1 }} </span></div>
-                                        <div class="number-title">
-                                            <h3 class="title"> {{@$recruitment->title}}</h3>
+            <div class="container custom2">
+                <div class="process-effects-layer">
+                    <div class="row">
+                        @foreach(@$recruitments as $index=>$recruitment)
+                            <div class="col-lg-3 col-md-6 md-mb-30">
+                                <div class="rs-addon-number">
+                                    <div class="number-part">
+                                        <div class="number-image">
+                                            <img src="{{asset('assets/frontend/images/services/'.recruitment_process_icons($index))}}" alt="">
                                         </div>
-                                        <div class="number-txt">
-                                            {{ $recruitment->icon_description ?? '' }}
+                                        <div class="number-text">
+                                            <div class="number-area"> <span class="number-prefix"> {{ $index+1 }} </span></div>
+                                            <div class="number-title">
+                                                <h3 class="title"> {{@$recruitment->title}}</h3>
+                                            </div>
+                                            <div class="number-txt">
+                                                {{ $recruitment->icon_description ?? '' }}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    @endforeach
+                        @endforeach
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     @endif
 
     @if(count($latestJobs) > 1)

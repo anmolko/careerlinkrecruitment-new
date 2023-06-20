@@ -172,8 +172,8 @@
                                                 </div>
 
                                                 <div class="form-group mb-3">
-                                                    <label>Description <span class="text-muted text-danger">* write 900 characters only</span></label>
-                                                    <textarea class="form-control" maxlength="990" rows="14" name="description" id="basic_editor" required>{!! @$basic_elements->description !!}</textarea>
+                                                    <label>Description <span class="text-muted text-danger">* write 1100 characters only</span></label>
+                                                    <textarea class="form-control" maxlength="1100" rows="14" name="description" id="basic_editor" required>{!! @$basic_elements->description !!}</textarea>
                                                     <div class="invalid-feedback">
                                                         Please write the small summary for basic section.
                                                     </div>
@@ -277,7 +277,7 @@
 
                                                  <div class="form-group mb-3">
                                                      <label>Description <span class="text-muted text-danger">*</span></label>
-                                                     <textarea class="form-control" maxlength="980" rows="10" name="description" id="mapeditor" required>{{@$map_descp->description}}</textarea>
+                                                     <textarea class="form-control" maxlength="1400" rows="10" name="description" id="mapeditor" required>{{@$map_descp->description}}</textarea>
                                                      <div class="invalid-feedback">
                                                          Please enter the description.
                                                      </div>

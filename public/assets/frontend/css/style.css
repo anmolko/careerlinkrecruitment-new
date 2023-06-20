@@ -1339,7 +1339,7 @@ blockquote cite:before {
 }
 .sec-title .sub-text.small {
   font-size: 15px;
-  color: #0082f1;
+    color: #efbc49;
   text-transform: uppercase;
 }
 .sec-title .title {
@@ -1557,7 +1557,7 @@ blockquote cite:before {
   margin-bottom: 14px;
 }
 .sec-title4 .title {
-  color: #043d72;
+  color: #0a0a0a;
 }
 /* -----------------------
     03. Header Section CSS
@@ -3886,7 +3886,7 @@ body .search-modal .close:hover {
   color: #454545;
 }
 .rs-services.style2 .service-wrap {
-  padding: 15px 15px 30px;
+  padding: 15px 15px 15px;
   background: #ffffff;
   box-shadow: 0px 14px 30px rgba(0, 0, 0, 0.07);
 }
@@ -4403,7 +4403,7 @@ body .search-modal .close:hover {
   transition: all 0.3s ease;
 }
 .rs-services.style1 .service-wrap .service-grid .title a {
-  color: #043d72;
+  color: #0a0a0a;
 }
 .rs-services.style1 .service-wrap .service-grid .title a:hover {
   color: #efbc49;

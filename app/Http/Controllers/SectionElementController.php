@@ -291,7 +291,7 @@ class SectionElementController extends Controller
                     $path         = base_path().'/public/images/section_elements/list_1/';
                     $thumb_path   = base_path().'/public/images/section_elements/list_1/thumb/';
                     $moved        = Image::make($image->getRealPath())->fit(850, 560)->orientate()->save($path.$name);
-                    $thumb        = Image::make($image->getRealPath())->fit(338, 425)->orientate()->save($thumb_path.$thumb);
+                    $thumb        = Image::make($image->getRealPath())->fit(360, 260)->orientate()->save($thumb_path.$thumb);
                     if ($moved && $thumb){
                         $data['list_image']= $name;
                     }
@@ -561,7 +561,7 @@ class SectionElementController extends Controller
                         $path         = base_path().'/public/images/section_elements/list_1/';
                         $thumb_path   = base_path().'/public/images/section_elements/list_1/thumb/';
                         $moved        = Image::make($image->getRealPath())->fit(850, 560)->orientate()->save($path.$name);
-                        $thumb        = Image::make($image->getRealPath())->fit(338, 425)->orientate()->save($thumb_path.$thumb);
+                        $thumb        = Image::make($image->getRealPath())->fit(360, 260)->orientate()->save($thumb_path.$thumb);
                         if ($moved && $thumb){
                             $data['list_image']= $name;
                         }

@@ -114,10 +114,10 @@
         @endif
 
         @if($value == "flash_cards")
-            <div class="rs-services style1 modify shape-bg pt-128 md-pt-70 pb-140 md-pb-80">
+            <div class="rs-services style1 modify shape-bg pt-128 md-pt-70 pb-80 md-pb-80">
                 <div class="container">
                     <div class="sec-title4 text-center mb-60">
-                        <div class="sub-title mb-6">{{$flash_elements[0]->subheading ?? ''}}</div>
+                        <div class="sub-title mb-2">{{$flash_elements[0]->subheading ?? ''}}</div>
                         <h2 class="title primary-color">{{@$flash_elements[0]->heading ?? ''}}</h2>
                     </div>
                     <div class="row service-wrap mr-0 ml-0">
@@ -145,17 +145,19 @@
 
         @if($value == "simple_header_and_description")
             <div class="rts-service-details-area rts-section-gap" style="padding: 0px!important;">
-                <div class="container">
-                    @if(@$header_descp_elements->heading!==null)
-                        <div class="col-12">
-                            <div class="text-center title-service-three">
-                                <p class="pre-title">
-                                    {{@$header_descp_elements->subheading ?? ''}}
-                                </p>
-                                <h2 class="title">{{@$header_descp_elements->heading}}</h2>
-                            </div>
-                        </div>
-                    @endif
+               <div class="container">
+                   @if(@$header_descp_elements->heading!==null)
+                       <div class="sec-title2 text-center md-left mb-20">
+                           <div class="sub-text">
+                               {{@$header_descp_elements->subheading ?? ''}}
+                           </div>
+                           <h2 class="title mb-0 md-pb-20">
+                               <?php
+                               $split = explode(" ", @$header_descp_elements->heading);?> {{preg_replace('/\W\w+\s*(\W*)$/', '$1', @$header_descp_elements->heading)."\n"}}
+                               <span class="new-next"> {{$split[count($split)-1]}} </span>
+                           </h2>
+                       </div>
+                   @endif
                     <div class="row">
                         <div class="col-xl-12 col-md-12 col-sm-12 col-12">
                             <!-- service details left area start -->
@@ -171,33 +173,34 @@
         @endif
 
         @if($value == "map_and_description")
-            <div class="rts-about-area rts-section-gap bg-light-white">
+            <div class="rs-contact contact-style2 bg11 pt-95 pb-100 md-pt-65 md-pb-70">
                 <div class="container">
-                    <div class="row g-5 align-items-center">
+                    <div class="row y-middle">
                         <div class="col-lg-6">
-                            <div class="about-progress-inner">
-                                <div class="title-area">
-                                    <span>{{@$map_descp->subheading}}</span>
-                                    <h2 class="title">{{@$map_descp->heading}}</h2>
+                            <div class="sec-title2 mb-45 md-mb-30">
+                                <div class="sub-text">{{@$map_descp->subheading ?? ''}}</div>
+                                <h2 class="title mb-23">
+                                    <?php
+                                    $split = explode(" ", @$map_descp->heading);?> {{preg_replace('/\W\w+\s*(\W*)$/', '$1', @$map_descp->heading)."\n"}}
+                                    <span> {{$split[count($split)-1]}} </span>
+                                </h2>
+                                <div class="desc mb-0 text-justify">
+                                    {!! @$map_descp->description !!}
                                 </div>
-                                <!-- inner start -->
-                                <div class="inner">
-                                    <div class="disc fs-18 text-justify line-height-30">
-                                        {!! ucfirst(@$map_descp->description) !!}}</div>
-                                    @if(@$map_descp->button_link)
-                                        <a href="{{@$map_descp->button_link}}" class="rts-btn btn-primary">{{ucwords(@$map_descp->button ?? 'Reach out')}}</a>
-                                    @endif
-                                </div>
-                                <!-- end -->
+                                @if(@$map_descp->button_link)
+                                    <div class="btn-part mt-3">
+                                        <a class="readon consultant discover" href="{{@$map_descp->button_link}}">
+                                            {{ucwords(@$map_descp->button ?? 'Contact us')}}
+                                        </a>
+                                    </div>
+                                @endif
                             </div>
                         </div>
                         <div class="col-lg-6">
-                            <div class="about-image-v-inner">
-                                <div class="image-area">
-                                    <iframe src="{{@$setting_data->google_map ?? ''}}"
-                                            width="600" height="600" style="border:0;"
-                                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                </div>
+                            <div class="contact-map">
+                                <iframe src="{{@$setting_data->google_map ?? ''}}"
+                                        width="600" height="400" style="border:0;"
+                                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                         </div>
                     </div>
@@ -206,43 +209,33 @@
         @endif
 
         @if($value == "small_box_description")
-            @if(count($process_elements)>0))
-                <div class="rts-service-area rts-section-gap" style="padding: 75px 0;">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="text-center">
-                                    <p class="pre-title" style="margin: 0 0 18px;">
-                                            {{ ucfirst($process_elements[0]->subheading ?? 'Careerlink')}}
-                                    </p>
-                                    <h2 class="title">{{@$process_elements[0]->heading}}</h2>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row g-5 mt--10">
+            @if(count($process_elements)>0)
+            <div id="rs-services" class="rs-services style6 bg14" style="margin-top: 0px;padding-top: 100px;padding-bottom: 100px;">
+                <div class="container">
+                    <div class="sec-title text-center mb-50">
+                        <span class="sub-text small"> {{ ucfirst($process_elements[0]->subheading ?? '') }}</span>
+                        <h2 class="title title3">
+                            {{@$process_elements[0]->heading}}
+                        </h2>
+                    </div>
+                    <div class="services-box-area bg20">
+                        <div class="row margin-0">
                             @for ($i = 1; $i <=@$process_num; $i++)
-                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-                                    <!-- single service for home six -->
-                                    <div class="single-service-home-six">
-                                        <div class="icon">
-                                            <img src="{{asset('assets/frontend/images/'. get_solution_icons($i-1))}}" alt="">
-                                        </div>
-                                        <div class="inner">
-                                            <h5 class="title">
-                                                {{ucwords(@$process_elements[$i-1]->list_header ??'')}}
-                                            </h5>
-                                            <p class="disc">
+                                <div class="col-lg-4 col-md-6 col-sm-6 padding-0">
+                                    <div class="services-item">
+                                        <div class="services-content">
+                                            <h3 class="title"><a> {{ucwords(@$process_elements[$i-1]->list_header ??'')}}</a></h3>
+                                            <p class="margin-0 text-justify">
                                                 {{ucfirst(@$process_elements[$i-1]->list_description)}}
                                             </p>
-
                                         </div>
                                     </div>
-                                    <!-- single service for home six End -->
                                 </div>
                             @endfor
                         </div>
                     </div>
                 </div>
+            </div>
             @endif
         @endif
 
@@ -250,9 +243,9 @@
             <div class="rs-project style3 pt-100 pb-100 md-pt-70 md-pb-70">
                 <div class="container">
                     @if(@$heading!==null)
-                        <div class="sec-title3 text-center mb-65 md-mb-45">
+                        <div class="sec-title3 text-center mb-25 md-mb-45">
                             <span class="sub-title">  {{@$subheading ?? ''}}</span>
-                            <h2 class="title pb-25">
+                            <h2 class="title pb-15">
                                 {{@$heading}}
                             </h2>
                             <div class="heading-border-line"></div>
@@ -266,8 +259,8 @@
                                         @foreach($gallery_elements as $gallery)
                                             <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
                                                 <div class="{{  $page_detail->slug =='legal-document' || $page_detail->slug =='legal-documents' ? "":"img-wrapper"   }}">
-                                                    <a href="{{asset('/images/albums/gallery/'.@$gallery->filename)}}">
-                                                        <img data-src="{{asset('/images/albums/gallery/'.@$gallery->filename)}}" class="img-responsive lazy"></a>
+                                                    <a href="{{asset('/images/section_elements/gallery/'.@$gallery->filename)}}">
+                                                        <img data-src="{{asset('/images/section_elements/gallery/'.@$gallery->filename)}}" class="img-responsive lazy"></a>
                                                     <div class="img-overlay">
                                                         <i class="fa fa-plus-circle" aria-hidden="true"></i>
                                                     </div>
@@ -285,41 +278,40 @@
 
         @if($value == "slider_list")
             @if(count($slider_list_elements)>0))
-                <div class="rts-business-case rts-section-gap business-case-bg-2">
+
+            <div id="rs-services" class="rs-services style2 gray-bg pt-100 pb-100 md-pt-70 md-pb-70">
                 <div class="container">
-                    <div class="row">
-                        <div class="title-areas text-center business-case">
-                            <span>{{ucwords(@$slider_list_elements[0]->description)}}</span>
-                            <h2 class="title">{{ucwords(@$slider_list_elements[0]->heading)}}</h2>
+                    <div class="sec-title2 d-flex align-items-center mb-60 md-mb-40">
+                        <div class="first-half">
+                            <div class="sub-text">{{ucwords(@$slider_list_elements[0]->description)}}</div>
+                            <h2 class="title mb-0 md-pb-20">
+                                <?php
+                                $split = explode(" ", @$slider_list_elements[0]->heading);?> {{preg_replace('/\W\w+\s*(\W*)$/', '$1', @$slider_list_elements[0]->heading)."\n"}}
+                                <span> {{$split[count($split)-1]}} </span>
+                            </h2>
                         </div>
                     </div>
-                </div>
-                <div class="container-cusiness-case-h2 mt--50">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="swiper mySwiperh2_Business_Cases">
-                                <div class="swiper-wrapper">
-                                    @for ($i = 1; $i <=@$list_3; $i++)
-                                        <div class="swiper-slide">
-                                            <div class="rts-business-case-s-2">
-                                                <a href="{{route('slider.single',@$slider_list_elements[$i-1]->subheading)}}" class="thumbnail">
-                                                    <img src="{{ asset('/images/section_elements/list_1/thumb/thumb_'.$slider_list_elements[$i-1]->list_image) }}" alt="Business_case">
-                                                </a>
-                                                <div class="inner">
-                                                    <a href="{{route('slider.single',@$slider_list_elements[$i-1]->subheading)}}">
-                                                        <h5 class="title">
-                                                            {{ucwords(@$slider_list_elements[$i-1]->list_header)}}
-                                                        </h5>
-                                                    </a>
-                                                    <span>  {{ elipsis(strip_tags(@$slider_list_elements[$i-1]->list_description))}}</span>
-                                                </div>
-                                                <a href="{{route('slider.single',@$slider_list_elements[$i-1]->subheading)}}" class="over_link"></a>
-                                            </div>
-                                        </div>
-                                    @endfor
+                    <div class="rs-carousel owl-carousel" data-loop="true" data-items="3" data-margin="30"
+                         data-autoplay="true" data-hoverpause="true" data-autoplay-timeout="5000" data-smart-speed="800"
+                         data-dots="true" data-nav="false" data-nav-speed="false" data-md-device="3"
+                         data-md-device-nav="false" data-md-device-dots="true" data-center-mode="false" data-ipad-device2="2"
+                         data-ipad-device-nav2="false" data-ipad-device-dots2="true" data-ipad-device="2"
+                         data-ipad-device-nav="false" data-ipad-device-dots="true" data-mobile-device="1"
+                         data-mobile-device-nav="false" data-mobile-device-dots="true">
+                        @for ($i = 1; $i <=@$list_3; $i++)
+                            <div class="service-wrap">
+                                <div class="image-part">
+                                    <img class="lazy" data-src="{{ asset('/images/section_elements/list_1/thumb/thumb_'.$slider_list_elements[$i-1]->list_image) }}" alt="">
+                                </div>
+                                <div class="content-part">
+                                    <h3 class="title" style="font-size: 18px;line-height: 26px;font-weight: 600;">
+                                        <a href="{{route('slider.single',@$slider_list_elements[$i-1]->subheading)}}">
+                                            {{ucwords(@$slider_list_elements[$i-1]->list_header)}}
+                                        </a>
+                                    </h3>
                                 </div>
                             </div>
-                        </div>
+                        @endfor
                     </div>
                 </div>
             </div>

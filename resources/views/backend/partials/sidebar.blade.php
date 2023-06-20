@@ -142,11 +142,12 @@
                         <i class="ri-user-2-line"></i> <span data-key="t-widgets">Clients</span>
                     </a>
                 </li>
-{{--                <li class="nav-item">--}}
-{{--                    <a class="nav-link menu-link @if(\Request::route()->getName() == 'subsidiary.index') active @endif" href="{{route('subsidiary.index')}}">--}}
-{{--                        <i class="ri-user-4-line"></i> <span data-key="t-widgets">Subsidiary</span>--}}
-{{--                    </a>--}}
-{{--                </li>--}}
+
+                <li class="nav-item">
+                    <a class="nav-link menu-link @if(\Request::route()->getName() == 'career.index') active @endif" href="{{route('career.index')}}">
+                        <i class="ri-medal-line"></i> <span data-key="t-widgets">Career</span>
+                    </a>
+                </li>
 
                 <li class="nav-item">
                     <a class="nav-link menu-link @if(\Request::route()->getName() == 'sliders.index') active @endif" href="{{route('sliders.index')}}">

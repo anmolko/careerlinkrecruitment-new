@@ -40,6 +40,8 @@ Route::get('/testimonial', 'App\Http\Controllers\FrontController@testimonial')->
 
 Route::get('/', 'App\Http\Controllers\FrontController@index')->name('home');
 
+Route::get('/career', 'App\Http\Controllers\FrontController@career')->name('career');
+
 //blog
 Route::get('blog/search/', 'App\Http\Controllers\FrontController@searchBlog')->name('searchBlog');
 
@@ -164,6 +166,18 @@ Route::group(['prefix' => 'auth', 'middleware' => ['auth']], function () {
     Route::put('/services/{service}', 'App\Http\Controllers\ServiceController@update')->name('services.update');
     Route::delete('/services/{service}', 'App\Http\Controllers\ServiceController@destroy')->name('services.destroy');
     Route::get('/services/{service}/edit', 'App\Http\Controllers\ServiceController@edit')->name('services.edit');
+
+    //career
+
+    Route::get('/career', 'App\Http\Controllers\CareerController@index')->name('career.index');
+    Route::get('/career/create', 'App\Http\Controllers\CareerController@create')->name('career.create');
+    Route::post('/career', 'App\Http\Controllers\CareerController@store')->name('career.store');
+    Route::put('/career/{career}', 'App\Http\Controllers\CareerController@update')->name('career.update');
+    Route::delete('/career/{career}', 'App\Http\Controllers\CareerController@destroy')->name('career.destroy');
+    Route::get('/career/{career}/edit', 'App\Http\Controllers\CareerController@edit')->name('career.edit');
+
+    //End of Career
+
 
     //pages
 

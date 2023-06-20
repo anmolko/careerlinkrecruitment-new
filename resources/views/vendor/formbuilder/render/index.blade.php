@@ -14,7 +14,7 @@
             font-weight: 700;
             color: #293043;
             line-height: 1.22;
-            font-size: 45px;
+            font-size: 35px;
         }
         .card-title{
             color: #27aae1;
@@ -38,9 +38,24 @@
             font-family: 'Font Awesome 5 Pro';
         }
         .rendered-form .form-control {
-            background: none;
-            padding-top: 17px;
-            padding-bottom: 17px;
+            padding: 17px 17px 17px 17px!important;
+            color: #000000!important;
+            border-style: solid!important;
+            border-width: 1px 1px 1px 1px!important;
+            border-color: #EBEBEB!important;
+            background-color: #F1F1F1!important;
+            width: 100%;
+            max-width: 100%;
+            opacity: 1;
+        }
+        .rendered-form p{
+            margin: 0px 0 10px!important;
+        }
+
+        .rendered-form label{
+            font-size: 15px!important;
+            color: #454545!important;
+            font-family: 'Poppins', sans-serif!important;
         }
 
         input.parsley-success,
@@ -140,6 +155,10 @@
             margin-bottom: 0;
         }
 
+        .rendered-form .fb-file input {
+            padding: 10px 0px 40px 25px!important;
+        }
+
         .rendered-form .fb-checkbox-group .checkbox-inline {
             display: -ms-inline-flexbox;
             display: inline-flex;
@@ -206,149 +225,98 @@
         }
 
         .btn {
-            display: inline-block !important;
-            font-weight: 400 !important;
-            line-height: 1.5 !important;
-            text-align: center !important;
-            text-decoration: none !important;
-            vertical-align: middle !important;
-            cursor: pointer !important;
-            -webkit-user-select: none !important;
-            -moz-user-select: none !important;
-            -ms-user-select: none !important;
-            user-select: none !important;
-            border: 1px solid transparent !important;
-            padding: 0.5rem 0.9rem !important;
-            font-size: .8125rem !important;
-            border-radius: 0.25rem !important;
+            color: #fff;
+            font-size: 17px;
+            line-height: 26px;
+            font-weight: 600;
+            text-transform: capitalize;
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: all 0.4s;
+            z-index: 1;
+            background-color: transparent;
         }
     </style>
 @endsection
 @section('content')
-    <!-- Page Banner Start -->
-    <section class="page-banner-area pt-245 rpt-150 pb-170 rpb-100 rel z-1 bgc-lighter text-center">
+
+    <!-- Breadcrumbs Start -->
+    <div class="rs-breadcrumbs img10">
         <div class="container">
-            <div class="banner-inner rpt-10">
-                <h1 class="page-title wow fadeInUp delay-0-2s">{{ $pageTitle }}</h1>
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb justify-content-center wow fadeInUp delay-0-4s">
-                        <li class="breadcrumb-item"><a href="/">Home</a></li>
-                        <li class="breadcrumb-item active">{{ $form->name }}  </li>
-                    </ol>
-                </nav>
+            <div class="breadcrumbs-inner">
+                <h1 class="page-title">{{ $form->name }}</h1>
             </div>
         </div>
-        <div class="banner-shapes">
-            <div class="circle wow zoomInLeft delay-0-2s" data-wow-duration="2s"></div>
-            <img class="shape-one" src="{{asset('assets/frontend/images/shapes/hero-shape1.png')}}" alt="Shape">
-            <img class="shape-two" src="{{asset('assets/frontend/images/shapes/hero-shape2.png')}}" alt="Shape">
-        </div>
-    </section>
-    <!-- Page Banner End -->
+    </div>
 
-    <section class="contact-us-page-area py-130">
+    <div class="rs-contact contact-style2 bg9 pt-100 pb-100 md-pt-70 md-pb-70">
         <div class="container">
             <div class="row">
-                <div class="col-md-7">
-                    <div class="card rounded-0">
-                        <div class="card-header">
-                            <h5 class="card-title">{{ ucwords($pageTitle) }}</h5>
-                        </div>
-
-                        <form action="{{ route('formbuilder::form.submit', $form->identifier) }}" method="POST" id="submitForm" enctype="multipart/form-data">
-                            @csrf
-                            @if ($message = Session::get('success'))
-                                <div class="alert alert-success alert-block">
-                                    <strong class="sent-success">{{ $message }}</strong>
-                                </div>
-                            @endif
-                            @if ($message = Session::get('error'))
-                                <div class="alert alert-danger alert-block">
-                                    <strong class="error-sent">{{ $message }}</strong>
-                                </div>
-                            @endif
-                            <div class="card-body">
-                                <div id="fb-render"></div>
-                            </div>
-
-
-                            <div class="card-footer">
-                                <button type="submit" class="theme-btn w-100 confirm-form" data-form="submitForm" data-message="Submit your entry for '{{ $form->name }}'?">
-                                    <i class="fa fa-submit"></i> Submit Form
-                                </button>
-                            </div>
-                        </form>
+                <div class="col-lg-12">
+                    <div class="sec-title md-mb-25">
+                        <h2 class="title pb-20">
+                            {{ ucwords($pageTitle) }}
+                        </h2>
                     </div>
+                    <form action="{{ route('formbuilder::form.submit', $form->identifier) }}" method="POST" id="submitForm" enctype="multipart/form-data">
+                        @csrf
+                        <div id="fb-render"></div>
+                        <div class="btn-part">
+                            <div class="form-group mb-0">
+                                <input class="readon submit" type="submit" value="Submit Now">
+                            </div>
+                        </div>
+                    </form>
+
                 </div>
-                <div class="col-xl-4 col-lg-5">
-                    <div class="contact-info wow fadeInLeft delay-0-2s">
-                        <div class="contact-info-item style-two">
-                            <div class="icon">
-                                <i class="fal fa-map-marker-alt"></i>
-                            </div>
-                            <div class="content">
-                                <span class="title">Location</span>
-                                <span class="text">
-                                        @if(!empty(@$setting_data->address)) {{@$setting_data->address}} @else Kathmandu, Nepal @endif
-                                    </span>
-                            </div>
-                        </div>
-                        <div class="contact-info-item style-two">
-                            <div class="icon">
-                                <i class="far fa-envelope-open-text"></i>
-                            </div>
-                            <div class="content">
-                                <span class="title">email address</span>
-                                <span class="text">
-                                        <a href="mailto:@if(!empty(@$setting_data->email)) {{@$setting_data->email}} @else example@gmail.com @endif"><span class="__cf_email__" >@if(!empty(@$setting_data->email)) {{@$setting_data->email}} @else example@gmail.com @endif</span></a><br>
-                                    </span>
+            </div>
+        </div>
+        <!-- Contact Icon Section Start -->
+        <div class="rs-contact main-home">
+            <div class="container">
+                <div class="contact-icons-style box-address pt-100 md-pt-70">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-6 md-mb-30">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <img src="{{ asset('assets/frontend/images/contact/icons/1.png') }}" alt="images">
+                                </div>
+                                <div class="content-text">
+                                    <h2 class="title"><a>Office</a></h2>
+                                    <p class="services-txt">{{@$setting_data->address}}</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="contact-info-item style-two">
-                            <div class="icon">
-                                <i class="far fa-phone"></i>
-                            </div>
-                            <div class="content">
-                                <span class="title">Phone Number</span>
-                                <span class="text">
-                                        Call <a href="calto:@if(!empty(@$setting_data->phone)) {{@$setting_data->phone}} @else +9771238798 @endif">@if(!empty(@$setting_data->phone)) {{@$setting_data->phone}} @else +9771238798 @endif</a><br>
-                                    </span>
+                        <div class="col-lg-4 col-md-6 col-sm-6 xs-mb-30">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <img src="{{ asset('assets/frontend/images/contact/icons/3.png') }}" alt="images">
+                                </div>
+                                <div class="content-text">
+                                    <h2 class="title"><a href="mailto:{{@$setting_data->email}}">Email us</a></h2>
+                                    <a href="mailto:{{@$setting_data->email}}">{{@$setting_data->email}}</a><br>
+                                </div>
                             </div>
                         </div>
-                        <div class="follow-us">
-                            <h4>Follow Us</h4>
-                            <div class="social-style-two">
-
-                                @if(!empty(@$setting_data->facebook))
-                                    <a href="@if(!empty(@$setting_data->facebook)) {{@$setting_data->facebook}} @endif" target="_blank" class="social-fb"
-                                    ><i class="fab fa-facebook-f"></i
-                                        ></a>
-                                @endif
-                                @if(!empty(@$setting_data->youtube))
-
-                                    <a href="@if(!empty(@$setting_data->youtube)) {{@$setting_data->youtube}} @endif" target="_blank" class="social-youtube"
-                                    ><i class="fab fa-youtube"></i
-                                        ></a>
-                                @endif
-                                @if(!empty(@$setting_data->instagram))
-
-                                    <a href="@if(!empty(@$setting_data->instagram)) {{@$setting_data->instagram}} @endif" target="_blank" class="social-instagram"
-                                    ><i class="fab fa-instagram"></i
-                                        ></a>
-                                @endif
-                                @if(!empty(@$setting_data->linkedin))
-
-                                    <a href="@if(!empty(@$setting_data->linkedin)) {{@$setting_data->linkedin}} @endif" target="_blank" class="social-linkedin"
-                                    ><i class="fab fa-linkedin-in"></i
-                                        ></a>
-                                @endif
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <img src="{{ asset('assets/frontend/images/contact/icons/4.png') }}" alt="images">
+                                </div>
+                                <div class="content-text">
+                                    <h2 class="title"><a href="tel:{{@$setting_data->phone ?? $setting_data->mobile}}">Call us</a></h2>
+                                    <a href="tel:{{@$setting_data->phone}}">{{@$setting_data->phone}}</a><br>
+                                    <a href="tel:{{@$setting_data->mobile}}">{{@$setting_data->mobile}}</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+        <!-- Contact Icon Section End -->
+    </div>
 
 @endsection
 
@@ -356,5 +324,7 @@
     <script type="text/javascript">
         window._form_builder_content = {!! json_encode($form->form_builder_json) !!}
     </script>
+    @include('frontend.partials.toast_alert')
+
     <script src="{{ asset('vendor/formbuilder/js/render-form.js') }}{{ jazmy\FormBuilder\Helper::bustCache() }}" defer></script>
 @endpush

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Album;
 use App\Models\Blog;
 use App\Models\BlogCategory;
+use App\Models\Career;
 use App\Models\Faq;
 use App\Models\Job;
 use App\Models\JobCategory;
@@ -487,6 +488,10 @@ class FrontController extends Controller
         return view('frontend.pages.album_gallery',compact('singleAlbum'));
     }
 
+    public function career(){
+        $careers =   Career::orderBy('end_date', 'DESC')->paginate(9);
+        return view('frontend.pages.careers.index',compact('careers'));
+    }
 
 
 }

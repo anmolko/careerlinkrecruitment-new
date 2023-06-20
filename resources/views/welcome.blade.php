@@ -534,7 +534,6 @@
                 </div>
             </div>
         </div>
-
     @endif
 
     @if(!empty($homepage_info->why_heading))

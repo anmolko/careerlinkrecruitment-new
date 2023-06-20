@@ -27,7 +27,7 @@
                             <div class="col-lg-6 col-md-6 mb-30">
                                 <div class="project-item">
                                     <div class="project-img">
-                                        <img class="lazy" data-src="{{ ($job->image !== null) ? asset('/images/job/thumb/thumb_'.@$job->image): asset('assets/frontend/images/space.png')}}" alt="">
+                                        <img class="lazy" data-src="{{ ($job->image !== null) ? asset('/images/job/thumb/thumb_'.@$job->image): asset('assets/frontend/images/career.png')}}" alt="">
                                     </div>
                                     <div class="project-content">
                                         <a class="p-icon" href="{{route('job.single',@$job->slug)}}"><i class="custom-icon"></i></a>

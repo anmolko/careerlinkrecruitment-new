@@ -8,61 +8,51 @@
     </style>
 @endsection
 @section('content')
-    <div class="rts-breadcrumb-area breadcrumb-bg bg_image">
+    <!-- Breadcrumbs Start -->
+    <div class="rs-breadcrumbs img9">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 breadcrumb-1">
-                    <h1 class="title">Team</h1>
-                </div>
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                    <div class="bread-tag">
-                        <a href="/">Home</a>
-                        <span> / </span>
-                        <a href="#" class="active">Our Team</a>
-                    </div>
-                </div>
+            <div class="breadcrumbs-inner">
+                <h1 class="page-title">Our Team</h1>
             </div>
         </div>
     </div>
-
-    <div class="rts-team-area style-3 rts-section-gap">
+    <div id="rs-team" class="rs-team style2 pt-100 pb-100 md-pt-70 md-pb-70">
         <div class="container">
-            <div class="row g-5 mt--20 mt_md--30 mt_sm--0">
+            <div class="row">
                 @foreach($teams as $team)
-                    <div class="col-lg-3 col-md-6 col-sm-12 col-12">
-                    <div class="team-inner-two inner">
-                        <div class="thumbnail">
-                            <a>
-                                <img class="lazy" data-src="{{ ($team->image!==null) ? asset('/images/teams/'.$team->image ):asset('assets/backend/images/users/user-dummy-img.jpg')}}" alt="">
-                            </a>
-                            @if(!empty(@$team->fb) || !empty(@$team->twitter) || !empty(@$team->linkedin) || !empty(@$team->insta))
-
-                                <div class="social">
-                                    @if(!empty(@$team->fb))
-                                        <a href="{{@$team->fb}}"><span class="fa-brands fa-facebook"></span></a>
-                                    @endif
-                                    @if(!empty(@$team->twitter))
-                                        <a href="{{$team->twitter}}"><span class="fa-brands fa-twitter"></span></a>
-                                    @endif
-                                    @if(!empty(@$team->linkedin))
-                                        <a href="{{$team->linkedin}}"><span class="fa-brands fa-linkedin"></span></a>
-                                    @endif
-                                    @if(!empty(@$team->insta))
-                                        <a href="{{ $team->insta }}"><span class="fa-brands fa-instagram"></span></a>
-                                    @endif
+                    <div class="col-lg-4 col-md-6 mb-30">
+                        <div class="team-item">
+                            <div class="team-img">
+                                <a>
+                                    <img class="lazy" data-src="{{ ($team->image!==null) ? asset('/images/teams/'.$team->image ):''}}" alt="">
+                                </a>
+                            </div>
+                            <div class="team-content">
+                                <div class="team-info">
+                                    <div class="name">
+                                        <a>{{ucfirst(@$team->name)}}</a>
+                                    </div>
+                                    <span class="post">{{ucfirst(@$team->post)}}</span>
                                 </div>
-                            @endif
-                        </div>
-                        <!-- Acquaintance area -->
-                        <div class="inner-content">
-                            <div class="header">
-                                <h5 class="title">{{ucfirst(@$team->name)}}</h5>
-                                <span>{{ucfirst(@$team->post)}}</span>
+                                @if(!empty(@$team->fb) || !empty(@$team->twitter) || !empty(@$team->linkedin) || !empty(@$team->insta))
+                                    <ul class="social-icon">
+                                        @if(!empty(@$team->fb))
+                                            <li><a href="{{@$team->fb}}"><i class="fa-brands fa-facebook"></i></a></li>
+                                        @endif
+                                        @if(!empty(@$team->twitter))
+                                            <li><a href="{{$team->twitter}}"><i class="fa-brands fa-twitter"></i></a></li>
+                                        @endif
+                                        @if(!empty(@$team->linkedin))
+                                            <li><a href="{{$team->linkedin}}"><i class="fa-brands fa-linkedin"></i></a></li>
+                                        @endif
+                                        @if(!empty(@$team->insta))
+                                            <li><a href="{{ $team->insta }}"><i class="fa-brands fa-instagram"></i></a></li>
+                                        @endif
+                                    </ul>
+                                @endif
                             </div>
                         </div>
-                        <!-- Acquaintance area -->
                     </div>
-                </div>
                 @endforeach
             </div>
         </div>

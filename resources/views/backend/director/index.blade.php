@@ -55,7 +55,7 @@
 
                             <div class="form-group mb-3">
                                 <label>Description <span class="text-muted text-danger">*</span></label>
-                                <textarea class="form-control" rows="16" maxlength="800" name="description" id="ckeditor-classic-director-one" required></textarea>
+                                <textarea class="form-control" rows="16" maxlength="1150" name="description" id="ckeditor-classic-director-one" required></textarea>
                                 <div class="invalid-feedback">
                                     Please write the short description
                                 </div>
@@ -86,7 +86,7 @@
                                 <div class="invalid-feedback" >
                                     Please select a image.
                                 </div>
-                                <span class="ctm-text-sm">*use image minimum of 320 x 320px for director. Let the image be PNG</span>
+                                <span class="ctm-text-sm">*use image minimum of 550 x 550px for director. Let the image be PNG</span>
 
                                 <label for="profile-foreground-img-file-input" class="profile-photo-edit btn btn-light feature-image-button">
                                     <i class="ri-image-edit-line align-bottom me-1"></i> Add Image
@@ -206,7 +206,7 @@
 
                                         <div class="form-group mb-3">
                                             <label>Description <span class="text-muted text-danger">*</span></label>
-                                            <textarea class="form-control" rows="16" maxlength="800" name="description" id="ckeditor-classic-director" required></textarea>
+                                            <textarea class="form-control" rows="16" maxlength="1150" name="description" id="ckeditor-classic-director" required></textarea>
                                             <div class="invalid-feedback">
                                                 Please write the short description
                                             </div>

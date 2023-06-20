@@ -33,6 +33,7 @@
             </div>
         </div>
     @endif
+
     @if($homepage_info->mission)
         <div id="rs-services" class="rs-services style4 pt-95 pb-100 md-pt-65 md-pb-70">
             <div class="container">
@@ -485,6 +486,55 @@
                 </div>
             </div>
         </div>
+    @endif
+
+    @if(count($director) > 0)
+        <div class="rs-project style7 pt-100 pb-30 md-pt-70 md-pb-70">
+            <div class="container custom">
+                <div class="row y-middle">
+                    <div class="col-lg-6">
+                        <div class="sec-title2 mb-55 md-mb-30">
+                            <div class="sub-text">Recent Jobs</div>
+                            <h2 class="title mb-23">We provide good availability of jobs for <span>you.</span>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid pl-30 pr-30 rs-team-Single">
+                <div class="rs-carousel owl-carousel" data-loop="true" data-items="1" data-margin="30"
+                     data-autoplay="false" data-hoverpause="true" data-autoplay-timeout="5000" data-smart-speed="800"
+                     data-dots="false" data-nav="false" data-nav-speed="false" data-md-device="1"
+                     data-md-device-nav="false" data-md-device-dots="true" data-center-mode="false" data-ipad-device2="2"
+                     data-ipad-device-nav2="false" data-ipad-device-dots2="true" data-ipad-device="1"
+                     data-ipad-device-nav="false" data-ipad-device-dots="true" data-mobile-device="1"
+                     data-mobile-device-nav="false" data-mobile-device-dots="true">
+
+                    @foreach($director as $managing)
+                        <div class="btm-info-team" style="padding: 20px 100px;">
+                            <div class="row align-items-center">
+                                <div class="col-lg-5 md-mb-50">
+                                    <div class="images-part">
+                                        <img class="lazy" data-src="{{asset('/images/director/'.@$managing->image)}}" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-7">
+                                    <div class="con-info">
+                                        <span class="designation-info">{{ucfirst(@$managing->heading)}}</span>
+                                        <h2 class="title">{{ucfirst(@$managing->designation)}}</h2>
+                                        <div class="short-desc">
+                                            {{@$managing->description}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+
+                </div>
+            </div>
+        </div>
+
     @endif
 
     @if(!empty($homepage_info->why_heading))

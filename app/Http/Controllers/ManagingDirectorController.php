@@ -64,7 +64,7 @@ class ManagingDirectorController extends Controller
                 mkdir($this->path, 0777);
             }
             $path         = base_path().'/public/images/director/';
-            $moved        = Image::make($image->getRealPath())->fit('530','600')->orientate()->save($path.$name);
+            $moved        = Image::make($image->getRealPath())->fit('550','550')->orientate()->save($path.$name);
             if ($moved){
                 $data['image']= $name;
             }
@@ -137,7 +137,7 @@ class ManagingDirectorController extends Controller
             $image                = $request->file('image');
             $name                 = uniqid().'_director_'.trim(preg_replace('/\s*\([^)]*\)/', '', $image->getClientOriginalName()));
             $path                 = base_path().'/public/images/director/';
-            $moved                = Image::make($image->getRealPath())->fit('530','600')->orientate()->save($path.$name);
+            $moved                = Image::make($image->getRealPath())->fit('550','550')->orientate()->save($path.$name);
             if ($moved){
                 $director->image = $name;
                 if (!empty($oldimage) && file_exists(public_path().'/images/director/'.$oldimage)){

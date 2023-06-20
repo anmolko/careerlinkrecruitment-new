@@ -5157,20 +5157,20 @@ body .search-modal .close:hover {
   padding: 20px;
   margin: -20px;
 }
-.rs-team-Single .btm-info-team {
+ .btm-info-team {
   position: relative;
   box-shadow: 0px 0px 32px 0px rgba(7, 28, 31, 0.05);
   background: #fff;
   margin-bottom: 70px;
   padding: 40px;
 }
-.rs-team-Single .btm-info-team .images-part {
+ .btm-info-team .images-part {
   padding: 0 30px 0 0;
 }
-.rs-team-Single .btm-info-team .con-info {
+.btm-info-team .con-info {
   position: relative;
 }
-.rs-team-Single .btm-info-team .con-info .designation-info {
+.btm-info-team .con-info .designation-info {
   font-size: 15px;
   line-height: 26px;
   font-weight: 600;
@@ -5178,33 +5178,33 @@ body .search-modal .close:hover {
   text-transform: uppercase;
   display: block;
 }
-.rs-team-Single .btm-info-team .con-info .title {
+.btm-info-team .con-info .title {
   font-size: 36px;
   line-height: 46px;
   font-weight: 700;
   color: #0a0a0a;
   margin-bottom: 15px;
 }
-.rs-team-Single .btm-info-team .con-info .short-desc {
+.btm-info-team .con-info .short-desc {
   font-size: 15px;
   line-height: 26px;
   font-weight: 400;
   color: #454545;
   margin-bottom: 25px;
 }
-.rs-team-Single .btm-info-team .con-info .team-title {
+.btm-info-team .con-info .team-title {
   font-size: 28px;
   line-height: 38px;
   font-weight: 700;
   color: #0a0a0a;
   margin-bottom: 15px;
 }
-.rs-team-Single .btm-info-team .con-info .ps-informations .personal-info li {
+.btm-info-team .con-info .ps-informations .personal-info li {
   margin: 5px 0 10px;
   padding: 0;
   display: block;
 }
-.rs-team-Single .btm-info-team .con-info .ps-informations .personal-info li span i:before {
+ .btm-info-team .con-info .ps-informations .personal-info li span i:before {
   color: #efbc49;
   margin-right: 18px;
   position: relative;

@@ -7,7 +7,7 @@
     <meta name="description" content="{{ucwords(@$setting_data->meta_description ?? 'Careerlink')}} "/>
     <meta name="keywords" content="{{@$setting_data->meta_tags ?? 'Careerlink '}}">
     <meta name="csrf-token" content="{{ csrf_token() }}" />
-{{--    <link rel="canonical" href="https://spacehrsolution.com" />--}}
+    <link rel="canonical" href="https://careerlinkrecruitment.com" />
 
     @if (\Request::is('/'))
         <title>{{ucwords(@$setting_data->website_name ?? 'Careerlink')}}</title>
@@ -18,7 +18,7 @@
 
     <meta property="og:title" content=" {{ucwords(@$setting_data->meta_title ?? 'Careerlink')}}" />
     <meta property="og:type" content="Consultancy" />
-{{--    <meta property="og:url" content="https://spacehrsolution.com/" />--}}
+    <meta property="og:url" content="https://careerlinkrecruitment.com" />
     <meta property="og:site_name" content="Careerlink" />
     <meta property="og:description" content=" {{ucwords(@$setting_data->meta_description ?? 'Careerlink')}}" />
 

@@ -77,16 +77,14 @@ class FrontController extends Controller
         $homepage_info      = $this->home_page->first();
         $testimonials       = Testimonial::orderBy('created_at', 'asc')->get();
         $latestPosts        = $this->blog->inRandomOrder()->take(3)->get();
-        $servicecategory    = ServiceCategory::inRandomOrder()->take(6)->get();
         $recruitments       = RecruitmentProcess::all();
         $director           = ManagingDirector::orderBy('order', 'asc')->get();
-        $subsidiaries       = Subsidiary::orderBy('created_at', 'asc')->get();
         $today              = date('Y-m-d');
         $latestJobs         = Job::orderBy('created_at', 'DESC')->where('start_date','<=',$today)->take(3)->get();
         $recuruitment_index = [3,7,11,15];
         $legal_data         = get_legal_documents();
 
-        return view('welcome',compact('director','legal_data','subsidiaries','today','latestJobs','clients','recruitments','servicecategory','testimonials','clients','latestPosts','latestServices','countries','homepage_info','sliders','recuruitment_index'));
+        return view('welcome',compact('director','legal_data','today','latestJobs','clients','recruitments','testimonials','clients','latestPosts','latestServices','countries','homepage_info','sliders','recuruitment_index'));
     }
 
 

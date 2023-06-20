@@ -17,63 +17,47 @@
 
 @endsection
 @section('content')
-    <div class="rts-breadcrumb-area bg_image"
-         style="background:linear-gradient(rgb(41 122 190 / 63%), rgb(233 63 51 / 30%)), url( {{ $page_detail->image ? asset('images/page/'.$page_detail->image) : asset('assets/frontend/images/breadcrumb/01.jpg') }} ); margin-bottom:30px;">
+    <div class="rs-breadcrumbs" style="background:linear-gradient(rgb(246 184 51 / 29%), rgb(10 10 10 / 66%)), url( {{ $page_detail->image ? asset('images/page/'.$page_detail->image) : asset('assets/frontend/images/breadcrumbs/inr_1.jpg') }} ); margin-bottom:30px;">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 breadcrumb-1">
-                    <h1 class="title">{{ucwords(@$page_detail->name)}}</h1>
-                </div>
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                    <div class="bread-tag">
-                        <a href="/">Home</a>
-                        <span> / </span>
-                        <a href="#" class="active">{{ucwords(@$page_detail->name)}}</a>
-                    </div>
-                </div>
+            <div class="breadcrumbs-inner">
+                <h1 class="page-title">
+                    {{ucwords(@$page_detail->name)}}
+                </h1>
             </div>
         </div>
     </div>
+
     @foreach($sections as $key=>$value)
 
         @if($value == "basic_section")
-            <div class="rts-business-goal rts-business-goal2 mt--0 rts-section-gapBottom" style="padding-bottom: 30px;!important;">
+            <div class="rs-about style2 pt-20 pb-30">
                 <div class="container">
                     <div class="row">
-                        <!-- business goal left -->
-                        <div class="col-lg-6">
-                            <div class="business-goal-one">
+                        <div class="col-lg-6 pr-33 md-pr-15 md-mb-50">
+                            <div class="images-part">
                                 <img class="lazy" data-src="{{asset('/images/section_elements/basic_section/'.@$basic_elements->image) }}" alt="">
                             </div>
                         </div>
-                        <!-- business goal right -->
-
-                        <!-- right area business -->
-                        <div class="col-lg-6 mt--35 mt_md--70 mt_sm--70 mb_sm--35">
-                            <div class="business-goal-right">
-                                <div class="rts-title-area business text-start pl--30">
-                                    <p class="pre-title">
-                                        {{@$basic_elements->subheading?? ''}}
-                                    </p>
-                                    <h2 class="title">{{@$basic_elements->heading ?? ''}}</h2>
-                                </div>
-                                <div class="rts-business-goal pl--30" style="margin-top: 10px;">
-                                    <div class="about-inner">
-                                        <p class="disc fs-18 text-justify" style="font-size: 18px!important;  line-height: 30px!important;">
-                                            {!! @$basic_elements->description !!}
-                                        </p>
+                        <div class="col-lg-6 ">
+                            <div class="sec-title">
+                                <h2 class="title">
+                                    {{@$basic_elements->heading ?? ''}}
+                                </h2>
+                                <div class="margin-0 pt-10 text-justify"> {!! @$basic_elements->description !!}</div>
+                                @if(@$basic_elements->button_link)
+                                    <div class="btn-part mt-3 md-mt-30">
+                                        <a class="readon consultant discover" href="{{@$basic_elements->button_link}}">
+                                            {{ucwords(@$basic_elements->button ?? 'Discover More')}}
+                                        </a>
                                     </div>
-                                    @if(@$basic_elements->button_link)
-                                        <div class="goal-button-wrapper mt--10">
-                                            <a href="{{@$basic_elements->button_link}}" class="rts-btn btn-primary color-h-black">
-                                                {{ucwords(@$basic_elements->button ?? 'Discover More')}}
-                                            </a>
-                                        </div>
-                                    @endif
-                                </div>
+                                @endif
                             </div>
                         </div>
-                        <!-- right area business ENd -->
+                    </div>
+                </div>
+                <div class="rs-animation">
+                    <div class="animate-style">
+                        <img class="scale" src="{{asset('assets/frontend/images/about/tri-circle-1.png')}}" alt="About">
                     </div>
                 </div>
             </div>
@@ -272,11 +256,11 @@
                         </div>
                     @endif
                     <div class="row">
-                        @if(count(@$singleAlbum->gallery) > 0)
+                        @if(count(@$gallery_elements) > 0)
                             <div id="gallery" style="padding: 0px 30px 0 30px;">
                                 <div id="image-gallery">
                                     <div class="row">
-                                        @foreach($singleAlbum->gallery as $gallery)
+                                        @foreach($gallery_elements as $gallery)
                                             <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
                                                 <div class="{{  $page_detail->slug =='legal-document' || $page_detail->slug =='legal-documents' ? "":"img-wrapper"   }}">
                                                     <a href="{{asset('/images/albums/gallery/'.@$gallery->filename)}}">

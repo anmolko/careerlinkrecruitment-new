@@ -172,13 +172,6 @@
                                                 </div>
 
                                                 <div class="form-group mb-3">
-                                                    <label>Sub Heading </label>
-                                                    <input type="text" class="form-control" maxlength="60" name="subheading" value="{{@$basic_elements->subheading}}">
-                                                    <div class="invalid-feedback">
-                                                        Please enter the basic section Sub heading.
-                                                    </div>
-                                                </div>
-                                                <div class="form-group mb-3">
                                                     <label>Description <span class="text-muted text-danger">* write 900 characters only</span></label>
                                                     <textarea class="form-control" maxlength="990" rows="14" name="description" id="basic_editor" required>{!! @$basic_elements->description !!}</textarea>
                                                     <div class="invalid-feedback">
@@ -219,7 +212,7 @@
                                                             id="basic-image" onchange="loadbasicFile('basic-image','current-basic-img',event)" name="image" {{(@$basic_elements->id !== null) ? "":"required" }}
                                                             class="profile-foreground-img-file-input" >
 
-                                                    <figcaption class="figure-caption">Banner image for current basic section. (SIZE:  610 x 610px)</figcaption>
+                                                    <figcaption class="figure-caption">Banner image for current basic section. (SIZE:  750 x 750px)</figcaption>
                                                     <div class="invalid-feedback" >
                                                         Please select a image.
                                                     </div>

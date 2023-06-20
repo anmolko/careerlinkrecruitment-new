@@ -154,7 +154,6 @@ class SectionElementController extends Controller
             $data=[
                 'heading'                => $request->input('heading'),
                 'page_section_id'        => $section_id,
-                'subheading'             => $request->input('subheading'),
                 'description'            => $request->input('description'),
                 'list_image'             => $request->input('list_image'),
                 'button'                 => $request->input('button'),
@@ -165,7 +164,7 @@ class SectionElementController extends Controller
                 $image        = $request->file('image');
                 $name         = uniqid().'_basic_'.$image->getClientOriginalName();
                 $path         = base_path().'/public/images/section_elements/basic_section/';
-                $moved        = Image::make($image->getRealPath())->fit(610, 610)->orientate()->save($path.$name);
+                $moved        = Image::make($image->getRealPath())->fit(750, 750)->orientate()->save($path.$name);
                 if ($moved){
                     $data['image']= $name;
                 }
@@ -364,7 +363,6 @@ class SectionElementController extends Controller
             $basic                      = SectionElement::find($id);
             $basic->heading             = $request->input('heading');
             $basic->page_section_id     = $section_id;
-            $basic->subheading          = $request->input('subheading');
             $basic->list_image          = $request->input('list_image');
             $basic->description         = $request->input('description');
             $basic->button              = $request->input('button');
@@ -376,7 +374,7 @@ class SectionElementController extends Controller
                 $image                = $request->file('image');
                 $name                 = uniqid().'_basic_'.$image->getClientOriginalName();
                 $path                 = base_path().'/public/images/section_elements/basic_section/';
-                $moved                = Image::make($image->getRealPath())->fit(610, 610)->orientate()->save($path.$name);
+                $moved                = Image::make($image->getRealPath())->fit(750, 750)->orientate()->save($path.$name);
                 if ($moved){
                     $basic->image = $name;
                     if (!empty($oldimage) && file_exists(public_path().'/images/section_elements/basic_section/'.$oldimage)){

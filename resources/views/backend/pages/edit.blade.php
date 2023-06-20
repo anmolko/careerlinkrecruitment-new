@@ -98,9 +98,19 @@
                 <div class="col-md-12">
                     <div class="card ctm-border-radius shadow-sm flex-fill">
                         <div class="card-header">
-                            <h4 class="card-title mb-0">
-                                General Details
-                            </h4>
+                            <div class="row g-4">
+                                <div class="col-sm-auto">
+                                    <h4 class="card-title mb-0">General Details</h4>
+                                </div>
+                                <div class="col-sm">
+                                    <div class="d-flex justify-content-sm-end">
+                                        <div>
+                                            <a href="{{route('section-elements.create',$page->id)}}" class="btn btn-primary"><i class="ri-edit-2-fill align-bottom me-1"></i>Section Details</a>
+                                            <a href="{{route('pages.index')}}" class="btn btn-success"><i class="ri-list-ordered align-bottom me-1"></i>Page List</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="card-body">
                             <div class="form-group mb-3">

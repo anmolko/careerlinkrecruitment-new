@@ -90,7 +90,7 @@
         @endif
 
         @if($value == "background_image_section")
-            <div class="rs-about bg19 pt-40 pb-80 md-pb-70">
+            <div class="rs-about bg19 pt-40 pb-5 md-pb-70">
                 <div class="container">
                     <div class="row y-middle">
                         <div class="col-lg-6 pr-50 md-pr-15">

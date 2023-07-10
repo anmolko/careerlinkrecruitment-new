@@ -102,7 +102,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="rs-videos choose-video">
-                            <div class="images-video">
+                            <div class="images-video custom-image">
                                 <img class="lazy" data-src="{{ @$homepage_info->welcome_image ? asset('/images/home/welcome/'.@$homepage_info->welcome_image):''}}" alt="images">
                             </div>
                             @if(@$homepage_info->welcome_video_link)
@@ -233,7 +233,6 @@
                                         </div>
                                         <div class="front-desc-part">
                                             <p>
-    {{--                                            #efbc49--}}
                                                 {{ucfirst(@$homepage_info->core_description2)}}
                                             </p>
                                         </div>
@@ -505,7 +504,7 @@
                 <div class="rs-carousel owl-carousel" data-loop="true" data-items="1" data-margin="30"
                      data-autoplay="false" data-hoverpause="true" data-autoplay-timeout="5000" data-smart-speed="800"
                      data-dots="false" data-nav="false" data-nav-speed="false" data-md-device="1"
-                     data-md-device-nav="false" data-md-device-dots="true" data-center-mode="false" data-ipad-device2="2"
+                     data-md-device-nav="false" data-md-device-dots="true" data-center-mode="false" data-ipad-device2="1"
                      data-ipad-device-nav2="false" data-ipad-device-dots2="true" data-ipad-device="1"
                      data-ipad-device-nav="false" data-ipad-device-dots="true" data-mobile-device="1"
                      data-mobile-device-nav="false" data-mobile-device-dots="true">

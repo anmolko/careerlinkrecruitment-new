@@ -1575,7 +1575,7 @@ blockquote cite:before {
 .full-width-header .rs-header .topbar-area.style1 .topbar-contact li {
   display: inline-block;
   color: #ffffff;
-  font-size: 13px;
+  font-size: 12.5px;
   line-height: 50px;
   font-weight: 500;
   border-right: 1px solid rgba(255, 255, 255, 0.2);
@@ -1592,7 +1592,7 @@ blockquote cite:before {
 }
 .full-width-header .rs-header .topbar-area.style1 .topbar-contact li a {
   color: #ffffff;
-  font-size: 14px;
+  font-size: 12.5px;
 }
 .full-width-header .rs-header .topbar-area.style1 .topbar-contact li a:hover {
   color: #efbc49;
@@ -2604,7 +2604,7 @@ body .search-modal .close:hover {
 }
 .rs-about.style2 .rs-animation .animate-style {
   position: absolute;
-  right: 21%;
+  right: 5;
   bottom: 19%;
 }
 .rs-about.style2 .rs-animation .animate-style img {
@@ -9154,4 +9154,13 @@ body .search-modal .close:hover {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     content: "\f058";
+}
+
+.custom-image img{
+    box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.25)
+}
+
+.custom-image img:hover{
+    transform: translateY(-5px);
+    box-shadow: 8px 8px 20px 5px rgba(0, 0, 0, 0.5);
 }

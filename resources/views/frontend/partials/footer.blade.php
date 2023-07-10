@@ -8,26 +8,26 @@
                     <div class="footer-logo mb-10">
                         <a href="/"><img src="{{ (@$setting_data->logo_white) ? asset('/images/settings/'.@$setting_data->logo_white): asset('/images/settings/'.@$setting_data->logo) }}" alt=""></a>
                     </div>
-                    <div class="textwidget white-color pb-10">
+                    <div class="textwidget white-color pb-10 text-justify">
                          {!! ucfirst(@$setting_data->website_description ?? '') !!}
                     </div>
                     <ul class="footer-social md-mb-30">
                         @if(@$setting_data->facebook)
-                            <li><a href="{{@$setting_data->facebook}}"><span class="fa-brands fa-facebook"></span></a></li>
+                            <li><a href="{{@$setting_data->facebook}}" target="_blank"><span class="fa-brands fa-facebook"></span></a></li>
                         @endif
                         @if(@$setting_data->youtube)
-                            <li><a href="{{@$setting_data->youtube}}"><span class="fa-brands fa-youtube"></span></a></li>
+                            <li><a href="{{@$setting_data->youtube}}" target="_blank"><span class="fa-brands fa-youtube"></span></a></li>
 
                         @endif
                         @if(@$setting_data->instagram)
-                            <li><a href="{{@$setting_data->instagram}}"><span class="fa-brands fa-instagram"></span></a></li>
+                            <li><a href="{{@$setting_data->instagram}}" target="_blank"><span class="fa-brands fa-instagram"></span></a></li>
 
                         @endif
                         @if(@$setting_data->linkedin)
-                            <li><a href="{{@$setting_data->linkedin}}"><span class="fa-brands fa-linkedin"></span></a></li>
+                            <li><a href="{{@$setting_data->linkedin}}" target="_blank"><span class="fa-brands fa-linkedin"></span></a></li>
                         @endif
                         @if(!empty(@$setting_data->ticktock))
-                            <li><a href="{{@$setting_data->ticktock}}"><span class="fa-brands fa-tiktok"></span></a></li>
+                            <li><a href="{{@$setting_data->ticktock}}" target="_blank"><span class="fa-brands fa-tiktok"></span></a></li>
                         @endif
                     </ul>
                 </div>
@@ -57,7 +57,7 @@
                         <li>
                             <i class="flaticon-call"></i>
                             <div class="desc">
-                                <a href="tel:{{@$setting_data->phone ?? $setting_data->mobile ?? ''}}">
+                                <a href="tel:{{@$setting_data->phone ?? $setting_data->mobile ?? ''}}" target="_blank">
                                     {{@$setting_data->phone ?? $setting_data->mobile ?? ''}}
                                 </a>
                             </div>
@@ -65,7 +65,7 @@
                         <li>
                             <i class="flaticon-email"></i>
                             <div class="desc">
-                                <a href="mailto:{{@$setting_data->email ?? ''}}"> {{@$setting_data->email ?? ''}}</a>
+                                <a href="mailto:{{@$setting_data->email ?? ''}}" target="_blank"> {{@$setting_data->email ?? ''}}</a>
                             </div>
                         </li>
                     </ul>

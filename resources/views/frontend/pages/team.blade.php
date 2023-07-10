@@ -37,16 +37,16 @@
                                 @if(!empty(@$team->fb) || !empty(@$team->twitter) || !empty(@$team->linkedin) || !empty(@$team->insta))
                                     <ul class="social-icon">
                                         @if(!empty(@$team->fb))
-                                            <li><a href="{{@$team->fb}}"><i class="fa-brands fa-facebook"></i></a></li>
+                                            <li><a href="{{@$team->fb}}" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
                                         @endif
                                         @if(!empty(@$team->twitter))
-                                            <li><a href="{{$team->twitter}}"><i class="fa-brands fa-twitter"></i></a></li>
+                                            <li><a href="{{$team->twitter}}" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
                                         @endif
                                         @if(!empty(@$team->linkedin))
-                                            <li><a href="{{$team->linkedin}}"><i class="fa-brands fa-linkedin"></i></a></li>
+                                            <li><a href="{{$team->linkedin}}" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
                                         @endif
                                         @if(!empty(@$team->insta))
-                                            <li><a href="{{ $team->insta }}"><i class="fa-brands fa-instagram"></i></a></li>
+                                            <li><a href="{{ $team->insta }}" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
                                         @endif
                                     </ul>
                                 @endif

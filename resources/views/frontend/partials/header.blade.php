@@ -97,11 +97,11 @@
                                 <ul>
                                     <li>
                                         <i class="flaticon-email"></i>
-                                        <a href="mailto:{{@$setting_data->email ?? ''}}">{{@$setting_data->email ?? ''}}</a>
+                                        <a href="mailto:{{@$setting_data->email ?? ''}}" target="_blank">{{@$setting_data->email ?? ''}}</a>
                                     </li>
                                     <li>
                                         <i class="flaticon-call"></i>
-                                        <a href="tel:{{@$setting_data->phone ?? $setting_data->mobile ?? ''}}"> {{@$setting_data->phone ?? $setting_data->mobile  ?? ''}}</a>
+                                        <a href="tel:{{@$setting_data->phone ?? $setting_data->mobile ?? ''}}" target="_blank"> {{@$setting_data->phone ?? $setting_data->mobile  ?? ''}}</a>
                                     </li>
                                     <li>
                                         <i class="flaticon-location"></i>
@@ -115,32 +115,32 @@
                                 <ul>
                                     @if(@$setting_data->facebook)
                                         <li>
-                                            <a href="{{@$setting_data->facebook}}">
+                                            <a href="{{@$setting_data->facebook}}" target="_blank">
                                                 <i class="fa-brands fa-facebook-f"></i>
                                             </a>
                                         </li>
                                     @endif
                                     @if(@$setting_data->youtube)
                                         <li>
-                                            <a href="{{@$setting_data->youtube}}">
+                                            <a href="{{@$setting_data->youtube}}" target="_blank">
                                                 <i class="fa-brands fa-youtube"></i>
                                             </a>
                                         </li>
                                     @endif
                                     @if(@$setting_data->instagram)
-                                        <li><a href="{{@$setting_data->instagram}}">
+                                        <li><a href="{{@$setting_data->instagram}}" target="_blank">
                                                 <i class="fa-brands fa-instagram"></i>
                                             </a></li>
                                     @endif
                                     @if(@$setting_data->linkedin)
-                                        <li><a href="{{@$setting_data->linkedin}}">
+                                        <li><a href="{{@$setting_data->linkedin}}" target="_blank">
                                                 <i class="fa-brands fa-linkedin"></i>
                                             </a>
                                         </li>
                                     @endif
                                     @if(!empty(@$setting_data->ticktock))
                                         <li>
-                                            <a href="{{@$setting_data->ticktock}}">
+                                            <a href="{{@$setting_data->ticktock}}" target="_blank">
                                                 <i class="fa-brands fa-tiktok"></i>
                                             </a>
                                         </li>
@@ -274,7 +274,7 @@
                             </div>
                             <div class="info-content">
                                 <h4 class="title">Email</h4>
-                                <em><a href="mailto:{{@$setting_data->email ?? ''}}">{{@$setting_data->email ?? ''}}</a></em>
+                                <em><a href="mailto:{{@$setting_data->email ?? ''}}" target="_blank">{{@$setting_data->email ?? ''}}</a></em>
                             </div>
                         </div>
                         <div class="address-list">
@@ -289,27 +289,27 @@
                     </div>
                     <ul class="social">
                         @if(@$setting_data->facebook)
-                            <a href="{{@$setting_data->facebook}}">
+                            <a href="{{@$setting_data->facebook}}" target="_blank">
                                 <i class="fa-brands fa-facebook-f"></i>
                             </a>
                         @endif
                         @if(@$setting_data->youtube)
-                            <a href="{{@$setting_data->youtube}}">
+                            <a href="{{@$setting_data->youtube}}" target="_blank">
                                 <i class="fa-brands fa-youtube"></i>
                             </a>
                         @endif
                         @if(@$setting_data->instagram)
-                            <a href="{{@$setting_data->instagram}}">
+                            <a href="{{@$setting_data->instagram}}" target="_blank">
                                 <i class="fa-brands fa-instagram"></i>
                             </a>
                         @endif
                         @if(@$setting_data->linkedin)
-                            <a href="{{@$setting_data->linkedin}}">
+                            <a href="{{@$setting_data->linkedin}}" target="_blank">
                                 <i class="fa-brands fa-linkedin"></i>
                             </a>
                         @endif
                         @if(!empty(@$setting_data->ticktock))
-                            <a href="{{@$setting_data->ticktock}}">
+                            <a href="{{@$setting_data->ticktock}}" target="_blank">
                                 <i class="fa-brands fa-tiktok"></i>
                             </a>
                         @endif
@@ -381,7 +381,7 @@
                             </div>
                             <div class="info-content">
                                 <h4 class="title">Email</h4>
-                                <em><a href="mailto:{{@$setting_data->email ?? ''}}">{{@$setting_data->email ?? ''}}</a></em>
+                                <em><a href="mailto:{{@$setting_data->email ?? ''}}" target="_blank">{{@$setting_data->email ?? ''}}</a></em>
                             </div>
                         </div>
                         <div class="address-list">

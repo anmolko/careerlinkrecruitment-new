@@ -117,6 +117,12 @@
 </div>
 <!-- End scrollUp  -->
 
+@if(!empty(@$setting_data->whatsapp))
+    <a href="https://wa.me/{{$setting_data->whatsapp}}" class="float" target="_blank">
+        <i class="fa-brands fa-whatsapp my-float"></i>
+    </a>
+@endif
+
 <!-- Search Modal Start -->
 <div class="modal fade search-modal" id="searchModal" tabindex="-1">
     <button type="button" class="close" data-bs-dismiss="modal">

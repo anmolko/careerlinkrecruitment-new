@@ -367,6 +367,65 @@
 
                              @endif
 
+                             @if($value == 'call_to_action_2')
+                                    @if($call2_elements !== null)
+                                        {!! Form::open(['url'=>route('section-elements.update', @$call2_elements->id),'id'=>'call-action2-form','class'=>'needs-validation','novalidate'=>'','method'=>'PUT']) !!}
+                                    @else
+                                        {!! Form::open(['route' => 'section-elements.store','method'=>'post','class'=>'needs-validation','id'=>'call-action2-form','novalidate'=>'']) !!}
+                                    @endif
+
+                                    <div class="row" id="call-action2-form-ajax">
+                                        <div class="col-md-12">
+                                            <div class="card ctm-border-radius shadow-sm flex-fill">
+                                                <div class="card-header">
+                                                    <h4 class="card-title mb-0">
+                                                        Call to action: Option 2 Details
+                                                    </h4>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="form-group mb-3">
+                                                        <label>Heading <span class="text-muted text-danger">*</span></label>
+                                                        <input type="text" class="form-control" maxlength="65" name="heading" value="{{@$call2_elements->heading}}" required>
+                                                        <input type="hidden" class="form-control" value="{{$key}}" name="page_section_id" required>
+                                                        <input type="hidden" class="form-control" value="{{$value}}" name="section_name" required>
+                                                        <div class="invalid-feedback">
+                                                            Please enter the call action section heading.
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group mb-3">
+                                                        <label>Subheading </label>
+                                                        <input type="text" maxlength="20" class="form-control" value="{{@$call2_elements->subheading}}" name="subheading">
+                                                        <div class="invalid-feedback">
+                                                            Please enter the subheading.
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group mb-3">
+                                                        <label>Button Text </label>
+                                                        <input type="text" maxlength="30" class="form-control" value="{{@$call2_elements->button}}" name="button">
+                                                        <div class="invalid-feedback">
+                                                            Please enter the button text.
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group mb-3">
+                                                        <label>Button Link </label>
+                                                        <input type="text" class="form-control" value="{{@$call2_elements->button_link}}" name="button_link">
+                                                        <div class="invalid-feedback">
+                                                            Please enter the button link.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-center mt-3 mb-3" id="call-action2-form-button">
+                                        <button id="call-action-button-submit" class="btn btn-success w-sm">
+                                            {{(@$call2_elements !==null)? "Update Details":"Add Details"}}
+                                        </button>
+                                    </div>
+                                    {!! Form::close() !!}
+
+                                @endif
+
                              @if($value == 'background_image_section')
                                     @if($bgimage_elements !== null)
                                         {!! Form::open(['url'=>route('section-elements.update', @$bgimage_elements->id),'id'=>'background-image-form','class'=>'needs-validation','method'=>'PUT','novalidate'=>'','enctype'=>'multipart/form-data']) !!}
@@ -1259,6 +1318,21 @@
 
         if($.inArray("call_to_action_1", section_list) !== -1) {
             $("#call-action1-form").submit(function(event){
+                event.preventDefault(); //prevent default action
+                if (!this.checkValidity()) { return false;}
+
+                var post_url       = $(this).attr("action"); //get form action url
+                var request_method = $(this).attr("method"); //get form GET/POST method
+                var form_data      = new FormData(this); //Creates new FormData object
+                var divID          = $(this).attr('id')+'-ajax';
+                var buttonID       = $(this).attr('id')+'-button';
+                ElementData(post_url,request_method,form_data,divID,buttonID);
+
+            });
+        }
+
+        if($.inArray("call_to_action_2", section_list) !== -1) {
+            $("#call-action2-form").submit(function(event){
                 event.preventDefault(); //prevent default action
                 if (!this.checkValidity()) { return false;}
 

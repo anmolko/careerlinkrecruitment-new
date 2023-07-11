@@ -223,6 +223,10 @@ class FrontController extends Controller
                 $call1_elements = SectionElement::with('section')
                     ->where('page_section_id', $section->id)
                     ->first();
+            }else if ($section->section_slug == 'call_to_action_2'){
+                $call2_elements = SectionElement::with('section')
+                    ->where('page_section_id', $section->id)
+                    ->first();
             }
             else if ($section->section_slug == 'background_image_section'){
                 $bgimage_elements = SectionElement::with('section')

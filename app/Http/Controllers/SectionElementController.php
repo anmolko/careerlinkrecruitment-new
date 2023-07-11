@@ -85,6 +85,10 @@ class SectionElementController extends Controller
                 $call1_elements = SectionElement::with('section')
                     ->where('page_section_id', $section->id)
                     ->first();
+            }else if ($section->section_slug == 'call_to_action_2'){
+                $call2_elements = SectionElement::with('section')
+                    ->where('page_section_id', $section->id)
+                    ->first();
             }
             else if ($section->section_slug == 'background_image_section'){
                 $bgimage_elements = SectionElement::with('section')
@@ -136,7 +140,6 @@ class SectionElementController extends Controller
             }
         }
 
-
         return view('backend.pages.section_elements.create',compact( 'page','recruitment_process','sections','process_num','process_elements','map_descp','icon_title_elements','location_map','video_descp_elements','list_2','list_3','basic_elements','call1_elements','gallery2_elements','bgimage_elements','call2_elements','flash_elements','gallery_elements','header_descp_elements','accordian1_elements','accordian2_elements','slider_list_elements','contact_info_elements','id'));
     }
 
@@ -185,6 +188,16 @@ class SectionElementController extends Controller
             $status = SectionElement::create($data);
         }
         elseif ($section_name == 'call_to_action_1'){
+            $data=[
+                'page_section_id'        => $section_id,
+                'heading'                => $request->input('heading'),
+                'subheading'             => $request->input('subheading'),
+                'button'                 => $request->input('button'),
+                'button_link'            => $request->input('button_link'),
+                'created_by'             => Auth::user()->id,
+            ];
+            $status = SectionElement::create($data);
+        } elseif ($section_name == 'call_to_action_2'){
             $data=[
                 'page_section_id'        => $section_id,
                 'heading'                => $request->input('heading'),
@@ -398,6 +411,17 @@ class SectionElementController extends Controller
             $status = $map->update();
         }
         elseif ($section_name == 'call_to_action_1'){
+            $action                      = SectionElement::find($id);
+            $action->page_section_id     = $section_id;
+            $action->heading             = $request->input('heading');
+            $action->subheading          = $request->input('subheading');
+            $action->description         = $request->input('description');
+            $action->button              = $request->input('button');
+            $action->button_link         = $request->input('button_link');
+            $action->updated_by          = Auth::user()->id;
+            $status                      = $action->update();
+
+        }  elseif ($section_name == 'call_to_action_2'){
             $action                      = SectionElement::find($id);
             $action->page_section_id     = $section_id;
             $action->heading             = $request->input('heading');

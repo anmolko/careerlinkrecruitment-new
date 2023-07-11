@@ -2289,7 +2289,7 @@ blockquote cite:before {
   padding-bottom: 25px;
 }
 .full-width-header .right_menu_togle .canvas-logo img {
-  max-height: 28px;
+  max-height: 118px;
 }
 .full-width-header .right_menu_togle .offcanvas-text p {
   font-size: 16px;
@@ -6138,7 +6138,7 @@ body .search-modal .close:hover {
 .rs-patter-section .logo-img a .mains-logos {
   transition: all 0.3s ease-in-out;
   display: block;
-  filter: grayscale(1);
+  /*filter: grayscale(1);*/
 }
 .rs-patter-section .logo-img a:hover .hovers-logos {
   display: block;
@@ -9163,4 +9163,11 @@ body .search-modal .close:hover {
 .custom-image img:hover{
     transform: translateY(-5px);
     box-shadow: 8px 8px 20px 5px rgba(0, 0, 0, 0.5);
+}
+
+.bg22-cta{
+    background-image: url(../images/banner/banner2.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }

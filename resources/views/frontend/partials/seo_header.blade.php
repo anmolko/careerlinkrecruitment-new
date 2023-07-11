@@ -242,8 +242,8 @@
                 <div class="canvas-logo">
                     <a href="/"><img class="lazy" data-src="{{$setting_data->logo ? asset('/images/settings/'.@$setting_data->logo):''}}" alt="logo"></a>
                 </div>
-                <div class="offcanvas-text">
-                    <p>{{ $setting_data->website_description ?? '' }}</p>
+                <div class="offcanvas-text text-justify">
+                    <p>{!! $setting_data->website_description ?? '' !!}</p>
                 </div>
                 <div class="canvas-contact">
                     <div class="address-area">

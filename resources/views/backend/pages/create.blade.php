@@ -179,6 +179,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="card shadow-none">
                                 <div class="card-header">
                                     <h5 class="card-title text-primary mb-0">Call to Action</h5>
@@ -196,6 +197,26 @@
 
                                 </div>
                             </div>
+
+                            <div class="card shadow-none">
+                                <div class="card-header">
+                                    <h5 class="card-title text-primary mb-0">Call to Action 2</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <label class="image-checkbox">
+                                                <img class="img-responsive" src="{{asset('assets/backend/img/page_sections/call_to_action_2.png')}}" width="100%"/>
+                                                <input type="checkbox" name="section[]" value="call_to_action_2" id="call_to_action_2.png"/>
+                                                <i class="ri ri-check-line hidden"></i>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
                             <div class="card shadow-none">
                                 <div class="card-header">
                                     <h5 class="card-title text-primary mb-0">Background Image Section</h5>

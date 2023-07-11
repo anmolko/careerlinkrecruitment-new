@@ -89,6 +89,29 @@
             </div>
         @endif
 
+        @if($value == "call_to_action_2")
+            <div class="rs-cta style1 bg22-cta relative pt-100 pb-100 md-pt-70 md-pb-70">
+                <div class="container">
+                    <div class="row rs-vertical-middle">
+                        <div class="col-lg-7">
+                            <div class="sec-title4">
+                                <div class="sub-title secondary-color mb-6" style="font-size: 20px;">{{@$call2_elements->subheading ?? ''}}</div>
+                                <h2 class="title white-color left-line-v margin-0" style="font-size: 32px;">
+                                    <div class="draw-line start-draw"></div>
+                                    {{ @$call2_elements->heading ?? '' }}
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 md-pt-30">
+                            <div class="cta-btn text-center text-md-left">
+                                <a class="readon2 hover-light" href="{{@$call2_elements->button_link ?? '/contact-us'}}">
+                                    {{ucwords(@$call2_elements->button ?? 'Reach Out')}} <div class="btn-arrow"></div></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        @endif
         @if($value == "background_image_section")
             <div class="rs-about bg19 pt-40 pb-5 md-pb-70">
                 <div class="container">
